@@ -1,39 +1,37 @@
 {
   "expo": {
-    "name": "cherrymobile_v3",
-    "slug": "cherrymobile_v3",
+    "name": "Cherrymobile_v2",
+    "slug": "cherrymobile_v2",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "icon": "./assets/images/app_config/cherry-app-icon.png",
+    "scheme": "cherryV2",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
+    "developmentClient": {
+      "silentLaunch": true
+    },
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "foregroundImage": "./assets/images/app_config/cherry-android-adaptive-icon.png",
+        "backgroundColor": "#ff0000"
+      },
+      "splash": {
+        "image": "./assets/images/app_config/cherry-android-adaptive-icon.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#ff0000"
+      },
+      "package": "com.cherrymobile.v2",
+      "versionCode": 1
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/app_config/cherry-app-icon.png"
     },
-    "plugins": [
-      "expo-router",
-      [
-        "expo-splash-screen",
-        {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
-        }
-      ]
-    ],
+    "plugins": ["expo-router", "expo-font"],
     "experiments": {
       "typedRoutes": true
     }
