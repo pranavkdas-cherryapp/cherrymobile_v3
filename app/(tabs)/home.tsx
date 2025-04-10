@@ -63,7 +63,7 @@ export default function HomeScreen() {
             title="What to do?"
             subtitle="Shop, post, earn"
             imageSource={require("@/assets/images/what-todo.png")}
-            onPress={() => router.push("/onboarding/HowItWorksScreen")}
+            onPress={() => null}
             containerStyle={styles.actionCardLeft}
             imageStyle={styles.actionCardLeftImage}
           />

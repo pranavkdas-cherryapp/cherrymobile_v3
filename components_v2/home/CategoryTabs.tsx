@@ -158,6 +158,7 @@ const styles = StyleSheet.create({
     width: 104, // 3 items per row
     borderRadius: 12,
     backgroundColor: "#fff",
+    marginRight: 8,
     marginBottom: 16,
     justifyContent: "center",
     alignItems: "center",
@@ -170,8 +171,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   productImage: {
-    width: 40,
-    height: 40,
-    marginBottom: 8,
+    width: 90,
+    height: 98,
+    borderRadius: 12,
   },
 });
