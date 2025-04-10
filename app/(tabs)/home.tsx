@@ -40,7 +40,7 @@ export default function HomeScreen() {
         </View>
       </View>
 
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.membershipCard}>
           <View style={styles.membershipHeader}>
             <IconButton iconKey="goldBadge" width={26} height={30} />

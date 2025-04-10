@@ -14,8 +14,28 @@ const products = {
     "Skirt",
     "Leggings",
   ],
-  Beauty: ["Lipstick", "Foundation", "Blush"],
-  Accessories: ["Bags", "Jewelry", "Belts"],
+  Beauty: [
+    "Lipstick",
+    "Foundation",
+    "Blush",
+    "Mascara",
+    "Eyeliner",
+    "Highlighter",
+    "Concealer",
+    "Nail Polish",
+    "Face Serum",
+  ],
+  Accessories: [
+    "Bags",
+    "Jewelry",
+    "Belts",
+    "Hats",
+    "Sunglasses",
+    "Scarves",
+    "Watches",
+    "Wallets",
+    "Hair Accessories",
+  ],
 };
 
 const renderTabContent = (routeKey: string) => () =>
@@ -114,13 +134,14 @@ const styles = StyleSheet.create({
   productsGrid: {
     flexDirection: "row",
     flexWrap: "wrap",
-    justifyContent: "space-between",
+    justifyContent: "center", // center-align grid
     paddingHorizontal: 16,
     paddingTop: 16,
   },
+
   productCard: {
-    width: "30%",
-    aspectRatio: 1, // Makes it square
+    height: 120,
+    width: 104, // 3 items per row
     borderRadius: 12,
     backgroundColor: "#fff",
     marginBottom: 16,
