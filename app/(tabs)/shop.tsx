@@ -14,7 +14,7 @@ import { Chip, Searchbar } from "react-native-paper";
 import { router } from "expo-router";
 import SearchInputBar from "@/components_v2/common/SearchInputBar";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
-import ProductsGrid from "@/components_v2/shop/ProductCard";
+import ProductsGrid from "@/components_v2/shop/ProductCard2";
 
 export default function ShopScreen() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -93,12 +93,12 @@ export default function ShopScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
     backgroundColor: "#fff",
   },
   searchContainer: {
     flexDirection: "row",
     alignItems: "center",
+    paddingHorizontal: 20,
   },
   searchInput: {
     flex: 1,
