@@ -65,7 +65,9 @@ const ProductsGrid = () => {
       title: `Product ${products.length + index + 1}`,
       price: `Rs. ${(1000 + (products.length + index) * 100).toLocaleString()}`,
       brand: "Brand Name",
-      image: "https://via.placeholder.com/300x400.png?text=Product",
+      image: `https://picsum.photos/300/${
+        400 + Math.floor(Math.random() * 200)
+      }`,
     }));
     setProducts([...products, ...moreProducts]);
   };
