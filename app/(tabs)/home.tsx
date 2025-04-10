@@ -16,6 +16,7 @@ import CategoryTabs from "@/components_v2/home/CategoryTabs";
 import HomeActionCard from "@/components_v2/common/HomeActionCard";
 import SearchInputBar from "@/components_v2/common/SearchInputBar";
 import ShopByCategory from "@/components_v2/home/ShopByCategory";
+import Collections from "@/components_v2/home/Collections";
 
 export default function HomeScreen() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -85,9 +86,17 @@ export default function HomeScreen() {
             />
           </View>
         </View>
-
+        <HomeActionCard
+          title="Our wall of love"
+          imageSource={require("@/assets/images/reviews-stars.png")}
+          subtitle="Reviews from our happy users"
+          onPress={() => null}
+          containerStyle={styles.reviewActionCard}
+          imageStyle={styles.reviewActionCardImage}
+        />
         <ShopByCategory />
         <CategoryTabs />
+        <Collections />
       </ScrollView>
     </View>
   );
@@ -208,6 +217,21 @@ const styles = StyleSheet.create({
     height: 40,
     width: 40,
   },
+  reviewActionCard: {
+    borderWidth: 1,
+    borderColor: "#F1F1F1",
+    padding: 8,
+    height: 71,
+    marginTop: 10,
+  },
+  reviewActionCardImage: {
+    right: 7,
+    position: "absolute",
+    bottom: 20,
+    height: 30,
+    width: 121,
+  },
+
   membershipDetails: {
     flexDirection: "row",
     justifyContent: "space-between",

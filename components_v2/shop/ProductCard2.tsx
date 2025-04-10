@@ -19,25 +19,6 @@ const sampleProducts = Array.from({ length: 50 }).map((_, index) => ({
   image: `https://picsum.photos/300/${400 + Math.floor(Math.random() * 200)}`,
 }));
 
-// const ProductCard = ({ item }: { item: any }) => (
-//   <View style={styles.productCard}>
-//     <Image
-//       source={{ uri: item.image }}
-//       style={styles.productImage}
-//       resizeMode="cover"
-//     />
-//     <TouchableOpacity style={styles.heartIcon}>
-//       <Text>♡</Text>
-//     </TouchableOpacity>
-//     <Text style={styles.productTitle} numberOfLines={2}>
-//       {item.title}
-//     </Text>
-//     <Text style={styles.productPrice}>
-//       {item.price} . {item.brand}
-//     </Text>
-//   </View>
-// );
-
 const ProductsGrid = () => {
   const [numColumns, setNumColumns] = useState(2);
   const [products, setProducts] = useState(sampleProducts);

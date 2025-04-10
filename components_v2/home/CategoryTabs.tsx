@@ -38,22 +38,6 @@ const products = {
   ],
 };
 
-const renderTabContent = (routeKey: string) => () =>
-  (
-    <View style={styles.productsGrid}>
-      {products[routeKey as keyof typeof products].map((product, index) => (
-        <View key={index} style={styles.productCard}>
-          <Image
-            source={{ uri: "https://placehold.co/102x104" }}
-            style={styles.productImage}
-            resizeMode="contain"
-          />
-          <Text style={styles.productName}>{product}</Text>
-        </View>
-      ))}
-    </View>
-  );
-
 export default function CategoryTabs() {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
@@ -61,6 +45,34 @@ export default function CategoryTabs() {
     { key: "beauty", title: "Beauty" },
     { key: "accessories", title: "Accessories" },
   ]);
+
+  const [contentHeight, setContentHeight] = React.useState(0);
+  const contentRef = React.useRef<View>(null);
+
+  const handleLayout = (event: any) => {
+    const { height } = event.nativeEvent.layout;
+    setContentHeight(height);
+  };
+
+  const renderTabContent = (routeKey: string) => () =>
+    (
+      <View
+        ref={contentRef}
+        onLayout={handleLayout}
+        style={styles.productsGrid}
+      >
+        {products[routeKey as keyof typeof products].map((product, index) => (
+          <View key={index} style={styles.productCard}>
+            <Image
+              source={{ uri: "https://placehold.co/102x104" }}
+              style={styles.productImage}
+              resizeMode="contain"
+            />
+            <Text style={styles.productName}>{product}</Text>
+          </View>
+        ))}
+      </View>
+    );
 
   const renderScene = SceneMap({
     fashion: renderTabContent("Fashion"),
@@ -120,13 +132,15 @@ export default function CategoryTabs() {
   );
 
   return (
-    <TabView
-      navigationState={{ index, routes }}
-      renderScene={renderScene}
-      onIndexChange={setIndex}
-      initialLayout={{ width: Dimensions.get("window").width }}
-      renderTabBar={renderTabBar}
-    />
+    <View style={{ height: contentHeight + 50 }}>
+      <TabView
+        navigationState={{ index, routes }}
+        renderScene={renderScene}
+        onIndexChange={setIndex}
+        initialLayout={{ width: Dimensions.get("window").width }}
+        renderTabBar={renderTabBar}
+      />
+    </View>
   );
 }
 
@@ -134,11 +148,11 @@ const styles = StyleSheet.create({
   productsGrid: {
     flexDirection: "row",
     flexWrap: "wrap",
-    justifyContent: "center", // center-align grid
+    justifyContent: "center",
     paddingHorizontal: 16,
     paddingTop: 16,
+    paddingBottom: 16,
   },
-
   productCard: {
     height: 120,
     width: 104, // 3 items per row
