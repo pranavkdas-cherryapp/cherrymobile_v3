@@ -49,15 +49,6 @@ export default function ShopScreen() {
         inactiveColor="gray"
         pressColor="transparent"
       />
-      <View style={styles.filtersRow}>
-        {["Sort", "Brands", "Products", "More filters"].map((filter, index) => (
-          <Chip key={index} style={styles.chip}>
-            <TouchableOpacity style={styles.filterButton}>
-              <Text style={styles.filterText}>{filter}</Text>
-            </TouchableOpacity>
-          </Chip>
-        ))}
-      </View>
     </View>
   );
 
@@ -123,28 +114,6 @@ const styles = StyleSheet.create({
     backgroundColor: "black",
     height: 2,
     borderRadius: 10,
-  },
-  filtersRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-around",
-    paddingVertical: 10,
-    paddingHorizontal: 10,
-    backgroundColor: "white",
-  },
-  filterButton: {
-    flexDirection: "row",
-    alignItems: "center",
-    paddingHorizontal: 4,
-  },
-  filterText: {
-    fontSize: 12,
-    fontWeight: "500",
-    color: "black",
-  },
-  chip: {
-    marginVertical: 4,
-    backgroundColor: "#f5f5f5",
   },
   productsGrid: {
     padding: 10,

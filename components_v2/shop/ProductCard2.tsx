@@ -6,17 +6,20 @@ import {
   StyleSheet,
   Dimensions,
   TouchableOpacity,
+  ScrollView,
 } from "react-native";
 import MasonryList from "@react-native-seoul/masonry-list";
 import Animated from "react-native-reanimated";
+import IconButton from "@/components_v2/common/IconButton";
+import { Chip } from "react-native-paper";
 
 const sampleProducts = Array.from({ length: 50 }).map((_, index) => ({
   id: index.toString(),
   title: `Product ${index + 1}`,
   price: `Rs. ${(1000 + index * 100).toLocaleString()}`,
   brand: "Brand Name",
-  //   image: `https://placehold.co/300x${200 + (idx % 5) * 30}`,
   image: `https://picsum.photos/300/${400 + Math.floor(Math.random() * 200)}`,
+  wishlist: Math.random() < 0.5 ? true : false,
 }));
 
 const ProductsGrid = () => {
@@ -49,35 +52,78 @@ const ProductsGrid = () => {
       image: `https://picsum.photos/300/${
         400 + Math.floor(Math.random() * 200)
       }`,
+      wishlist: Math.random() < 0.5 ? true : false,
     }));
     setProducts([...products, ...moreProducts]);
   };
 
+  const overlayObjects = (item: any) => {
+    const wishlistIcon = item.wishlist
+      ? "addedToWishlist"
+      : "notAddedToWishlist";
+    return (
+      <View style={styles.overlay}>
+        <View style={styles.topTags}>
+          <IconButton iconKey={wishlistIcon} width={16} height={16} />
+        </View>
+        {/* <View style={styles.bottomContent}>
+          <Text style={styles.title}>{item.title}</Text>
+          {item.description ? (
+            <Text style={styles.description}>{item.description}</Text>
+          ) : null}
+          {item.button ? (
+            <TouchableOpacity style={styles.button}>
+              <Text style={styles.buttonText}>{item.button}</Text>
+            </TouchableOpacity>
+          ) : null}
+        </View>  */}
+      </View>
+    );
+  };
+
   return (
-    <MasonryList
-      data={products}
-      keyExtractor={(item, index) => `${item.title}-${index}`}
-      numColumns={numColumns}
-      showsVerticalScrollIndicator={false}
-      renderItem={({ item }) => (
-        <Animated.View entering={Animated.FadeIn} style={styles.card}>
-          <Image
-            source={{ uri: item.image }}
-            style={[styles.image, { height: 150 + Math.random() * 100 }]} // Random heights
-            resizeMode="cover"
-          />
-          <Text style={styles.productTitle} numberOfLines={2}>
-            {item.title}
-          </Text>
-          <Text style={styles.productPrice}>
-            {item.price} . {item.brand}
-          </Text>
-        </Animated.View>
-      )}
-      contentContainerStyle={styles.container}
-      onEndReached={loadMoreProducts}
-      onEndReachedThreshold={0.5}
-    />
+    <>
+      <MasonryList
+        data={products}
+        keyExtractor={(item, index) => `${item.title}-${index}`}
+        numColumns={numColumns}
+        showsVerticalScrollIndicator={false}
+        ListHeaderComponent={
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            <View style={styles.filtersRow}>
+              {["Sort", "Brands", "Products", "More filters"].map(
+                (filter, index) => (
+                  <Chip key={index} style={styles.chip}>
+                    <TouchableOpacity style={styles.filterButton}>
+                      <Text style={styles.filterText}>{filter}</Text>
+                    </TouchableOpacity>
+                  </Chip>
+                )
+              )}
+            </View>
+          </ScrollView>
+        }
+        renderItem={({ item }) => (
+          <Animated.View entering={Animated.FadeIn} style={styles.card}>
+            <Image
+              source={{ uri: item.image }}
+              style={[styles.image, { height: 150 + Math.random() * 100 }]} // Random heights
+              resizeMode="cover"
+            />
+            {overlayObjects(item)}
+            <Text style={styles.productTitle} numberOfLines={2}>
+              {item.title}
+            </Text>
+            <Text style={styles.productPrice}>
+              {item.price} . {item.brand}
+            </Text>
+          </Animated.View>
+        )}
+        contentContainerStyle={styles.container}
+        onEndReached={loadMoreProducts}
+        onEndReachedThreshold={0.5}
+      />
+    </>
   );
 };
 
@@ -98,14 +144,34 @@ const styles = StyleSheet.create({
   },
   image: {
     width: "100%",
-    borderTopLeftRadius: 12,
-    borderTopRightRadius: 12,
+    borderRadius: 12,
   },
   title: {
     padding: 8,
     fontSize: 14,
     fontWeight: "600",
     textAlign: "center",
+  },
+  filtersRow: {
+    flexDirection: "row",
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    backgroundColor: "white",
+  },
+  filterButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 4,
+  },
+  filterText: {
+    fontSize: 12,
+    fontWeight: "500",
+    color: "black",
+  },
+  chip: {
+    marginVertical: 4,
+    backgroundColor: "#f5f5f5",
+    marginHorizontal: 4,
   },
   productTitle: {
     fontSize: 14,
@@ -119,5 +185,18 @@ const styles = StyleSheet.create({
     marginTop: 4,
     marginBottom: 8,
     marginHorizontal: 8,
+  },
+  overlay: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: "space-between",
+    padding: 8,
+  },
+  topTags: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
   },
 });
