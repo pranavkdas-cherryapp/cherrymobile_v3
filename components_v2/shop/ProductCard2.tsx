@@ -89,7 +89,15 @@ const ProductsGrid = () => {
         numColumns={numColumns}
         showsVerticalScrollIndicator={false}
         ListHeaderComponent={
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={{
+              justifyContent: "center",
+              alignItems: "center",
+              paddingHorizontal: 4,
+            }}
+          >
             <View style={styles.filtersRow}>
               {["Sort", "Brands", "Products", "More filters"].map(
                 (filter, index) => (
@@ -154,9 +162,11 @@ const styles = StyleSheet.create({
   },
   filtersRow: {
     flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center", // <-- Center the chips!
     paddingVertical: 10,
     paddingHorizontal: 10,
-    backgroundColor: "white",
+    gap: 8, // optional: nice spacing between chips
   },
   filterButton: {
     flexDirection: "row",
