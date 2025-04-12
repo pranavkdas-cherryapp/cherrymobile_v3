@@ -1,12 +1,14 @@
 import { Tabs } from "expo-router";
 import React from "react";
-import { Platform } from "react-native";
+import { Platform, View } from "react-native";
 
 import { HapticTab } from "@/components/HapticTab";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import TabBarBackground from "@/components/ui/TabBarBackground";
 import { Colors } from "@/constants/Colors";
 import { useColorScheme } from "@/hooks/useColorScheme";
+import { Image } from "expo-image";
+import StyledText from "@/components_v2/common/StyledText";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -18,21 +20,46 @@ export default function TabLayout() {
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
-        tabBarStyle: Platform.select({
-          ios: {
-            // Use a transparent background on iOS to show the blur effect
-            position: "absolute",
-          },
-          default: {},
-        }),
+        // tabBarStyle: Platform.select({
+        //   ios: {
+        //     // Use a transparent background on iOS to show the blur effect
+        //     position: "absolute",
+        //   },
+        //   default: {},
+        // }),
+        tabBarStyle: {
+          height: Platform.OS === "android" ? 60 : 100,
+        },
       }}
     >
       <Tabs.Screen
         name="home"
         options={{
           title: "Home",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="house.fill" color={color} />
+          tabBarShowLabel: false,
+          tabBarIcon: ({ focused }) => (
+            <View
+              style={{
+                alignItems: "center",
+                justifyContent: "center",
+                marginTop: 20,
+                width: 40,
+              }}
+            >
+              {focused ? (
+                <Image
+                  style={{ height: 24, width: 24 }}
+                  source={require("@/assets/images/tabs/home_selected.png")}
+                />
+              ) : (
+                <Image
+                  style={{ height: 24, width: 24 }}
+                  source={require("@/assets/images/tabs/home.png")}
+                  contentFit="contain"
+                />
+              )}
+              <StyledText preset={"consentText"}>Home</StyledText>
+            </View>
           ),
         }}
       />
@@ -40,8 +67,29 @@ export default function TabLayout() {
         name="shop"
         options={{
           title: "Shop",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="paperplane.fill" color={color} />
+          tabBarShowLabel: false,
+          tabBarIcon: ({ focused }) => (
+            <View
+              style={{
+                alignItems: "center",
+                justifyContent: "center",
+                marginTop: 20,
+                width: 60,
+              }}
+            >
+              {focused ? (
+                <Image
+                  style={{ height: 30, width: 24 }}
+                  source={require("@/assets/images/tabs/shop_selected.png")}
+                />
+              ) : (
+                <Image
+                  style={{ height: 24, width: 24 }}
+                  source={require("@/assets/images/tabs/shop.png")}
+                />
+              )}
+              <StyledText preset={"consentText"}>Shop</StyledText>
+            </View>
           ),
         }}
       />
@@ -49,8 +97,29 @@ export default function TabLayout() {
         name="cashback"
         options={{
           title: "Cashback",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="paperplane.fill" color={color} />
+          tabBarShowLabel: false,
+          tabBarIcon: ({ focused }) => (
+            <View
+              style={{
+                alignItems: "center",
+                justifyContent: "center",
+                marginTop: 20,
+                width: 60,
+              }}
+            >
+              {focused ? (
+                <Image
+                  style={{ height: 24, width: 24 }}
+                  source={require("@/assets/images/tabs/discount_selected.png")}
+                />
+              ) : (
+                <Image
+                  style={{ height: 24, width: 24 }}
+                  source={require("@/assets/images/tabs/discount.png")}
+                />
+              )}
+              <StyledText preset={"consentText"}>Cashback</StyledText>
+            </View>
           ),
         }}
       />
@@ -58,8 +127,31 @@ export default function TabLayout() {
         name="profile"
         options={{
           title: "Profile",
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="paperplane.fill" color={color} />
+          tabBarShowLabel: false,
+          tabBarIcon: ({ focused }) => (
+            <View
+              style={{
+                alignItems: "center",
+                justifyContent: "center",
+                marginTop: 20,
+                width: 40,
+              }}
+            >
+              {focused ? (
+                <Image
+                  style={{ height: 24, width: 24 }}
+                  contentFit="contain"
+                  source={require("@/assets/images/tabs/profile_selected.png")}
+                />
+              ) : (
+                <Image
+                  style={{ height: 24, width: 24 }}
+                  contentFit="contain"
+                  source={require("@/assets/images/tabs/profile.png")}
+                />
+              )}
+              <StyledText preset={"consentText"}>Profile</StyledText>
+            </View>
           ),
         }}
       />

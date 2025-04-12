@@ -1,9 +1,10 @@
 import * as React from "react";
 import { View, Text, StyleSheet, Dimensions, Image } from "react-native";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
+import { MaterialCommunityIcons, Feather, Ionicons } from "@expo/vector-icons";
 
 const products = {
-  Fashion: [
+  fashion: [
     "Tshirt",
     "Shirt",
     "Jeans",
@@ -14,7 +15,7 @@ const products = {
     "Skirt",
     "Leggings",
   ],
-  Beauty: [
+  beauty: [
     "Lipstick",
     "Foundation",
     "Blush",
@@ -25,7 +26,7 @@ const products = {
     "Nail Polish",
     "Face Serum",
   ],
-  Accessories: [
+  accessories: [
     "Bags",
     "Jewelry",
     "Belts",
@@ -36,6 +37,45 @@ const products = {
     "Wallets",
     "Hair Accessories",
   ],
+};
+
+const productIcons = {
+  fashion: {
+    Tshirt: { name: "tshirt-crew", set: "MaterialCommunityIcons" },
+    Shirt: { name: "shirt", set: "Ionicons" },
+    Jeans: { name: "hanger", set: "MaterialCommunityIcons" },
+    Corset: { name: "hanger", set: "MaterialCommunityIcons" },
+    "Co-ord set": { name: "wardrobe", set: "MaterialCommunityIcons" },
+    "Inner wear": { name: "underwear-outline", set: "MaterialCommunityIcons" },
+    Shorts: { name: "shorts", set: "MaterialCommunityIcons" },
+    Skirt: { name: "hanger", set: "MaterialCommunityIcons" },
+    Leggings: { name: "hanger", set: "MaterialCommunityIcons" },
+  },
+  beauty: {
+    Lipstick: { name: "lipstick", set: "MaterialCommunityIcons" },
+    Foundation: { name: "spray-bottle", set: "MaterialCommunityIcons" },
+    Blush: { name: "brush", set: "Feather" },
+    Mascara: { name: "brush", set: "Feather" },
+    Eyeliner: { name: "eyedropper", set: "Feather" },
+    Highlighter: { name: "brush", set: "Feather" },
+    Concealer: { name: "bottle-tonic", set: "MaterialCommunityIcons" },
+    "Nail Polish": { name: "nail", set: "MaterialCommunityIcons" },
+    "Face Serum": { name: "bottle-tonic", set: "MaterialCommunityIcons" },
+  },
+  accessories: {
+    Bags: { name: "bag-personal", set: "MaterialCommunityIcons" },
+    Jewelry: { name: "diamond-stone", set: "MaterialCommunityIcons" },
+    Belts: { name: "belt", set: "MaterialCommunityIcons" },
+    Hats: { name: "hat-fedora", set: "MaterialCommunityIcons" },
+    Sunglasses: { name: "sunglasses", set: "MaterialCommunityIcons" },
+    Scarves: { name: "scarf", set: "MaterialCommunityIcons" },
+    Watches: { name: "watch", set: "Feather" },
+    Wallets: { name: "wallet", set: "Feather" },
+    "Hair Accessories": {
+      name: "hair-dryer-outline",
+      set: "MaterialCommunityIcons",
+    },
+  },
 };
 
 export default function CategoryTabs() {
@@ -54,97 +94,174 @@ export default function CategoryTabs() {
     setContentHeight(height);
   };
 
-  const renderTabContent = (routeKey: string) => () =>
-    (
+  const renderScene = ({ route }: { route: { key: string } }) => {
+    return (
       <View
         ref={contentRef}
         onLayout={handleLayout}
         style={styles.productsGrid}
       >
-        {products[routeKey as keyof typeof products].map((product, index) => (
+        {products[route.key as keyof typeof products].map((product, index) => (
           <View key={index} style={styles.productCard}>
-            <Image
-              source={{ uri: "https://placehold.co/102x104" }}
-              style={styles.productImage}
-              resizeMode="contain"
-            />
+            <View style={styles.iconContainer}>
+              {productIcons[route.key][product].set ===
+              "MaterialCommunityIcons" ? (
+                <MaterialCommunityIcons
+                  name={productIcons[route.key][product].name}
+                  size={64}
+                  color="black"
+                  style={styles.productIcon}
+                />
+              ) : productIcons[route.key][product].set === "Feather" ? (
+                <Feather
+                  name={productIcons[route.key][product].name}
+                  size={64}
+                  color="black"
+                  style={styles.productIcon}
+                />
+              ) : productIcons[route.key][product].set === "Ionicons" ? (
+                <Ionicons
+                  name={productIcons[route.key][product].name}
+                  size={64}
+                  color="black"
+                  style={styles.productIcon}
+                />
+              ) : (
+                <Image
+                  source={{ uri: "https://placehold.co/600x400" }}
+                  style={styles.productIcon}
+                  resizeMode="contain"
+                />
+              )}
+            </View>
             <Text style={styles.productName}>{product}</Text>
           </View>
         ))}
       </View>
     );
+  };
 
-  const renderScene = SceneMap({
-    fashion: renderTabContent("Fashion"),
-    beauty: renderTabContent("Beauty"),
-    accessories: renderTabContent("Accessories"),
-  });
+  // const renderTabBar = (props: any) => (
+  //   <TabBar
+  //     {...props}
+  //     renderLabel={({ route, focused, color }) => (
+  //       <Text
+  //         style={{
+  //           fontSize: 12,
+  //           fontWeight: "bold",
+  //           color: color,
+  //           textAlign: "center",
+  //           includeFontPadding: false, // Android fix
+  //           textTransform: "none",
+  //         }}
+  //         numberOfLines={1}
+  //         allowFontScaling={false} // prevent device font scaling
+  //       >
+  //         {route.title}
+  //       </Text>
+  //     )}
+  //     indicatorStyle={{
+  //       backgroundColor: "#f3f3f3",
+  //       borderRadius: 30,
+  //       height: "80%",
+  //       margin: 4,
+  //     }}
+  //     style={{
+  //       margin: 10,
+  //       width: 288,
+  //       alignSelf: "center",
+  //       backgroundColor: "#ffffff",
+  //       borderRadius: 30,
+  //       borderColor: "#f3f3f3",
+  //       borderWidth: 1,
+  //     }}
+  //     tabStyle={{
+  //       borderRadius: 30,
+  //     }}
+  //     labelStyle={{
+  //       fontWeight: "bold",
+  //       fontSize: 12,
+  //       textTransform: "none",
+  //     }}
+  //     contentContainerStyle={{
+  //       width: "100%",
+  //     }}
+  //     activeColor="black"
+  //     inactiveColor="black"
+  //     pressColor="transparent"
+  //   />
+  // );
 
-  const renderTabBar = (props: any) => (
+  const renderTabBar = (props) => (
     <TabBar
       {...props}
-      renderLabel={({ route, focused, color }) => (
-        <Text
-          style={{
-            fontSize: 12, // 👈 forced here
-            fontWeight: "bold",
-            color: color,
-            textAlign: "center",
-            includeFontPadding: false, // Android fix
-            textTransform: "none",
-          }}
-          numberOfLines={1}
-          allowFontScaling={false} // prevent device font scaling
-        >
-          {route.title}
-        </Text>
-      )}
-      indicatorStyle={{
-        backgroundColor: "#f3f3f3",
-        borderRadius: 30,
-        height: "80%",
-        margin: 4,
-      }}
-      style={{
-        margin: 10,
-        width: 288,
-        alignSelf: "center",
-        backgroundColor: "#ffffff",
-        borderRadius: 30,
-        borderColor: "#f3f3f3",
-        borderWidth: 1,
-      }}
-      tabStyle={{
-        borderRadius: 30,
-      }}
-      labelStyle={{
-        fontWeight: "bold",
-        fontSize: 12,
-        textTransform: "none",
-      }}
-      contentContainerStyle={{
-        width: "100%",
-      }}
-      activeColor="black"
-      inactiveColor="black"
-      pressColor="transparent"
+      indicatorStyle={styles.indicator}
+      style={styles.tabBar}
+      tabStyle={styles.tab}
+      labelStyle={styles.label}
+      activeColor="#000000"
+      inactiveColor="#666666"
     />
   );
 
   return (
-    <View style={{ height: contentHeight + 50 }}>
+    <View>
       <TabView
         navigationState={{ index, routes }}
         renderScene={renderScene}
         onIndexChange={setIndex}
         initialLayout={{ width: Dimensions.get("window").width }}
         renderTabBar={renderTabBar}
+        style={{ height: contentHeight + 80 }}
       />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  tabBar: {
+    backgroundColor: "white",
+    elevation: 1,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 3,
+    borderRadius: 30,
+    margin: 10,
+    height: 50,
+  },
+  tab: {
+    paddingHorizontal: 0,
+    paddingVertical: 0,
+  },
+  // tabItem: {
+  //   paddingHorizontal: 16,
+  //   paddingVertical: 8,
+  //   borderRadius: 30,
+  // },
+  // activeTabItem: {
+  //   backgroundColor: "#F5F5F5",
+  // },
+  // tabLabel: {
+  //   color: "#888",
+  //   fontSize: 12,
+  //   fontWeight: "500",
+  //   textAlign: "center",
+  // },
+  // activeTabLabel: {
+  //   color: "#000",
+  // },
+  label: {
+    fontSize: 12,
+    fontWeight: "500",
+    textTransform: "none",
+  },
+  indicator: {
+    backgroundColor: "#F3F3F3",
+    height: "70%",
+    borderRadius: 30,
+    marginBottom: 8,
+  },
   productsGrid: {
     flexDirection: "row",
     flexWrap: "wrap",
@@ -165,14 +282,26 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#e0e0e0",
   },
+  iconContainer: {
+    alignItems: "center", // Align icon in the center
+    justifyContent: "center", // Center content vertically as well
+    marginBottom: 8, // Spacing between icon and product name
+  },
   productName: {
     fontSize: 12,
     fontWeight: "bold",
     textAlign: "center",
+    marginTop: 8,
   },
   productImage: {
     width: 90,
     height: 98,
     borderRadius: 12,
+    borderColor: "red",
+    borderWidth: 1,
+  },
+  productIcon: {
+    width: 64,
+    height: 64,
   },
 });

@@ -5,10 +5,9 @@ import {
   Text,
   TouchableOpacity,
   StyleSheet,
-  Image,
+  Platform,
   ScrollView,
 } from "react-native";
-import { Ionicons, Feather } from "@expo/vector-icons";
 import IconButton from "@/components_v2/common/IconButton";
 import { Searchbar } from "react-native-paper";
 import { router } from "expo-router";
@@ -24,90 +23,99 @@ export default function HomeScreen() {
   const searchbarRef = useRef<typeof Searchbar>(null);
 
   return (
-    <View style={styles.container}>
-      <View style={styles.searchContainer}>
-        <SearchInputBar
-          isSearchActive={isSearchActive}
-          searchbarRef={searchbarRef}
-          searchQuery={searchQuery}
-          setSearchQuery={setSearchQuery}
-          onSearchFocus={() => setIsSearchActive(true)}
-          onSearchBlur={() => setIsSearchActive(false)}
-          containerStyle={styles.searchInput}
-        />
-        <View style={styles.searchIcons}>
-          <IconButton iconKey="wishlist" width={28} height={28} />
-          <IconButton iconKey="help" width={28} height={28} />
-        </View>
-      </View>
-
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={styles.membershipCard}>
-          <View style={styles.membershipHeader}>
-            <IconButton iconKey="goldBadge" width={26} height={30} />
-            <Text style={styles.membershipTitle}>Cherry Gold Member</Text>
-          </View>
-          <Text style={styles.moneySavedLabel}>Money Saved</Text>
-
-          <View style={styles.membershipDetails}>
-            <Text style={styles.moneySavedAmount}>₹1,200</Text>
-            <TouchableOpacity style={styles.shopButton}>
-              <Text style={styles.shopButtonText}>Shop →</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-
-        {/* Action Cards */}
-        <View style={styles.actionCardsContainer}>
-          <HomeActionCard
-            title="What to do?"
-            subtitle="Shop, post, earn"
-            imageSource={require("@/assets/images/what-todo.png")}
-            onPress={() => null}
-            containerStyle={styles.actionCardLeft}
-            imageStyle={styles.actionCardLeftImage}
+    <SafeAreaView style={styles.safeArea}>
+      <View style={styles.container}>
+        <View style={styles.searchContainer}>
+          <SearchInputBar
+            isSearchActive={isSearchActive}
+            searchbarRef={searchbarRef}
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+            onSearchFocus={() => setIsSearchActive(true)}
+            onSearchBlur={() => setIsSearchActive(false)}
+            containerStyle={styles.searchInput}
           />
-          <View style={{ flex: 1 }}>
-            <HomeActionCard
-              title="Where will I get?"
-              subtitle="UPI account"
-              imageSource={require("../../assets/images/guard.png")}
-              onPress={() => null}
-              containerStyle={styles.actionCardTopRight}
-              imageStyle={styles.actionCardTopRightImage}
-            />
-            <HomeActionCard
-              title="How much?"
-              subtitle="Calculate now!"
-              imageSource={require("@/assets/images/coins.png")}
-              onPress={() => null}
-              containerStyle={styles.actionCardBottomRight}
-              imageStyle={styles.actionCardBottomRightImage}
-            />
+          <View style={styles.searchIcons}>
+            <IconButton iconKey="wishlist" width={28} height={28} />
+            <IconButton iconKey="help" width={28} height={28} />
           </View>
         </View>
-        <HomeActionCard
-          title="Our wall of love"
-          imageSource={require("@/assets/images/reviews-stars.png")}
-          subtitle="Reviews from our happy users"
-          onPress={() => null}
-          containerStyle={styles.reviewActionCard}
-          imageStyle={styles.reviewActionCardImage}
-        />
-        <ShopByCategory />
-        <CategoryTabs />
-        <Collections />
-      </ScrollView>
-    </View>
+
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View style={styles.membershipCard}>
+            <View style={styles.membershipHeader}>
+              <IconButton iconKey="goldBadge" width={26} height={30} />
+              <Text style={styles.membershipTitle}>Cherry Gold Member</Text>
+            </View>
+            <Text style={styles.moneySavedLabel}>Money Saved</Text>
+
+            <View style={styles.membershipDetails}>
+              <Text style={styles.moneySavedAmount}>₹1,200</Text>
+              <TouchableOpacity
+                style={styles.shopButton}
+                onPress={() => router.push("/shop")}
+              >
+                <Text style={styles.shopButtonText}>Shop →</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+
+          {/* Action Cards */}
+          <View style={styles.actionCardsContainer}>
+            <HomeActionCard
+              title="What to do?"
+              subtitle="Shop, post, earn"
+              imageSource={require("@/assets/images/what-todo.png")}
+              onPress={() => null}
+              containerStyle={styles.actionCardLeft}
+              imageStyle={styles.actionCardLeftImage}
+            />
+            <View style={{ flex: 1 }}>
+              <HomeActionCard
+                title="Where will I get?"
+                subtitle="UPI account"
+                imageSource={require("../../assets/images/guard.png")}
+                onPress={() => null}
+                containerStyle={styles.actionCardTopRight}
+                imageStyle={styles.actionCardTopRightImage}
+              />
+              <HomeActionCard
+                title="How much?"
+                subtitle="Calculate now!"
+                imageSource={require("@/assets/images/coins.png")}
+                onPress={() => null}
+                containerStyle={styles.actionCardBottomRight}
+                imageStyle={styles.actionCardBottomRightImage}
+              />
+            </View>
+          </View>
+          <HomeActionCard
+            title="Our wall of love"
+            imageSource={require("@/assets/images/reviews-stars.png")}
+            subtitle="Reviews from our happy users"
+            onPress={() => null}
+            containerStyle={styles.reviewActionCard}
+            imageStyle={styles.reviewActionCardImage}
+          />
+          <ShopByCategory />
+          <CategoryTabs />
+          <Collections />
+        </ScrollView>
+      </View>
+    </SafeAreaView>
   );
 }
 
 // Styles
 const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    backgroundColor: "#fff",
+  },
   container: {
     flex: 1,
+    paddingTop: Platform.OS === "ios" ? 20 : 30,
     paddingHorizontal: 20,
-    backgroundColor: "#fff",
   },
   searchContainer: {
     flexDirection: "row",
@@ -132,7 +140,7 @@ const styles = StyleSheet.create({
     height: 20,
   },
   membershipCard: {
-    height: 160,
+    height: 180,
     backgroundColor: "#000",
     borderRadius: 20,
     padding: 20,
@@ -161,7 +169,7 @@ const styles = StyleSheet.create({
   },
   shopButton: {
     width: 77,
-    height: 26,
+    height: 36,
     backgroundColor: "white",
     padding: 10,
     borderRadius: 10,

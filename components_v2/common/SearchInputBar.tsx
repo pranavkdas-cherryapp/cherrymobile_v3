@@ -22,6 +22,7 @@ interface SearchInputBarProps {
   searchBarStyle?: StyleProp<ViewStyle>;
   inputStyle?: StyleProp<TextStyle>;
   placeholderStyle?: StyleProp<TextStyle>;
+  onClearIconPress?: () => void;
 }
 
 const SearchInputBar: React.FC<SearchInputBarProps> = ({
@@ -35,6 +36,7 @@ const SearchInputBar: React.FC<SearchInputBarProps> = ({
   searchBarStyle,
   inputStyle,
   placeholderStyle,
+  onClearIconPress,
 }) => {
   return (
     <TouchableOpacity
@@ -62,6 +64,7 @@ const SearchInputBar: React.FC<SearchInputBarProps> = ({
         onChangeText={setSearchQuery}
         style={[styles.searchBar, searchBarStyle]}
         inputStyle={[styles.searchInput, inputStyle]}
+        onClearIconPress={onClearIconPress}
       />
       {searchQuery === "" && !isSearchActive && (
         <StyledText

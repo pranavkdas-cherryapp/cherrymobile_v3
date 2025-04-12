@@ -1,22 +1,25 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   SafeAreaView,
   View,
   Text,
   TouchableOpacity,
   StyleSheet,
-  Image,
+  Platform,
   ScrollView,
   Dimensions,
 } from "react-native";
 import IconButton from "@/components_v2/common/IconButton";
 import { Chip, Searchbar } from "react-native-paper";
-import { router } from "expo-router";
+import { useLocalSearchParams, router } from "expo-router";
 import SearchInputBar from "@/components_v2/common/SearchInputBar";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import ProductsGrid from "@/components_v2/shop/ProductCard2";
+import SearchActiveShopScreen from "@/components_v2/shop/SearchActive";
 
 export default function ShopScreen() {
+  const { queryParams } = useLocalSearchParams();
+
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearchActive, setIsSearchActive] = useState(false);
   const searchbarRef = useRef<typeof Searchbar>(null);
@@ -36,6 +39,20 @@ export default function ShopScreen() {
     entertainment: ProductsGrid,
   });
 
+  useEffect(() => {
+    if (queryParams && typeof queryParams === "string")
+      setSearchQuery(queryParams);
+  }, [queryParams]);
+
+  const handleSearchSubmit = (newQuery: string) => {
+    setIsSearchActive(false);
+    if (newQuery) {
+      router.push(`/shop?queryParams=${encodeURIComponent(newQuery)}`);
+    } else {
+      router.push("/shop");
+    }
+  };
+
   const renderTabBar = (props: any) => (
     <View>
       <TabBar
@@ -44,7 +61,10 @@ export default function ShopScreen() {
         style={styles.tabBar}
         labelStyle={styles.tabLabel}
         tabStyle={{ width: "auto", paddingHorizontal: 10 }}
-        contentContainerStyle={{ justifyContent: "center" }}
+        contentContainerStyle={{
+          justifyContent: "center",
+          paddingHorizontal: 20,
+        }}
         activeColor="black"
         inactiveColor="gray"
         pressColor="transparent"
@@ -53,38 +73,53 @@ export default function ShopScreen() {
   );
 
   return (
-    <View style={styles.container}>
-      <View style={styles.searchContainer}>
-        <SearchInputBar
-          isSearchActive={isSearchActive}
-          searchbarRef={searchbarRef}
-          searchQuery={searchQuery}
-          setSearchQuery={setSearchQuery}
-          onSearchFocus={() => setIsSearchActive(true)}
-          onSearchBlur={() => setIsSearchActive(false)}
-          containerStyle={styles.searchInput}
-        />
-        <View style={styles.searchIcons}>
-          <IconButton iconKey="wishlist" width={28} height={28} />
-          <IconButton iconKey="help" width={28} height={28} />
+    <SafeAreaView style={styles.safeArea}>
+      <View style={styles.container}>
+        <View style={styles.searchContainer}>
+          <SearchInputBar
+            isSearchActive={isSearchActive}
+            searchbarRef={searchbarRef}
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+            onSearchFocus={() => setIsSearchActive(true)}
+            onSearchBlur={() => handleSearchSubmit(searchQuery)}
+            containerStyle={styles.searchInput}
+            onClearIconPress={() => handleSearchSubmit("")}
+          />
+          {!isSearchActive && (
+            <View style={styles.searchIcons}>
+              <IconButton iconKey="wishlist" width={28} height={28} />
+              <IconButton iconKey="help" width={28} height={28} />
+            </View>
+          )}
         </View>
+        {isSearchActive ? (
+          <SearchActiveShopScreen />
+        ) : (
+          <TabView
+            navigationState={{ index, routes }}
+            renderScene={renderScene}
+            onIndexChange={setIndex}
+            initialLayout={{ width: Dimensions.get("window").width }}
+            renderTabBar={renderTabBar}
+          />
+        )}
       </View>
-      <TabView
-        navigationState={{ index, routes }}
-        renderScene={renderScene}
-        onIndexChange={setIndex}
-        initialLayout={{ width: Dimensions.get("window").width }}
-        renderTabBar={renderTabBar}
-      />
-    </View>
+    </SafeAreaView>
   );
 }
 
 // Styles
 const styles = StyleSheet.create({
-  container: {
+  safeArea: {
     flex: 1,
     backgroundColor: "#fff",
+  },
+  container: {
+    flex: 1,
+    paddingTop: Platform.OS === "ios" ? 20 : 30,
+    // paddingHorizontal: 20,
+    // backgroundColor: "#fff",
   },
   searchContainer: {
     flexDirection: "row",
