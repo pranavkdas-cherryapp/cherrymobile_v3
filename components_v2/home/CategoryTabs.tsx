@@ -192,17 +192,22 @@ export default function CategoryTabs() {
   //   />
   // );
 
-  const renderTabBar = (props) => (
-    <TabBar
-      {...props}
-      indicatorStyle={styles.indicator}
-      style={styles.tabBar}
-      tabStyle={styles.tab}
-      labelStyle={styles.label}
-      activeColor="#000000"
-      inactiveColor="#666666"
-    />
-  );
+  const renderTabBar = (props) => {
+    return (
+      <View style={styles.tabBarContainer}>
+        <TabBar
+          {...props}
+          indicatorStyle={styles.indicator}
+          style={styles.tabBar}
+          tabStyle={styles.tab}
+          labelStyle={styles.label}
+          activeColor="#000000"
+          inactiveColor="#666666"
+          indicatorContainerStyle={styles.indicatorContainer}
+        />
+      </View>
+    );
+  };
 
   return (
     <View>
@@ -219,7 +224,7 @@ export default function CategoryTabs() {
 }
 
 const styles = StyleSheet.create({
-  tabBar: {
+  tabBarContainer: {
     backgroundColor: "white",
     elevation: 1,
     shadowColor: "#000",
@@ -230,27 +235,22 @@ const styles = StyleSheet.create({
     margin: 10,
     height: 50,
   },
+  tabBar: {
+    backgroundColor: "white",
+    elevation: 1,
+    // shadowColor: "#000",
+    // shadowOffset: { width: 0, height: 1 },
+    // shadowOpacity: 0.1,
+    // shadowRadius: 3,
+    // borderColor: "white",
+    borderRadius: 30,
+    margin: 10,
+    height: 30,
+  },
   tab: {
     paddingHorizontal: 0,
     paddingVertical: 0,
   },
-  // tabItem: {
-  //   paddingHorizontal: 16,
-  //   paddingVertical: 8,
-  //   borderRadius: 30,
-  // },
-  // activeTabItem: {
-  //   backgroundColor: "#F5F5F5",
-  // },
-  // tabLabel: {
-  //   color: "#888",
-  //   fontSize: 12,
-  //   fontWeight: "500",
-  //   textAlign: "center",
-  // },
-  // activeTabLabel: {
-  //   color: "#000",
-  // },
   label: {
     fontSize: 12,
     fontWeight: "500",
@@ -258,17 +258,19 @@ const styles = StyleSheet.create({
   },
   indicator: {
     backgroundColor: "#F3F3F3",
-    height: "70%",
+    height: "100%",
     borderRadius: 30,
-    marginBottom: 8,
+    maxWidth: "80%",
+  },
+  indicatorContainer: {
+    paddingHorizontal: 8, // Extra container padding
+    zIndex: 0,
   },
   productsGrid: {
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
-    paddingHorizontal: 16,
-    paddingTop: 16,
-    paddingBottom: 16,
+    padding: 16,
   },
   productCard: {
     height: 120,
