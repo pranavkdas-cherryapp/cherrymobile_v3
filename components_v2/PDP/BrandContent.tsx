@@ -1,76 +1,11 @@
 import StyledText from "@/components_v2/common/StyledText";
-// import { Divider } from "@/components_v2/common/Divider";
+import { Divider } from "react-native-paper";
 import { View, TouchableOpacity, StyleSheet } from "react-native";
 import { router } from "expo-router";
 import { MaterialIcons } from "@expo/vector-icons";
 import ProductList from "@/components_v2/PDP/ProductList";
+import { Product, brandDetails } from "@/components_v2/PDP/BrandDetails";
 
-const brandDetails = {
-  brandDetailsMeta: {
-    brandId: "67de68e9304dfe15b3244f64",
-    brandType: "CASHBACK",
-    category: {
-      description: "Skincare and makeup products",
-      id: "670014ae73fb1b5ab9355638",
-      name: "Beauty",
-    },
-    description: "Skin-loving, high quality SPF that you actually want to wear",
-    discountPercentage: 60,
-    instagramHandle: "52sundaze_",
-    instagramImageOne:
-      "https://cherry-meta.s3.ap-south-1.amazonaws.com/52+Sundaez_insta.png",
-    instagramImageSecond: null,
-    logo: "https://cherry-meta.s3.ap-south-1.amazonaws.com/52+Sundaez_logo.png",
-    maxDiscount: 1500,
-    name: "52 Sundaze",
-    offerDescription: null,
-    offerDiscountPercentage: null,
-    offerMaxDiscount: null,
-    offerType: null,
-    postDiscountMeta: {
-      discountPercentage: 60,
-      maxDiscount: 1500,
-      offerDiscountPercentage: null,
-    },
-    priceLevel: null,
-    primaryImage:
-      "https://cherry-meta.s3.ap-south-1.amazonaws.com/52+Sundaez_Cover.png",
-    products: null,
-    reelDiscountMeta: {
-      discountPercentage: 60,
-      maxDiscount: 1500,
-      offerDiscountPercentage: null,
-    },
-    shopifyHandles: [
-      "spf50-collagen-glow",
-      "spf-50-rice-sun-mist",
-      "spf-glow-kit-rose",
-      "spf-50-sun-milk-multi-active-creme",
-      "spf50-clear-glow-spf-mist-with-rosewater",
-    ],
-    storyDiscountMeta: {
-      discountPercentage: 40,
-      maxDiscount: 750,
-      offerDiscountPercentage: null,
-    },
-    styles: null,
-    website: "52sundaze.com",
-  },
-  couponCodeRef: null,
-  lastTransactionRef: null,
-};
-interface Product {
-  data: {
-    product: {
-      title: string;
-      images: Array<{ src: string }>;
-      variants: Array<{ price: string }>;
-    };
-  };
-  productId: string;
-  success: boolean;
-  error: string | null;
-}
 export default function BrandContent({ products }: { products: Product[] }) {
   const isNewMeBrand =
     brandDetails?.brandDetailsMeta?.brandId === "670783af1da35d67bc57a357";
@@ -89,7 +24,7 @@ export default function BrandContent({ products }: { products: Product[] }) {
       >
         {brandDetails?.brandDetailsMeta?.description}
       </StyledText>
-      {/* <Divider style={styles.divider} /> */}
+      <Divider style={styles.divider} />
     </>
   );
 
@@ -147,7 +82,17 @@ export default function BrandContent({ products }: { products: Product[] }) {
   const shouldShowDescription = products.length === 0;
 
   return (
-    <>
+    <View style={{ flex: 1, backgroundColor: "white" }}>
+      <StyledText
+        style={{
+          fontSize: 16,
+          fontWeight: "600",
+          paddingTop: 16,
+          paddingHorizontal: 12,
+        }}
+      >
+        More from {brandDetails?.brandDetailsMeta?.name}
+      </StyledText>
       <ProductList
         products={products}
         storyDiscountMeta={brandDetails?.brandDetailsMeta?.storyDiscountMeta}
@@ -156,7 +101,7 @@ export default function BrandContent({ products }: { products: Product[] }) {
         }
       />
       {shouldShowDescription && renderDescription()}
-    </>
+    </View>
   );
 }
 
