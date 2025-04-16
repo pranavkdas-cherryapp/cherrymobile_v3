@@ -7,11 +7,13 @@ import {
   Dimensions,
   TouchableOpacity,
   ScrollView,
+  Pressable,
 } from "react-native";
 import MasonryList from "@react-native-seoul/masonry-list";
 import Animated from "react-native-reanimated";
 import IconButton from "@/components_v2/common/IconButton";
 import { Chip } from "react-native-paper";
+import { router } from "expo-router";
 
 const sampleProducts = Array.from({ length: 50 }).map((_, index) => ({
   id: index.toString(),
@@ -20,6 +22,7 @@ const sampleProducts = Array.from({ length: 50 }).map((_, index) => ({
   brand: "Brand Name",
   image: `https://picsum.photos/300/${400 + Math.floor(Math.random() * 200)}`,
   wishlist: Math.random() < 0.5 ? true : false,
+  url: "/onboarding",
 }));
 
 const ProductsGrid = () => {
@@ -53,6 +56,7 @@ const ProductsGrid = () => {
         400 + Math.floor(Math.random() * 200)
       }`,
       wishlist: Math.random() < 0.5 ? true : false,
+      url: "/onboarding",
     }));
     setProducts([...products, ...moreProducts]);
   };
@@ -112,20 +116,23 @@ const ProductsGrid = () => {
           </ScrollView>
         }
         renderItem={({ item }) => (
-          <Animated.View entering={Animated.FadeIn} style={styles.card}>
-            <Image
-              source={{ uri: item.image }}
-              style={[styles.image, { height: 150 + Math.random() * 100 }]} // Random heights
-              resizeMode="cover"
-            />
-            {overlayObjects(item)}
-            <Text style={styles.productTitle} numberOfLines={2}>
-              {item.title}
-            </Text>
-            <Text style={styles.productPrice}>
-              {item.price} . {item.brand}
-            </Text>
-          </Animated.View>
+          <Pressable onPress={() => router.push(item.url)}>
+            {console.log(item)}
+            <Animated.View entering={Animated.FadeIn} style={styles.card}>
+              <Image
+                source={{ uri: item.image }}
+                style={[styles.image, { height: 150 + Math.random() * 100 }]} // Random heights
+                resizeMode="cover"
+              />
+              {overlayObjects(item)}
+              <Text style={styles.productTitle} numberOfLines={2}>
+                {item.title}
+              </Text>
+              <Text style={styles.productPrice}>
+                {item.price} . {item.brand}
+              </Text>
+            </Animated.View>
+          </Pressable>
         )}
         contentContainerStyle={styles.container}
         onEndReached={loadMoreProducts}

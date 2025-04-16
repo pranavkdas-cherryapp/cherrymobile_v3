@@ -10,6 +10,7 @@ import {
   Platform,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { router } from "expo-router";
 
 const { width } = Dimensions.get("window");
 
@@ -45,7 +46,7 @@ export default function ProductDetailScreen() {
           paddingTop: Platform.OS === "ios" ? 30 : 50, //Should be overlay and not sequential
         }}
       >
-        <Ionicons name="arrow-back" size={24} />
+        <Ionicons name="arrow-back" size={24} onPress={() => router.back()} />
         <View style={{ flexDirection: "row", gap: 10 }}>
           <Ionicons name="heart-outline" size={24} />
           <Ionicons name="share-social-outline" size={24} />
