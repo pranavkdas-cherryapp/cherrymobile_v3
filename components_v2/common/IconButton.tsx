@@ -8,6 +8,7 @@ import BronzeIcon from "@/assets/icons/cherry-bronze-icon.svg";
 import DiamondIcon from "@/assets/icons/cherry-diamond-icon.svg";
 import AddedToWishlistIcon from "@/assets/icons/added-to-wishlist-icon.svg";
 import NotAddedToWishlistIcon from "@/assets/icons/not-added-to-wishlist-icon.svg";
+import GoToNextPageIcon from "@/assets/icons/go-to-next-page-icon.svg";
 
 const iconsList = {
   wishlist: WishlistIcon,
@@ -19,6 +20,7 @@ const iconsList = {
   diamondBadge: DiamondIcon,
   addedToWishlist: AddedToWishlistIcon,
   notAddedToWishlist: NotAddedToWishlistIcon,
+  goToNextPage: GoToNextPageIcon,
 };
 
 type IconKey = keyof typeof iconsList;

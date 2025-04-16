@@ -1,7 +1,8 @@
-import { Text, View } from 'react-native';
+import { Text, View } from "react-native";
+import Main from "@/components_v2/PDP/Main";
 
 const OnboardingScreen = () => {
-  return <View><Text>"Hi" </Text></View>
-}
+  return <Main />;
+};
 
 export default OnboardingScreen;

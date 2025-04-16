@@ -1,78 +1,59 @@
-import React, { useMemo, useState, useEffect } from "react";
-import { View, Text, Image, StyleSheet, Dimensions } from "react-native";
-import MasonryList from "@react-native-seoul/masonry-list";
-import Animated from "react-native-reanimated";
+import React, { useState, useRef } from "react";
+import { SafeAreaView, View, StyleSheet, Platform } from "react-native";
+import IconButton from "@/components_v2/common/IconButton";
+import { Searchbar } from "react-native-paper";
+import SearchInputBar from "@/components_v2/common/SearchInputBar";
+import ListWithAlphabetScroll from "@/components_v2/cashback/ListWithAlphabetScroll";
 
-const sampleProducts = Array.from({ length: 50 }).map((_, idx) => ({
-  name: `Product ${idx + 1}`,
-  image: `https://placehold.co/300x${200 + (idx % 5) * 30}`,
-}));
-
-const ProductsGrid = () => {
-  const [numColumns, setNumColumns] = useState(2);
-
-  useEffect(() => {
-    const calculateColumns = () => {
-      const screenWidth = Dimensions.get("window").width;
-      const columnWidth = 180; // Your desired card width
-      const columns = Math.max(2, Math.floor(screenWidth / columnWidth));
-      setNumColumns(columns);
-    };
-
-    calculateColumns(); // Initial call
-
-    const subscription = Dimensions.addEventListener(
-      "change",
-      calculateColumns
-    );
-    return () => subscription.remove();
-  }, []);
-
+export default function CashbackScreen() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isSearchActive, setIsSearchActive] = useState(false);
+  const searchbarRef = useRef<typeof Searchbar>(null);
   return (
-    <MasonryList
-      data={sampleProducts}
-      keyExtractor={(item, index) => `${item.name}-${index}`}
-      numColumns={numColumns}
-      showsVerticalScrollIndicator={false}
-      renderItem={({ item }) => (
-        <Animated.View entering={Animated.FadeIn} style={styles.card}>
-          <Image
-            source={{ uri: item.image }}
-            style={[styles.image, { height: 150 + Math.random() * 100 }]} // Random heights
-            resizeMode="cover"
+    <SafeAreaView style={styles.safeArea}>
+      <View style={styles.container}>
+        <View style={styles.searchContainer}>
+          <SearchInputBar
+            isSearchActive={isSearchActive}
+            searchbarRef={searchbarRef}
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+            onSearchFocus={() => setIsSearchActive(true)}
+            onSearchBlur={() => setIsSearchActive(false)}
+            containerStyle={styles.searchInput}
           />
-          <Text style={styles.title}>{item.name}</Text>
-        </Animated.View>
-      )}
-      contentContainerStyle={styles.container}
-    />
+          <View style={styles.searchIcons}>
+            <IconButton iconKey="wishlist" width={28} height={28} />
+            <IconButton iconKey="help" width={28} height={28} />
+          </View>
+        </View>
+        <View style={{ flex: 1 }}>
+          <ListWithAlphabetScroll />
+        </View>
+      </View>
+    </SafeAreaView>
   );
-};
-
-export default ProductsGrid;
+}
 
 const styles = StyleSheet.create({
-  container: {
-    paddingHorizontal: 8,
-    paddingBottom: 100,
-  },
-  card: {
+  safeArea: {
+    flex: 1,
     backgroundColor: "#fff",
-    borderRadius: 12,
-    overflow: "hidden",
-    margin: 8,
-    elevation: 2,
+  },
+  container: {
+    flex: 1,
+    paddingTop: Platform.OS === "ios" ? 20 : 30,
+    paddingHorizontal: 20,
+  },
+  searchContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  searchInput: {
     flex: 1,
   },
-  image: {
-    width: "100%",
-    borderTopLeftRadius: 12,
-    borderTopRightRadius: 12,
-  },
-  title: {
-    padding: 8,
-    fontSize: 14,
-    fontWeight: "600",
-    textAlign: "center",
+  searchIcons: {
+    flexDirection: "row",
+    marginLeft: 10,
   },
 });

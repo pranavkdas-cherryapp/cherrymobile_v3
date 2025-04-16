@@ -6,8 +6,12 @@ import {
   SectionList,
   Dimensions,
   PanResponder,
-  Pressable,
+  Platform,
+  TouchableOpacity,
 } from "react-native";
+import { Image } from "expo-image";
+import IconButton from "@/components_v2/common/IconButton";
+import StyledText from "@/components_v2/common/StyledText";
 
 const ALPHABETS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
@@ -15,20 +19,23 @@ const ALPHABETS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const generateData = () => {
   return ALPHABETS.map((letter) => ({
     title: letter,
-    data: Array.from({ length: 3 }, (_, i) => `${letter} Brand ${i + 1}`),
+    data: Array.from({ length: 3 }, (_, i) => `Brand ${letter} ${i + 1}`),
   }));
 };
 
-export default function App() {
+export default function ListWithAlphabetScroll() {
   const sections = generateData();
-  const sectionListRef = useRef(null);
-  const [activeLetter, setActiveLetter] = useState(null);
+  const sectionListRef = useRef<SectionList>(null);
+  const [activeLetter, setActiveLetter] = useState<string | null>(null);
 
   // Get screen height and item height
   const { height: screenHeight } = Dimensions.get("window");
   const letterHeight = 16;
   const alphabetContainerHeight = letterHeight * ALPHABETS.length;
-  const translateY = (screenHeight - alphabetContainerHeight) / 2;
+  const screenHeightWithoutHeader = Platform.OS === "ios" ? 120 : 90; // Because of search bar + tab bar
+  const translateY =
+    (screenHeight - alphabetContainerHeight) / 2 - screenHeightWithoutHeader;
+  console.log(screenHeight);
 
   const panResponder = useRef(
     PanResponder.create({
@@ -37,7 +44,6 @@ export default function App() {
         handleLetterSelect(gestureState.y0);
       },
       onPanResponderMove: (_, gestureState) => {
-        console.log("gestureState", "alskdalskd");
         handleLetterSelect(gestureState.moveY);
       },
       onPanResponderRelease: () => setActiveLetter(null),
@@ -45,17 +51,19 @@ export default function App() {
     })
   ).current;
 
-  const handleLetterSelect = (yPosition) => {
+  const handleLetterSelect = (yPosition: number) => {
     const relativeY = yPosition - translateY;
-    const index = Math.floor(relativeY / letterHeight);
+    console.log("relativeY", relativeY, translateY, yPosition);
+    const index = Math.floor(yPosition / letterHeight);
     if (index >= 0 && index < ALPHABETS.length) {
       const letter = ALPHABETS[index];
+      console.log("letter", index);
       setActiveLetter(letter);
       const sectionIndex = sections.findIndex(
         (section) => section.title === letter
       );
       if (sectionIndex !== -1 && sectionListRef.current) {
-        sectionListRef.current.scrollToLocation({
+        sectionListRef.current?.scrollToLocation({
           sectionIndex,
           itemIndex: 0,
           animated: false,
@@ -64,22 +72,54 @@ export default function App() {
     }
   };
 
+  const handleBrandPress = (item: string) => {
+    console.log("item", item);
+  };
+
+  const renderItem = React.useCallback(({ item }: { item: string }) => {
+    return <BrandRow item={item} onPress={handleBrandPress} />;
+  }, []);
+
+  const BrandRow = React.memo(
+    ({ item, onPress }: { item: string; onPress: (item: string) => void }) => {
+      return (
+        <TouchableOpacity onPress={() => onPress(item)} style={styles.brandRow}>
+          <Image
+            source={{ uri: "https://picsum.photos/200/300" }}
+            style={styles.brandLogo}
+          />
+          <StyledText preset="headingMedium" style={styles.brandName}>
+            {item}
+          </StyledText>
+          <View style={styles.arrowContainer}>
+            <IconButton iconKey="goToNextPage" width={16} height={16} />
+          </View>
+        </TouchableOpacity>
+      );
+    }
+  );
+
   return (
     <View style={styles.container}>
       <SectionList
         ref={sectionListRef}
         sections={sections}
+        showsVerticalScrollIndicator={false}
         keyExtractor={(item, index) => item + index}
-        renderItem={({ item }) => (
-          <View style={styles.item}>
-            <Text style={styles.itemText}>{item}</Text>
-          </View>
-        )}
+        renderItem={renderItem}
         renderSectionHeader={({ section: { title } }) => (
           <View style={styles.sectionHeader}>
             <Text style={styles.sectionHeaderText}>{title}</Text>
           </View>
         )}
+        initialNumToRender={10}
+        maxToRenderPerBatch={10}
+        windowSize={10}
+        getItemLayout={(_, index) => ({
+          length: translateY, // estimated total row height including padding (adjust as needed)
+          offset: translateY * index,
+          index,
+        })}
       />
 
       {/* Alphabet Index */}
@@ -127,29 +167,19 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
   },
   sectionHeader: {
-    paddingVertical: 6,
-    paddingHorizontal: 10,
-    backgroundColor: "#eee",
+    height: 20,
+    marginTop: 24,
+    marginBottom: 0,
   },
   sectionHeaderText: {
     fontWeight: "bold",
     fontSize: 16,
   },
-  item: {
-    paddingVertical: 12,
-    paddingHorizontal: 16,
-    borderBottomColor: "#ccc",
-    borderBottomWidth: StyleSheet.hairlineWidth,
-  },
-  itemText: {
-    fontSize: 16,
-  },
   alphabetIndexContainer: {
     position: "absolute",
-    right: 8,
+    right: -12,
     width: 20,
     justifyContent: "space-between",
     alignItems: "center",
@@ -176,5 +206,35 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 40,
     fontWeight: "bold",
+  },
+  ////
+  brandRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    // height: 47,
+    // paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderBottomWidth: 1,
+    borderBottomColor: "#F1F1F1",
+  },
+  brandLogo: {
+    width: 32,
+    height: 32,
+    marginRight: 12,
+    borderWidth: 1,
+    borderColor: "#F1F1F1",
+    borderRadius: 100,
+  },
+  brandName: {
+    color: "black",
+    width: "100%",
+    textAlign: "left",
+    paddingVertical: 18,
+  },
+  arrowContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    position: "absolute",
+    right: 20,
   },
 });
