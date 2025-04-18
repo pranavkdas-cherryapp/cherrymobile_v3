@@ -119,7 +119,7 @@ export default function ShopByCategory() {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 16,
+    marginTop: 50,
     paddingTop: 16,
     backgroundColor: "#fff",
   },

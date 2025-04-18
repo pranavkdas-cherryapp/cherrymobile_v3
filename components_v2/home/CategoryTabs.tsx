@@ -210,7 +210,7 @@ export default function CategoryTabs() {
   };
 
   return (
-    <View>
+    <View style={{ marginTop: 46 }}>
       <TabView
         navigationState={{ index, routes }}
         renderScene={renderScene}
@@ -226,35 +226,37 @@ export default function CategoryTabs() {
 const styles = StyleSheet.create({
   tabBarContainer: {
     backgroundColor: "white",
-    elevation: 1,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.1,
-    shadowRadius: 3,
+    // elevation: 1,
+    borderColor: "#F3F3F3",
+    borderWidth: 1,
     borderRadius: 30,
     margin: 10,
-    height: 50,
+    height: 42,
+    width: 300, // 169 or (288 or 300)
+    alignSelf: "center",
   },
   tabBar: {
     backgroundColor: "white",
-    elevation: 1,
-    // shadowColor: "#000",
-    // shadowOffset: { width: 0, height: 1 },
-    // shadowOpacity: 0.1,
-    // shadowRadius: 3,
-    // borderColor: "white",
+    elevation: 0,
     borderRadius: 30,
-    margin: 10,
-    height: 30,
+    marginHorizontal: 8,
+    marginBottom: 8,
+    marginTop: 7,
+    height: 26,
   },
   tab: {
+    minHeight: 26,
+    maxHeight: 26,
     paddingHorizontal: 0,
     paddingVertical: 0,
+    justifyContent: "center",
+    alignItems: "center",
   },
   label: {
     fontSize: 12,
     fontWeight: "500",
     textTransform: "none",
+    lineHeight: 18,
   },
   indicator: {
     backgroundColor: "#F3F3F3",
@@ -263,7 +265,7 @@ const styles = StyleSheet.create({
     maxWidth: "80%",
   },
   indicatorContainer: {
-    paddingHorizontal: 8, // Extra container padding
+    paddingHorizontal: 0, // Extra container padding
     zIndex: 0,
   },
   productsGrid: {

@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect } from "react";
+import React, { useMemo, useState, useEffect, useRef } from "react";
 import {
   View,
   Text,
@@ -15,19 +15,25 @@ import IconButton from "@/components_v2/common/IconButton";
 import { Chip } from "react-native-paper";
 import { router } from "expo-router";
 
-const sampleProducts = Array.from({ length: 50 }).map((_, index) => ({
-  id: index.toString(),
-  title: `Product ${index + 1}`,
-  price: `Rs. ${(1000 + index * 100).toLocaleString()}`,
+const generateProduct = (id: number) => ({
+  id: id.toString(),
+  title: `Product ${id + 1}`,
+  price: `Rs. ${(1000 + id * 100).toLocaleString()}`,
   brand: "Brand Name",
   image: `https://picsum.photos/300/${400 + Math.floor(Math.random() * 200)}`,
-  wishlist: Math.random() < 0.5 ? true : false,
+  wishlist: Math.random() < 0.5,
   url: "/onboarding",
-}));
+  height: 150 + Math.floor(Math.random() * 100), // Fixed random height
+});
+
+const sampleProducts = Array.from({ length: 50 }).map((_, index) =>
+  generateProduct(index)
+);
 
 const ProductsGrid = () => {
   const [numColumns, setNumColumns] = useState(2);
   const [products, setProducts] = useState(sampleProducts);
+  const isLoadingRef = useRef(false);
 
   useEffect(() => {
     const calculateColumns = () => {
@@ -47,26 +53,42 @@ const ProductsGrid = () => {
   }, []);
 
   const loadMoreProducts = () => {
-    const moreProducts = Array.from({ length: 10 }).map((_, index) => ({
-      id: (products.length + index).toString(),
-      title: `Product ${products.length + index + 1}`,
-      price: `Rs. ${(1000 + (products.length + index) * 100).toLocaleString()}`,
-      brand: "Brand Name",
-      image: `https://picsum.photos/300/${
-        400 + Math.floor(Math.random() * 200)
-      }`,
-      wishlist: Math.random() < 0.5 ? true : false,
-      url: "/onboarding",
-    }));
-    setProducts([...products, ...moreProducts]);
+    if (isLoadingRef.current) return;
+    isLoadingRef.current = true;
+
+    setTimeout(() => {
+      const moreProducts = Array.from({ length: 50 }).map((_, index) =>
+        generateProduct(products.length + index)
+      );
+      setProducts((prev) => [...prev, ...moreProducts]);
+      isLoadingRef.current = false;
+    }, 500);
   };
 
-  const overlayObjects = (item: any) => {
+  const handleWishlistPress = ({ item }: { item: any }) => {
+    const updatedProducts = products.map((product) => {
+      console.log("done", product.id, item.id);
+
+      if (product.id === item.id) {
+        return {
+          ...product,
+          wishlist: !product.wishlist,
+        };
+      }
+      return product;
+    });
+    setProducts(updatedProducts);
+  };
+
+  const OverlayObjects = ({ item }: { item: any }) => {
     const wishlistIcon = item.wishlist
       ? "addedToWishlist"
       : "notAddedToWishlist";
     return (
-      <View style={styles.overlay}>
+      <Pressable
+        style={styles.overlay}
+        onPress={() => handleWishlistPress({ item })}
+      >
         <View style={styles.topTags}>
           <IconButton iconKey={wishlistIcon} width={16} height={16} />
         </View>
@@ -81,9 +103,28 @@ const ProductsGrid = () => {
             </TouchableOpacity>
           ) : null}
         </View>  */}
-      </View>
+      </Pressable>
     );
   };
+
+  const ProductCard = React.memo(({ item }: { item: any }) => (
+    <Pressable onPress={() => router.push(item.url)}>
+      <Animated.View entering={Animated.FadeIn} style={styles.card}>
+        <Image
+          source={{ uri: item.image }}
+          style={[styles.image, { height: item.height }]}
+          resizeMode="cover"
+        />
+        <OverlayObjects item={item} />
+        <Text style={styles.productTitle} numberOfLines={2}>
+          {item.title}
+        </Text>
+        <Text style={styles.productPrice}>
+          {item.price} . {item.brand}
+        </Text>
+      </Animated.View>
+    </Pressable>
+  ));
 
   return (
     <>
@@ -115,25 +156,7 @@ const ProductsGrid = () => {
             </View>
           </ScrollView>
         }
-        renderItem={({ item }) => (
-          <Pressable onPress={() => router.push(item.url)}>
-            {console.log(item)}
-            <Animated.View entering={Animated.FadeIn} style={styles.card}>
-              <Image
-                source={{ uri: item.image }}
-                style={[styles.image, { height: 150 + Math.random() * 100 }]} // Random heights
-                resizeMode="cover"
-              />
-              {overlayObjects(item)}
-              <Text style={styles.productTitle} numberOfLines={2}>
-                {item.title}
-              </Text>
-              <Text style={styles.productPrice}>
-                {item.price} . {item.brand}
-              </Text>
-            </Animated.View>
-          </Pressable>
-        )}
+        renderItem={({ item }) => <ProductCard item={item} />}
         contentContainerStyle={styles.container}
         onEndReached={loadMoreProducts}
         onEndReachedThreshold={0.5}

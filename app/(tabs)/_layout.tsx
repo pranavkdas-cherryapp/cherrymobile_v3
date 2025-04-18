@@ -1,8 +1,8 @@
 import { Tabs } from "expo-router";
 import React from "react";
-import { Platform, View } from "react-native";
+import { Platform, Pressable, View, Easing } from "react-native";
 
-import { HapticTab } from "@/components/HapticTab";
+import { NoEffectTabBarButton } from "@/components/HapticTab";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import TabBarBackground from "@/components/ui/TabBarBackground";
 import { Colors } from "@/constants/Colors";
@@ -18,8 +18,11 @@ export default function TabLayout() {
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
         headerShown: false,
-        tabBarButton: HapticTab,
+        tabBarButton: NoEffectTabBarButton,
         tabBarBackground: TabBarBackground,
+        tabBarHideOnKeyboard: true,
+        // animation: "shift",
+
         // tabBarStyle: Platform.select({
         //   ios: {
         //     // Use a transparent background on iOS to show the blur effect
@@ -61,6 +64,13 @@ export default function TabLayout() {
               <StyledText preset={"consentText"}>Home</StyledText>
             </View>
           ),
+          // transitionSpec: {
+          //   animation: "timing",
+          //   config: {
+          //     duration: 300,
+          //     easing: Easing.inOut(Easing.ease),
+          //   },
+          // },
         }}
       />
       <Tabs.Screen
