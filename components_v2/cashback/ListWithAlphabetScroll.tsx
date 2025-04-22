@@ -39,7 +39,6 @@ export default function ListWithAlphabetScroll() {
   const handleLayout = () => {
     if (containerRef.current) {
       containerRef.current.measure((x, y, width, height, pageX, pageY) => {
-        console.log("Y position of component:", pageY);
         containerYRef.current = pageY;
       });
     }
@@ -55,7 +54,6 @@ export default function ListWithAlphabetScroll() {
   const screenHeightWithoutHeader = Platform.OS === "ios" ? 120 : 90; // Because of search bar + tab bar
   const translateY =
     (screenHeight - alphabetContainerHeight) / 2 - screenHeightWithoutHeader;
-  console.log(screenHeight);
 
   const panResponder = useRef(
     PanResponder.create({
@@ -106,7 +104,6 @@ export default function ListWithAlphabetScroll() {
     const index = Math.floor(relativeY / letterHeight);
     if (index >= 0 && index < ALPHABETS.length) {
       const letter = ALPHABETS[index];
-      console.log("letter", index);
       setActiveLetter(letter);
       const sectionIndex = sections.findIndex(
         (section: any) => section.title === letter
@@ -164,14 +161,7 @@ export default function ListWithAlphabetScroll() {
             <Text style={styles.sectionHeaderText}>{title}</Text>
           </View>
         )}
-        // initialNumToRender={10}
-        // maxToRenderPerBatch={10}
-        // windowSize={10}
         style={{ paddingHorizontal: 20 }}
-        // onScrollToIndexFailed={(info) => {
-        //   console.warn("Scroll to index failed", info);
-        // }} // not a nice way to handle this
-        // getItemLayout={getItemLayout}
       />
 
       {/* Alphabet Index */}
