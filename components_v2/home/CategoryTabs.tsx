@@ -141,57 +141,6 @@ export default function CategoryTabs() {
     );
   };
 
-  // const renderTabBar = (props: any) => (
-  //   <TabBar
-  //     {...props}
-  //     renderLabel={({ route, focused, color }) => (
-  //       <Text
-  //         style={{
-  //           fontSize: 12,
-  //           fontWeight: "bold",
-  //           color: color,
-  //           textAlign: "center",
-  //           includeFontPadding: false, // Android fix
-  //           textTransform: "none",
-  //         }}
-  //         numberOfLines={1}
-  //         allowFontScaling={false} // prevent device font scaling
-  //       >
-  //         {route.title}
-  //       </Text>
-  //     )}
-  //     indicatorStyle={{
-  //       backgroundColor: "#f3f3f3",
-  //       borderRadius: 30,
-  //       height: "80%",
-  //       margin: 4,
-  //     }}
-  //     style={{
-  //       margin: 10,
-  //       width: 288,
-  //       alignSelf: "center",
-  //       backgroundColor: "#ffffff",
-  //       borderRadius: 30,
-  //       borderColor: "#f3f3f3",
-  //       borderWidth: 1,
-  //     }}
-  //     tabStyle={{
-  //       borderRadius: 30,
-  //     }}
-  //     labelStyle={{
-  //       fontWeight: "bold",
-  //       fontSize: 12,
-  //       textTransform: "none",
-  //     }}
-  //     contentContainerStyle={{
-  //       width: "100%",
-  //     }}
-  //     activeColor="black"
-  //     inactiveColor="black"
-  //     pressColor="transparent"
-  //   />
-  // );
-
   const renderTabBar = (props) => {
     return (
       <View style={styles.tabBarContainer}>
@@ -272,7 +221,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
-    padding: 16,
+    padding: 12,
   },
   productCard: {
     height: 120,

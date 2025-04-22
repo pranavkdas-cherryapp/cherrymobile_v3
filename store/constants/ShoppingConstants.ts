@@ -1,0 +1,112 @@
+// FilterOptions
+export const FilterOptions = {
+  sort: {
+    displayName: "Sort",
+    type: "singleSelect",
+    headerTitle: "Sort by",
+    searchPresent: false,
+    searchPlaceholder: "",
+  },
+  product: {
+    displayName: "Product",
+    type: "multiSelect",
+    headerTitle: "Filter Products",
+    searchPresent: true,
+    searchPlaceholder: "Search 1000+ products",
+  },
+  brand: {
+    displayName: "Brand",
+    type: "multiSelect",
+    headerTitle: "Filter Brands",
+    searchPresent: true,
+    searchPlaceholder: "Search 100+ brands",
+  },
+};
+
+export const FilterOptionsKeysMappedToShopFiltersValues = {
+  sort: "sortOptions",
+  product: "productFilterList",
+  brand: "brandFilterList",
+};
+
+export const FashionFilterList = [
+  "Shirt",
+  "T-Shirt",
+  "Pant",
+  "Jeans",
+  "Kurti",
+  "Saree",
+  "Dress",
+  "Top",
+  "Jacket",
+  "Blazer",
+  "Sweater",
+  "Skirt",
+  "Shorts",
+  "Suit",
+  "Ethnic Wear",
+  "Activewear",
+  "Loungewear",
+  "Nightwear",
+  "Innerwear",
+  "Footwear",
+];
+
+export const BeautyFilterList = [
+  "Skincare",
+  "Makeup",
+  "Lipstick",
+  "Foundation",
+  "Compact Powder",
+  "Eyeliner",
+  "Mascara",
+  "Blush",
+  "Nail Polish",
+  "Perfume",
+  "Fragrance Mists",
+  "Hair Care",
+  "Shampoo",
+  "Conditioner",
+  "Hair Oil",
+  "Body Lotion",
+  "Face Wash",
+  "Face Mask",
+  "Sunscreen",
+];
+
+export const AccessoriesFilterList = [
+  "Bags",
+  "Backpacks",
+  "Handbags",
+  "Wallets",
+  "Watches",
+  "Sunglasses",
+  "Belts",
+  "Caps & Hats",
+  "Scarves",
+  "Jewelry",
+  "Earrings",
+  "Necklaces",
+  "Bracelets",
+  "Rings",
+  "Hair Accessories",
+  "Socks",
+];
+
+export const EntertainmentFilterList = [
+  "Movies",
+  "TV Shows",
+  "Music",
+  "Live Concerts",
+  "Stand-Up Comedy",
+  "Theatre",
+  "Games",
+  "Mobile Games",
+  "Board Games",
+  "Streaming Services",
+  "Events",
+  "Virtual Events",
+  "E-Sports",
+  "Books",
+  "Podcasts",
+];

@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
   },
   searchInput: {
     width: "100%",
-    height: "46",
+    height: 46,
     textAlignVertical: "center",
     marginTop: -5,
     fontSize: 16,

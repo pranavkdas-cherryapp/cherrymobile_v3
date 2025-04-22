@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   SafeAreaView,
   View,
@@ -16,11 +16,20 @@ import HomeActionCard from "@/components_v2/common/HomeActionCard";
 import SearchInputBar from "@/components_v2/common/SearchInputBar";
 import ShopByCategory from "@/components_v2/home/ShopByCategory";
 import Collections from "@/components_v2/home/Collections";
+import LottieView from "lottie-react-native";
 
 export default function HomeScreen() {
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearchActive, setIsSearchActive] = useState(false);
   const searchbarRef = useRef<typeof Searchbar>(null);
+  const animationRef = useRef<LottieView>(null);
+  const [playCount, setPlayCount] = useState(0);
+
+  useEffect(() => {
+    if (playCount < 1 && animationRef.current) {
+      animationRef.current.play();
+    }
+  }, [playCount]);
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -43,6 +52,15 @@ export default function HomeScreen() {
 
         <ScrollView showsVerticalScrollIndicator={false}>
           <View style={styles.membershipCard}>
+            <LottieView
+              ref={animationRef}
+              loop={false}
+              source={require("@/assets/lottie/home_button_animation.json")}
+              onAnimationFinish={() => {
+                setPlayCount((prevCount) => prevCount + 1);
+              }}
+              style={StyleSheet.absoluteFillObject}
+            />
             <View style={styles.membershipHeader}>
               <IconButton iconKey="goldBadge" width={26} height={30} />
               <Text style={styles.membershipTitle}>Cherry Gold Member</Text>
@@ -145,6 +163,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     padding: 20,
     marginBottom: 20,
+    overflow: "hidden",
   },
   membershipHeader: {
     flexDirection: "row",

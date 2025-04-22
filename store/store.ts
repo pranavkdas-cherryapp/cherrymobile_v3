@@ -1,7 +1,8 @@
 import type { Action, ThunkAction } from "@reduxjs/toolkit";
 import { combineSlices, configureStore } from "@reduxjs/toolkit";
 // import { newExperimentSlice } from "./features/newExperiment/newExperimentSlice";
-import { shopPageSlice } from "@/store/slices/ShopPageSlice";
+import { shoppingSlice } from "@/store/slices/ShoppingSlice";
+import { brandsSlice } from "@/store/slices/BrandsSlice";
 // import { getHypothesisSlice } from './features/getHypothesis/getHypothesisSlice'
 
 // NEED TO CHECK THIS OUT FOR PERSISTENT STORAGE. https://github.com/Mohammad-Faisal/nextjs-app-router-redux-toolkit-persist-integration
@@ -9,7 +10,7 @@ import { shopPageSlice } from "@/store/slices/ShopPageSlice";
 
 // `combineSlices` automatically combines the reducers using
 // their `reducerPath`s, therefore we no longer need to call `combineReducers`.
-const rootReducer = combineSlices(shopPageSlice);
+const rootReducer = combineSlices(shoppingSlice, brandsSlice);
 
 // Infer the `RootState` type from the root reducer
 export type RootState = ReturnType<typeof rootReducer>;

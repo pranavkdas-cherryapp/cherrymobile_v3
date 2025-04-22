@@ -8,6 +8,7 @@ import {
   Platform,
   ScrollView,
   Dimensions,
+  Modal,
 } from "react-native";
 import IconButton from "@/components_v2/common/IconButton";
 import { Chip, Searchbar } from "react-native-paper";
@@ -16,6 +17,13 @@ import SearchInputBar from "@/components_v2/common/SearchInputBar";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import ProductsGrid from "@/components_v2/shop/ProductCard2";
 import SearchActiveShopScreen from "@/components_v2/shop/SearchActive";
+import FilterScreen from "@/components_v2/shop/FilterScreen";
+import {
+  getIsFilterVisibleSelector,
+  setIsFilterVisible,
+  setSelectedCategory,
+} from "@/store/slices/ShoppingSlice";
+import { useAppSelector, useAppDispatch } from "@/store/hooks";
 
 export default function ShopScreen() {
   const { queryParams } = useLocalSearchParams();
@@ -23,6 +31,9 @@ export default function ShopScreen() {
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearchActive, setIsSearchActive] = useState(false);
   const searchbarRef = useRef<typeof Searchbar>(null);
+
+  const isFilterVisible = useAppSelector(getIsFilterVisibleSelector);
+  const dispatch = useAppDispatch();
 
   const [index, setIndex] = useState(0);
   const [routes] = useState([
@@ -99,12 +110,29 @@ export default function ShopScreen() {
           <TabView
             navigationState={{ index, routes }}
             renderScene={renderScene}
-            onIndexChange={setIndex}
             initialLayout={{ width: Dimensions.get("window").width }}
             renderTabBar={renderTabBar}
+            onIndexChange={(index: number) => {
+              console.log(
+                index,
+                "index",
+                routes[index].key as keyof typeof Category
+              );
+              setIndex(index);
+              dispatch(
+                setSelectedCategory(routes[index].key as keyof typeof Category)
+              );
+            }}
           />
         )}
       </View>
+      <Modal
+        animationType="slide"
+        visible={isFilterVisible}
+        onRequestClose={() => dispatch(setIsFilterVisible(false))}
+      >
+        <FilterScreen onClose={() => dispatch(setIsFilterVisible(false))} />
+      </Modal>
     </SafeAreaView>
   );
 }

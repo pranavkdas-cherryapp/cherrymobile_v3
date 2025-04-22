@@ -14,6 +14,13 @@ import Animated from "react-native-reanimated";
 import IconButton from "@/components_v2/common/IconButton";
 import { Chip } from "react-native-paper";
 import { router } from "expo-router";
+import {
+  getIsFilterVisibleSelector,
+  setIsFilterVisible,
+  setSelectedFilterType,
+} from "@/store/slices/ShoppingSlice";
+import { useAppSelector, useAppDispatch } from "@/store/hooks";
+import { FilterOptions } from "@/store/constants/ShoppingConstants";
 
 const generateProduct = (id: number) => ({
   id: id.toString(),
@@ -34,7 +41,7 @@ const ProductsGrid = () => {
   const [numColumns, setNumColumns] = useState(2);
   const [products, setProducts] = useState(sampleProducts);
   const isLoadingRef = useRef(false);
-
+  const dispatch = useAppDispatch();
   useEffect(() => {
     const calculateColumns = () => {
       const screenWidth = Dimensions.get("window").width;
@@ -141,14 +148,32 @@ const ProductsGrid = () => {
               justifyContent: "center",
               alignItems: "center",
               paddingHorizontal: 4,
+              width: "100%",
             }}
           >
             <View style={styles.filtersRow}>
-              {["Sort", "Brands", "Products", "More filters"].map(
+              {Object.keys(FilterOptions).map(
+                // ["Sort", "Brands", "Products", "More filters"]
                 (filter, index) => (
-                  <Chip key={index} style={styles.chip}>
+                  <Chip
+                    key={index}
+                    style={styles.chip}
+                    onPress={() => {
+                      dispatch(setIsFilterVisible(true));
+                      dispatch(
+                        setSelectedFilterType(
+                          filter as keyof typeof FilterOptions
+                        )
+                      );
+                    }}
+                  >
                     <TouchableOpacity style={styles.filterButton}>
-                      <Text style={styles.filterText}>{filter}</Text>
+                      <Text style={styles.filterText}>
+                        {
+                          FilterOptions[filter as keyof typeof FilterOptions]
+                            .displayName
+                        }
+                      </Text>
                     </TouchableOpacity>
                   </Chip>
                 )

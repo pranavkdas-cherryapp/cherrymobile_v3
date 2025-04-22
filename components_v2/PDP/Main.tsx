@@ -41,7 +41,7 @@ export default function Main() {
           .filter((r) => r.success && r.data)
           .map((r) => r.data);
         setProducts(validProducts);
-        console.log("validProducts", validProducts[0].product.productId);
+        // console.log("validProducts", validProducts[0].product.productId);
       } catch (error) {
         console.error("Error fetching products", error);
         setProducts([]);
