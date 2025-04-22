@@ -8,8 +8,6 @@ import {
   PanResponder,
   Platform,
   TouchableOpacity,
-  SectionListData,
-  DefaultSectionT,
 } from "react-native";
 import { Image } from "expo-image";
 import IconButton from "@/components_v2/common/IconButton";
@@ -68,36 +66,6 @@ export default function ListWithAlphabetScroll() {
       onPanResponderTerminate: () => setActiveLetter(null),
     })
   ).current;
-
-  const ITEM_HEIGHT = 64; // Approximate row height (you can adjust this)
-  const HEADER_HEIGHT = 44; // As defined in your styles
-
-  const getItemLayout = (
-    data: SectionListData<string, DefaultSectionT>[] | null,
-    index: number
-  ): { length: number; offset: number; index: number } => {
-    let offset = 0;
-    let itemCount = 0;
-
-    if (!data) return { length: ITEM_HEIGHT, offset: 0, index };
-
-    for (let i = 0; i < sections.length; i++) {
-      offset += HEADER_HEIGHT; // Add header height
-      if (index < itemCount + sections[i].data.length) {
-        offset += (index - itemCount) * ITEM_HEIGHT;
-        break;
-      } else {
-        offset += sections[i].data.length * ITEM_HEIGHT;
-        itemCount += sections[i].data.length;
-      }
-    }
-
-    return {
-      length: ITEM_HEIGHT,
-      offset,
-      index,
-    };
-  };
 
   const handleLetterSelect = (yPosition: number) => {
     const relativeY = yPosition - translateY - containerYRef.current;
