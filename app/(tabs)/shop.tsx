@@ -113,11 +113,6 @@ export default function ShopScreen() {
             initialLayout={{ width: Dimensions.get("window").width }}
             renderTabBar={renderTabBar}
             onIndexChange={(index: number) => {
-              console.log(
-                index,
-                "index",
-                routes[index].key as keyof typeof Category
-              );
               setIndex(index);
               dispatch(
                 setSelectedCategory(routes[index].key as keyof typeof Category)

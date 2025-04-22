@@ -14,11 +14,13 @@ import { useAppSelector, useAppDispatch } from "@/store/hooks";
 import {
   getAppliedOptionsOfFilterSelector,
   getOptionsOfFilterSelector,
+  getSelectedCategorySelector,
   getSelectedFilterTypeSelector,
   setAppliedOptionsOfFilter,
 } from "@/store/slices/ShoppingSlice";
 import FilterBody from "@/components_v2/shop/FilterBody";
-
+import { getBrandsGroupedByCategoryDict } from "@/store/slices/BrandsSlice";
+import { Category } from "@/store/initialState/ShoppingInitialState";
 interface FilterScreenProps {
   onClose: () => void;
 }
@@ -26,8 +28,19 @@ interface FilterScreenProps {
 const FilterScreen: React.FC<FilterScreenProps> = ({ onClose }) => {
   const dispatch = useAppDispatch();
   const selectedFilterType = useAppSelector(getSelectedFilterTypeSelector);
+  const selectedCategory = useAppSelector(getSelectedCategorySelector);
   const appliedOptionsInitialState = useAppSelector((state) =>
     getAppliedOptionsOfFilterSelector(state, { payload: selectedFilterType })
+  );
+
+  const brandsList = useAppSelector((state) =>
+    getBrandsGroupedByCategoryDict(state, { payload: selectedCategory })
+  );
+  console.log(
+    brandsList,
+    "brandsList",
+    selectedCategory,
+    selectedCategory as keyof Category
   );
 
   const [selectedOptions, setSelectedOptions] = useState<string[]>(
@@ -49,7 +62,7 @@ const FilterScreen: React.FC<FilterScreenProps> = ({ onClose }) => {
       ? useAppSelector((state) =>
           getOptionsOfFilterSelector(state, { payload: selectedFilterType })
         )
-      : [];
+      : brandsList;
 
   const resetFilters = () => {
     setSelectedOptions([]);

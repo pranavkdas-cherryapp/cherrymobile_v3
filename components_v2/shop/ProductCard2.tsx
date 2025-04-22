@@ -155,19 +155,18 @@ const ProductsGrid = () => {
               {Object.keys(FilterOptions).map(
                 // ["Sort", "Brands", "Products", "More filters"]
                 (filter, index) => (
-                  <Chip
-                    key={index}
-                    style={styles.chip}
-                    onPress={() => {
-                      dispatch(setIsFilterVisible(true));
-                      dispatch(
-                        setSelectedFilterType(
-                          filter as keyof typeof FilterOptions
-                        )
-                      );
-                    }}
-                  >
-                    <TouchableOpacity style={styles.filterButton}>
+                  <Chip key={index} style={styles.chip}>
+                    <TouchableOpacity
+                      style={styles.filterButton}
+                      onPress={() => {
+                        dispatch(setIsFilterVisible(true));
+                        dispatch(
+                          setSelectedFilterType(
+                            filter as keyof typeof FilterOptions
+                          )
+                        );
+                      }}
+                    >
                       <Text style={styles.filterText}>
                         {
                           FilterOptions[filter as keyof typeof FilterOptions]

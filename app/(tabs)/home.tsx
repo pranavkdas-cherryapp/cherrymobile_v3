@@ -17,9 +17,12 @@ import SearchInputBar from "@/components_v2/common/SearchInputBar";
 import ShopByCategory from "@/components_v2/home/ShopByCategory";
 import Collections from "@/components_v2/home/Collections";
 import LottieView from "lottie-react-native";
+import { useAppDispatch } from "@/store/hooks";
+import { getBrandsList } from "@/store/slices/BrandsSlice";
 
 export default function HomeScreen() {
   const [searchQuery, setSearchQuery] = useState("");
+  const dispatch = useAppDispatch();
   const [isSearchActive, setIsSearchActive] = useState(false);
   const searchbarRef = useRef<typeof Searchbar>(null);
   const animationRef = useRef<LottieView>(null);
@@ -30,6 +33,10 @@ export default function HomeScreen() {
       animationRef.current.play();
     }
   }, [playCount]);
+
+  useEffect(() => {
+    dispatch(getBrandsList());
+  }, []);
 
   return (
     <SafeAreaView style={styles.safeArea}>

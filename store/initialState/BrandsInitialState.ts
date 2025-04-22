@@ -1,5 +1,7 @@
 export const brandsInitialState = {
-  allBrandsList: [],
+  brandIdBrandDictionary: {},
+  brandGroupedByStartingLetterList: [],
+  brandsGroupedByCategoryDict: {},
   loading: false,
   error: null,
 };

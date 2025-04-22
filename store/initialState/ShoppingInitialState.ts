@@ -9,6 +9,7 @@ import {
 // Enums
 export enum Category {
   Fashion = "fashion",
+  Clothing = "fashion", // Currently Clothing used instead of Fashion
   Beauty = "beauty",
   Accessories = "accessories",
   Entertainment = "entertainment",

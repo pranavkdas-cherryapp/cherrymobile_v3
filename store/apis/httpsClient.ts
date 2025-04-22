@@ -2,7 +2,7 @@
 import axios from "axios";
 import { router } from "expo-router";
 
-const baseUrl = "http://127.0.0.1:8000";
+const baseUrl = "https://api.cherryapp.in";
 
 const apiClient = axios.create({
   baseURL: baseUrl,
@@ -11,10 +11,12 @@ const apiClient = axios.create({
 apiClient.interceptors.request.use(
   async (config) => {
     // const token = await getJwtToken();
+    const token =
+      "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5NzQ3OTkxMDkwIiwiaWF0IjoxNzQ1MjUwMTk3LCJleHAiOjE3NTMwMjYxOTd9.aOd0donwsUrFj3neLWzEdjIQ36fNDYY6n9GTzy1lXp0";
     // console.log("Getting this Token while sending an API request: ", token);
-    // if (token) {
-    //   config.headers.Authorization = `Bearer ${token}`;
-    // }
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
     config.headers["X-App-Version"] = "2.0.6";
     return config;
   },

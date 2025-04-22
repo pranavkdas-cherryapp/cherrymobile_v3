@@ -60,6 +60,7 @@ export const shoppingSlice = createAppSlice({
     getProductsSelector: (state: any) => state.products,
     getIsFilterVisibleSelector: (state: any) => state.isFilterVisible,
     getSelectedFilterTypeSelector: (state: any) => state.selectedFilterType,
+    getSelectedCategorySelector: (state: any) => state.selectedCategory,
     getAppliedOptionsOfFilterSelector: (state: any, action: any) => {
       const filterType = action.payload;
       if (filterType) {
@@ -103,4 +104,5 @@ export const {
   getAppliedOptionsOfFilterSelector,
   getOptionsOfFilterSelector,
   getSelectedFilterTypeSelector,
+  getSelectedCategorySelector,
 } = shoppingSlice.selectors;

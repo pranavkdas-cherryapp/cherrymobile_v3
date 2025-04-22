@@ -12,19 +12,27 @@ import {
 import { Image } from "expo-image";
 import IconButton from "@/components_v2/common/IconButton";
 import StyledText from "@/components_v2/common/StyledText";
+import { useAppSelector } from "@/store/hooks";
+import { getBrandsGroupedByStartingLetterList } from "@/store/slices/BrandsSlice";
 
-const ALPHABETS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-
-// Generate sample data
-const generateData = () => {
-  return ALPHABETS.map((letter) => ({
-    title: letter,
-    data: Array.from({ length: 3 }, (_, i) => `Brand ${letter} ${i + 1}`),
-  }));
-};
+// const ALPHABETS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
 export default function ListWithAlphabetScroll() {
-  const sections = generateData();
+  const brandsGroupedByStartingLetterList = useAppSelector(
+    getBrandsGroupedByStartingLetterList
+  );
+  const sections = React.useMemo(
+    () => brandsGroupedByStartingLetterList,
+    [brandsGroupedByStartingLetterList]
+  );
+
+  const ALPHABETS = React.useMemo(
+    () => sections.map((section: any) => section.title),
+    [sections]
+  );
+  console.log(ALPHABETS, "ALPHABETS", typeof ALPHABETS);
+  console.log(sections, "sections", typeof sections);
+
   const sectionListRef = useRef<SectionList>(null);
   const [activeLetter, setActiveLetter] = useState<string | null>(null);
 
@@ -81,15 +89,18 @@ export default function ListWithAlphabetScroll() {
   }, []);
 
   const BrandRow = React.memo(
-    ({ item, onPress }: { item: string; onPress: (item: string) => void }) => {
+    ({
+      item,
+      onPress,
+    }: {
+      item: { brandName: string; brandId: string; logo: string };
+      onPress: (item: string) => void;
+    }) => {
       return (
         <TouchableOpacity onPress={() => onPress(item)} style={styles.brandRow}>
-          <Image
-            source={{ uri: "https://picsum.photos/200/300" }}
-            style={styles.brandLogo}
-          />
+          <Image source={{ uri: item.logo }} style={styles.brandLogo} />
           <StyledText preset="headingMedium" style={styles.brandName}>
-            {item}
+            {item.brandName}
           </StyledText>
           <View style={styles.arrowContainer}>
             <IconButton iconKey="goToNextPage" width={16} height={16} />
@@ -105,7 +116,7 @@ export default function ListWithAlphabetScroll() {
         ref={sectionListRef}
         sections={sections}
         showsVerticalScrollIndicator={false}
-        keyExtractor={(item, index) => item + index}
+        keyExtractor={(item: any, index: number) => item?.brandId}
         renderItem={renderItem}
         renderSectionHeader={({ section: { title } }) => (
           <View style={styles.sectionHeader}>
@@ -115,11 +126,6 @@ export default function ListWithAlphabetScroll() {
         initialNumToRender={10}
         maxToRenderPerBatch={10}
         windowSize={10}
-        getItemLayout={(_, index) => ({
-          length: translateY, // estimated total row height including padding (adjust as needed)
-          offset: translateY * index,
-          index,
-        })}
       />
 
       {/* Alphabet Index */}

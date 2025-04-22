@@ -11,17 +11,28 @@ export const brandsSlice = createAppSlice({
   initialState: brandsInitialState,
   reducers: (create) => ({
     getBrandsList: create.asyncThunk(
-      // not sture if this is needed
       getAllBrandsListPayloadCreator,
       getAllBrandsListExtraReducers
     ),
   }),
 
   selectors: {
-    getAllBrandsListSelector: (state: any) => state.allBrandsList,
+    getBrandsGroupedByCategoryDict: (state: any, action: any) => {
+      const categoryId = action.payload;
+      if (categoryId in state.brandsGroupedByCategoryDict) {
+        return state.brandsGroupedByCategoryDict[categoryId];
+      }
+      return [];
+    },
+    getBrandsGroupedByStartingLetterList: (state: any) => {
+      return state.brandGroupedByStartingLetterList;
+    },
   },
 });
 
 export const { getBrandsList } = brandsSlice.actions;
 
-export const { getAllBrandsListSelector } = brandsSlice.selectors;
+export const {
+  getBrandsGroupedByCategoryDict,
+  getBrandsGroupedByStartingLetterList,
+} = brandsSlice.selectors;
