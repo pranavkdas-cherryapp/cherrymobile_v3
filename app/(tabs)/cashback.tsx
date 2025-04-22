@@ -43,11 +43,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: Platform.OS === "ios" ? 20 : 30,
-    paddingHorizontal: 20,
+    // paddingHorizontal: 20,
   },
   searchContainer: {
     flexDirection: "row",
     alignItems: "center",
+    paddingHorizontal: 20,
   },
   searchInput: {
     flex: 1,

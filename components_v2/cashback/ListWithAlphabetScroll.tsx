@@ -8,6 +8,8 @@ import {
   PanResponder,
   Platform,
   TouchableOpacity,
+  SectionListData,
+  DefaultSectionT,
 } from "react-native";
 import { Image } from "expo-image";
 import IconButton from "@/components_v2/common/IconButton";
@@ -30,8 +32,18 @@ export default function ListWithAlphabetScroll() {
     () => sections.map((section: any) => section.title),
     [sections]
   );
-  console.log(ALPHABETS, "ALPHABETS", typeof ALPHABETS);
-  console.log(sections, "sections", typeof sections);
+
+  const containerRef = useRef<View>(null);
+  const containerYRef = useRef(0);
+
+  const handleLayout = () => {
+    if (containerRef.current) {
+      containerRef.current.measure((x, y, width, height, pageX, pageY) => {
+        console.log("Y position of component:", pageY);
+        containerYRef.current = pageY;
+      });
+    }
+  };
 
   const sectionListRef = useRef<SectionList>(null);
   const [activeLetter, setActiveLetter] = useState<string | null>(null);
@@ -59,16 +71,45 @@ export default function ListWithAlphabetScroll() {
     })
   ).current;
 
+  const ITEM_HEIGHT = 64; // Approximate row height (you can adjust this)
+  const HEADER_HEIGHT = 44; // As defined in your styles
+
+  const getItemLayout = (
+    data: SectionListData<string, DefaultSectionT>[] | null,
+    index: number
+  ): { length: number; offset: number; index: number } => {
+    let offset = 0;
+    let itemCount = 0;
+
+    if (!data) return { length: ITEM_HEIGHT, offset: 0, index };
+
+    for (let i = 0; i < sections.length; i++) {
+      offset += HEADER_HEIGHT; // Add header height
+      if (index < itemCount + sections[i].data.length) {
+        offset += (index - itemCount) * ITEM_HEIGHT;
+        break;
+      } else {
+        offset += sections[i].data.length * ITEM_HEIGHT;
+        itemCount += sections[i].data.length;
+      }
+    }
+
+    return {
+      length: ITEM_HEIGHT,
+      offset,
+      index,
+    };
+  };
+
   const handleLetterSelect = (yPosition: number) => {
-    const relativeY = yPosition - translateY;
-    console.log("relativeY", relativeY, translateY, yPosition);
-    const index = Math.floor(yPosition / letterHeight);
+    const relativeY = yPosition - translateY - containerYRef.current;
+    const index = Math.floor(relativeY / letterHeight);
     if (index >= 0 && index < ALPHABETS.length) {
       const letter = ALPHABETS[index];
       console.log("letter", index);
       setActiveLetter(letter);
       const sectionIndex = sections.findIndex(
-        (section) => section.title === letter
+        (section: any) => section.title === letter
       );
       if (sectionIndex !== -1 && sectionListRef.current) {
         sectionListRef.current?.scrollToLocation({
@@ -111,7 +152,7 @@ export default function ListWithAlphabetScroll() {
   );
 
   return (
-    <View style={styles.container}>
+    <View ref={containerRef} onLayout={handleLayout} style={styles.container}>
       <SectionList
         ref={sectionListRef}
         sections={sections}
@@ -123,9 +164,14 @@ export default function ListWithAlphabetScroll() {
             <Text style={styles.sectionHeaderText}>{title}</Text>
           </View>
         )}
-        initialNumToRender={10}
-        maxToRenderPerBatch={10}
-        windowSize={10}
+        // initialNumToRender={10}
+        // maxToRenderPerBatch={10}
+        // windowSize={10}
+        style={{ paddingHorizontal: 20 }}
+        // onScrollToIndexFailed={(info) => {
+        //   console.warn("Scroll to index failed", info);
+        // }} // not a nice way to handle this
+        // getItemLayout={getItemLayout}
       />
 
       {/* Alphabet Index */}
@@ -185,7 +231,7 @@ const styles = StyleSheet.create({
   },
   alphabetIndexContainer: {
     position: "absolute",
-    right: -12,
+    right: 10,
     width: 20,
     justifyContent: "space-between",
     alignItems: "center",

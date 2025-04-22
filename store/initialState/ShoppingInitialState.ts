@@ -16,10 +16,10 @@ export enum Category {
 }
 
 export enum SortOption {
-  PriceLowToHigh = "priceLowToHigh",
-  PriceHighToLow = "priceHighToLow",
-  NewReleases = "newReleases",
-  Recommended = "recommended",
+  PriceLowToHigh = "Price low to high",
+  PriceHighToLow = "Price high to low",
+  NewReleases = "New releases",
+  Recommended = "Recommended",
 }
 
 // Types

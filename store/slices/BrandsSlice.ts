@@ -1,4 +1,3 @@
-import type { PayloadAction } from "@reduxjs/toolkit";
 import { createAppSlice } from "@/store/createAppSlice";
 import { brandsInitialState } from "@/store/initialState/BrandsInitialState";
 import {
