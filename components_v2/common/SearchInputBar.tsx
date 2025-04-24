@@ -1,12 +1,13 @@
 import React, { RefObject } from "react";
 import {
   StyleSheet,
-  TouchableOpacity,
   Image,
   Platform,
   StyleProp,
   ViewStyle,
+  View,
   TextStyle,
+  TouchableOpacity,
 } from "react-native";
 import { Searchbar } from "react-native-paper";
 import StyledText from "@/components_v2/common/StyledText"; // adjust if needed
@@ -23,6 +24,7 @@ interface SearchInputBarProps {
   inputStyle?: StyleProp<TextStyle>;
   placeholderStyle?: StyleProp<TextStyle>;
   onClearIconPress?: () => void;
+  placeholderText?: string;
 }
 
 const SearchInputBar: React.FC<SearchInputBarProps> = ({
@@ -37,16 +39,15 @@ const SearchInputBar: React.FC<SearchInputBarProps> = ({
   inputStyle,
   placeholderStyle,
   onClearIconPress,
+  placeholderText = "Search across 100+ brands",
 }) => {
   return (
-    <TouchableOpacity
+    <View
       style={[
         styles.searchContainer,
         isSearchActive && styles.stickyHeader,
         containerStyle,
       ]}
-      onPress={onSearchFocus}
-      activeOpacity={1}
     >
       <Searchbar
         ref={searchbarRef}
@@ -67,14 +68,18 @@ const SearchInputBar: React.FC<SearchInputBarProps> = ({
         onClearIconPress={onClearIconPress}
       />
       {searchQuery === "" && !isSearchActive && (
-        <StyledText
-          preset="headingSmall"
+        <TouchableOpacity
           style={[styles.customPlaceholder, placeholderStyle]}
+          activeOpacity={1}
+          onPress={() => {
+            searchbarRef.current?.focus();
+            onSearchFocus();
+          }}
         >
-          Search across 50+ brands
-        </StyledText>
+          <StyledText preset="headingSmall">{placeholderText}</StyledText>
+        </TouchableOpacity>
       )}
-    </TouchableOpacity>
+    </View>
   );
 };
 

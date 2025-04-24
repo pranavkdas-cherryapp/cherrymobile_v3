@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
-import { useState } from "react";
 import { router } from "expo-router";
 
 const brands = [
@@ -105,10 +104,14 @@ export default function ShopByCategory() {
           {/* Row 2 */}
           <View style={styles.row}>
             {row2.map((item) => (
-              <View key={item.id} style={styles.brandCard}>
+              <TouchableOpacity
+                key={item.brandId}
+                style={styles.brandCard}
+                onPress={() => router.push("/shop")}
+              >
                 <Image source={item.image} style={styles.brandImage} />
                 <Text style={styles.brandName}>{item.name}</Text>
-              </View>
+              </TouchableOpacity>
             ))}
           </View>
         </View>

@@ -26,6 +26,9 @@ export const brandsSlice = createAppSlice({
     getBrandsGroupedByStartingLetterList: (state: any) => {
       return state.brandGroupedByStartingLetterList;
     },
+    getBrandsListSelector: (state: any) => {
+      return Object.values(state.brandIdBrandDictionary);
+    },
   },
 });
 
@@ -34,4 +37,5 @@ export const { getBrandsList } = brandsSlice.actions;
 export const {
   getBrandsGroupedByCategoryDict,
   getBrandsGroupedByStartingLetterList,
+  getBrandsListSelector,
 } = brandsSlice.selectors;

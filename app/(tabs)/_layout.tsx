@@ -1,5 +1,5 @@
 import { Tabs } from "expo-router";
-import React from "react";
+import React, { useEffect } from "react";
 import { Platform, Pressable, View, Easing } from "react-native";
 
 import { NoEffectTabBarButton } from "@/components/HapticTab";

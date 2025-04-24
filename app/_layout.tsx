@@ -10,9 +10,23 @@ import { useEffect } from "react";
 import "react-native-reanimated";
 import { StoreProvider } from "@/store/storeProvider";
 import { useColorScheme } from "@/hooks/useColorScheme";
+import { useAppDispatch } from "@/store/hooks";
+import { getBrandsList } from "@/store/slices/BrandsSlice";
+import { searchAndFilterProducts } from "@/store/slices/ShoppingSlice";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
+
+function RootLogic() {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(getBrandsList());
+    dispatch(searchAndFilterProducts(1));
+  }, []);
+
+  return null;
+}
 
 export default function RootLayout() {
   const router = useRouter();
@@ -51,9 +65,11 @@ export default function RootLayout() {
         <Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="onboarding" options={{ headerShown: false }} />
+          <Stack.Screen name="shop" options={{ headerShown: false }} />
           <Stack.Screen name="+not-found" />
         </Stack>
         <StatusBar style="auto" />
+        <RootLogic />
       </ThemeProvider>
     </StoreProvider>
   );

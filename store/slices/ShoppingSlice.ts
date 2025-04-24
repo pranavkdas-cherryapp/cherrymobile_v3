@@ -7,8 +7,10 @@ import {
   Category,
   SortOption,
 } from "@/store/initialState/ShoppingInitialState";
-import { getProductsPayloadCreator } from "@/store/asyncThunks/ShopPageThunk";
-import { getProductsListExtraReducers } from "@/store/asyncThunks/ShopPageThunk";
+import {
+  searchAndFilterProductsPayloadCreator,
+  searchAndFilterProductsExtraReducers,
+} from "@/store/asyncThunks/ShopPageThunk";
 import {
   FilterOptions,
   FilterOptionsKeysMappedToShopFiltersValues,
@@ -17,10 +19,9 @@ export const shoppingSlice = createAppSlice({
   name: "shopping",
   initialState,
   reducers: (create) => ({
-    getProducts: create.asyncThunk(
-      // not sture if this is needed
-      getProductsPayloadCreator,
-      getProductsListExtraReducers
+    searchAndFilterProducts: create.asyncThunk(
+      searchAndFilterProductsPayloadCreator,
+      searchAndFilterProductsExtraReducers
     ),
     setIsFilterVisible: create.reducer(
       (state, action: PayloadAction<boolean>) => {
@@ -34,7 +35,16 @@ export const shoppingSlice = createAppSlice({
     ),
     setSelectedCategory: create.reducer(
       (state, action: PayloadAction<Category>) => {
+        state.productsListLoading = false;
         state.selectedCategory = action.payload;
+        state.pageNumber = 1;
+        state.isLastPage = false;
+        state.productsToDisplay = [];
+        state.appliedFilters = {
+          productFilterList: [],
+          brandFilterList: [],
+          sortOptions: null,
+        };
       }
     ),
     setAppliedOptionsOfFilter: create.reducer(
@@ -53,11 +63,13 @@ export const shoppingSlice = createAppSlice({
         }
       }
     ),
-    /////////////////////////
+    increasePageNumber: create.reducer((state) => {
+      state.pageNumber += 1;
+    }),
   }),
 
   selectors: {
-    getProductsSelector: (state: any) => state.products,
+    getProductsLoadingSelector: (state: any) => state.productsListLoading,
     getIsFilterVisibleSelector: (state: any) => state.isFilterVisible,
     getSelectedFilterTypeSelector: (state: any) => state.selectedFilterType,
     getSelectedCategorySelector: (state: any) => state.selectedCategory,
@@ -87,22 +99,27 @@ export const shoppingSlice = createAppSlice({
       }
       return [];
     },
+    getProductsToDisplaySelector: (state: any) => state.productsToDisplay,
+    getIsLastPageSelector: (state: any) => state.isLastPage,
   },
 });
 
 export const {
-  getProducts,
+  searchAndFilterProducts,
   setIsFilterVisible,
   setSelectedFilterType,
   setSelectedCategory,
   setAppliedOptionsOfFilter,
+  increasePageNumber,
 } = shoppingSlice.actions;
 
 export const {
-  getProductsSelector,
+  getProductsLoadingSelector,
   getIsFilterVisibleSelector,
   getAppliedOptionsOfFilterSelector,
   getOptionsOfFilterSelector,
   getSelectedFilterTypeSelector,
   getSelectedCategorySelector,
+  getProductsToDisplaySelector,
+  getIsLastPageSelector,
 } = shoppingSlice.selectors;

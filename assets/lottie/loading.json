@@ -1,0 +1,3044 @@
+{
+  "variants": [
+    {
+      "shopifyProductId": 91620022730,
+      "shopifyVariantId": 81675537351,
+      "variantId": "574abeaf-4576-49db-9dc3-84bd75744ff4",
+      "productId": "0d617bb7-a189-4a7a-a54e-99697bd9ba47",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Pink Activewear",
+      "handle": "Black-Activewear",
+      "productTitle": "Purple",
+      "description": "Black Activewear description",
+      "productType": "Activewear",
+      "vendor": "Comet",
+      "tags": [
+        "activewear",
+        "black",
+        "hot"
+      ],
+      "categoryId": "cat-001",
+      "categoryName": "Fashion",
+      "images": [
+        "https://cdn.example.com/images/image-3fa07c57.jpg",
+        "https://cdn.example.com/images/image-629924ec.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-035115f1.jpg",
+      "price": 50.58,
+      "compareAtPrice": 136.89,
+      "available": true,
+      "sku": "Cherry-comet-red",
+      "visualOptionId": "opt-511",
+      "options": {
+        "color": "Red",
+        "size": "7"
+      },
+      "id": "Cherry-Co.-93239230409-75009546839",
+      "publishedAt": "2025-03-26T11:36:50.040719",
+      "updatedAt": "2025-03-26T11:36:50.040719"
+    },
+    {
+      "shopifyProductId": 92842890854,
+      "shopifyVariantId": 60946536058,
+      "variantId": "fcdf1523-b8ec-44be-8c4b-7bb8b069999e",
+      "productId": "5b9a39d6-839d-43d8-8886-c9917897a231",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Purple Saree",
+      "handle": "Blue-Saree",
+      "productTitle": "Yellow",
+      "description": "Red Saree description",
+      "productType": "Saree",
+      "vendor": "Comet",
+      "tags": [
+        "saree",
+        "white",
+        "hot"
+      ],
+      "categoryId": "cat-001",
+      "categoryName": "Fashion",
+      "images": [
+        "https://cdn.example.com/images/image-2083b2ca.jpg",
+        "https://cdn.example.com/images/image-52c596e1.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-58572266.jpg",
+      "price": 81.02,
+      "compareAtPrice": 178.93,
+      "available": true,
+      "sku": "Cherry-comet-orange",
+      "visualOptionId": "opt-833",
+      "options": {
+        "color": "Red",
+        "size": "5"
+      },
+      "id": "Cherry-Co.-94903755808-30651637814",
+      "publishedAt": "2025-04-06T11:36:50.042740",
+      "updatedAt": "2025-04-06T11:36:50.042740"
+    },
+    {
+      "shopifyProductId": 99607600220,
+      "shopifyVariantId": 28372145642,
+      "variantId": "16d808ae-7072-4031-8893-ff3cfe5c93e1",
+      "productId": "a3b6349c-7adc-42c0-800c-5bbf04103294",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Blue Ethnic Wear",
+      "handle": "Red-Ethnic-Wear",
+      "productTitle": "Orange",
+      "description": "Pink Ethnic Wear description",
+      "productType": "Ethnic Wear",
+      "vendor": "Comet",
+      "tags": [
+        "ethnic wear",
+        "blue",
+        "hot"
+      ],
+      "categoryId": "cat-001",
+      "categoryName": "Fashion",
+      "images": [
+        "https://cdn.example.com/images/image-ccd86a1a.jpg",
+        "https://cdn.example.com/images/image-15f7ea70.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-dfdc8a6b.jpg",
+      "price": 76.34,
+      "compareAtPrice": 142.83,
+      "available": true,
+      "sku": "Cherry-comet-black",
+      "visualOptionId": "opt-133",
+      "options": {
+        "color": "Green",
+        "size": "7"
+      },
+      "id": "Cherry-Co.-90848759478-40731134618",
+      "publishedAt": "2025-03-31T11:36:50.043782",
+      "updatedAt": "2025-03-31T11:36:50.043782"
+    },
+    {
+      "shopifyProductId": 93724900206,
+      "shopifyVariantId": 69795045981,
+      "variantId": "ed4c4812-e7ef-4523-8aca-f31392cd7bdc",
+      "productId": "c4bce9cc-c640-4e51-9aee-0e658b75a900",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Yellow T-Shirt",
+      "handle": "Orange-T-Shirt",
+      "productTitle": "Blue",
+      "description": "Green T-Shirt description",
+      "productType": "T-Shirt",
+      "vendor": "Comet",
+      "tags": [
+        "t-shirt",
+        "yellow",
+        "hot"
+      ],
+      "categoryId": "cat-001",
+      "categoryName": "Fashion",
+      "images": [
+        "https://cdn.example.com/images/image-deb7c92e.jpg",
+        "https://cdn.example.com/images/image-2193af6a.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-489a8383.jpg",
+      "price": 25.45,
+      "compareAtPrice": 118.11,
+      "available": true,
+      "sku": "Cherry-comet-purple",
+      "visualOptionId": "opt-547",
+      "options": {
+        "color": "White",
+        "size": "8"
+      },
+      "id": "Cherry-Co.-98628767087-77840847017",
+      "publishedAt": "2025-04-11T11:36:50.043965",
+      "updatedAt": "2025-04-11T11:36:50.043965"
+    },
+    {
+      "shopifyProductId": 94097664466,
+      "shopifyVariantId": 73332542510,
+      "variantId": "b61399cc-e6bf-456a-b131-7c2f3e5e29b1",
+      "productId": "9b0011ab-a331-4fd3-85fa-e9bb43842c88",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Green Shorts",
+      "handle": "Yellow-Shorts",
+      "productTitle": "Blue",
+      "description": "Orange Shorts description",
+      "productType": "Shorts",
+      "vendor": "Comet",
+      "tags": [
+        "shorts",
+        "blue",
+        "hot"
+      ],
+      "categoryId": "cat-001",
+      "categoryName": "Fashion",
+      "images": [
+        "https://cdn.example.com/images/image-8a442ad9.jpg",
+        "https://cdn.example.com/images/image-80cb0b0f.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-bce08502.jpg",
+      "price": 83.29,
+      "compareAtPrice": 123.93,
+      "available": true,
+      "sku": "Cherry-comet-black",
+      "visualOptionId": "opt-481",
+      "options": {
+        "color": "Pink",
+        "size": "7"
+      },
+      "id": "Cherry-Co.-95708596927-79555246451",
+      "publishedAt": "2025-03-29T11:36:50.044164",
+      "updatedAt": "2025-03-29T11:36:50.044164"
+    },
+    {
+      "shopifyProductId": 91944967020,
+      "shopifyVariantId": 98433845929,
+      "variantId": "556636d4-cb37-4191-8664-ed9cd4f15ea5",
+      "productId": "f43ada87-89ae-4771-a244-b0e63312b221",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Orange T-Shirt",
+      "handle": "Orange-T-Shirt",
+      "productTitle": "Yellow",
+      "description": "Green T-Shirt description",
+      "productType": "T-Shirt",
+      "vendor": "Comet",
+      "tags": [
+        "t-shirt",
+        "purple",
+        "hot"
+      ],
+      "categoryId": "cat-001",
+      "categoryName": "Fashion",
+      "images": [
+        "https://cdn.example.com/images/image-5641ee4f.jpg",
+        "https://cdn.example.com/images/image-03801b2a.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-2ee6df07.jpg",
+      "price": 28.4,
+      "compareAtPrice": 197.6,
+      "available": true,
+      "sku": "Cherry-comet-orange",
+      "visualOptionId": "opt-898",
+      "options": {
+        "color": "White",
+        "size": "6"
+      },
+      "id": "Cherry-Co.-97253309008-87737195282",
+      "publishedAt": "2025-04-07T11:36:50.044373",
+      "updatedAt": "2025-04-07T11:36:50.044373"
+    },
+    {
+      "shopifyProductId": 95202464440,
+      "shopifyVariantId": 95892994293,
+      "variantId": "e211c2b0-30d0-4667-8061-fdb51998c88e",
+      "productId": "a8395624-4141-40b4-bc51-f4bf936e25e4",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "White Shorts",
+      "handle": "Yellow-Shorts",
+      "productTitle": "Yellow",
+      "description": "Orange Shorts description",
+      "productType": "Shorts",
+      "vendor": "Comet",
+      "tags": [
+        "shorts",
+        "green",
+        "hot"
+      ],
+      "categoryId": "cat-001",
+      "categoryName": "Fashion",
+      "images": [
+        "https://cdn.example.com/images/image-cdd8d1e0.jpg",
+        "https://cdn.example.com/images/image-4b0da6c9.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-6c3fb5da.jpg",
+      "price": 58.68,
+      "compareAtPrice": 159.62,
+      "available": true,
+      "sku": "Cherry-comet-black",
+      "visualOptionId": "opt-208",
+      "options": {
+        "color": "Pink",
+        "size": "7"
+      },
+      "id": "Cherry-Co.-97280056023-83660005266",
+      "publishedAt": "2025-03-24T11:36:50.044534",
+      "updatedAt": "2025-03-24T11:36:50.044534"
+    },
+    {
+      "shopifyProductId": 92780853489,
+      "shopifyVariantId": 58761576127,
+      "variantId": "2eb77b42-47d2-4f8e-b143-bd836e234fed",
+      "productId": "e560c0c8-7599-4b1c-9a97-3a8b78dc22d1",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Pink Dress",
+      "handle": "Red-Dress",
+      "productTitle": "Pink",
+      "description": "Red Dress description",
+      "productType": "Dress",
+      "vendor": "Comet",
+      "tags": [
+        "dress",
+        "black",
+        "hot"
+      ],
+      "categoryId": "cat-001",
+      "categoryName": "Fashion",
+      "images": [
+        "https://cdn.example.com/images/image-85d35929.jpg",
+        "https://cdn.example.com/images/image-c86cd542.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-1f1b2897.jpg",
+      "price": 36.2,
+      "compareAtPrice": 173.73,
+      "available": true,
+      "sku": "Cherry-comet-red",
+      "visualOptionId": "opt-906",
+      "options": {
+        "color": "Purple",
+        "size": "5"
+      },
+      "id": "Cherry-Co.-92727172600-40598216667",
+      "publishedAt": "2025-03-31T11:36:50.044917",
+      "updatedAt": "2025-03-31T11:36:50.044917"
+    },
+    {
+      "shopifyProductId": 96264919907,
+      "shopifyVariantId": 33570748403,
+      "variantId": "121fac4a-9904-4d9d-b6b4-c6ee584a17cc",
+      "productId": "a7e40129-59c8-4251-880d-e1a6ac9993cc",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Yellow Ethnic Wear",
+      "handle": "Black-Ethnic-Wear",
+      "productTitle": "Red",
+      "description": "Yellow Ethnic Wear description",
+      "productType": "Ethnic Wear",
+      "vendor": "Comet",
+      "tags": [
+        "ethnic wear",
+        "purple",
+        "hot"
+      ],
+      "categoryId": "cat-001",
+      "categoryName": "Fashion",
+      "images": [
+        "https://cdn.example.com/images/image-cb3404b7.jpg",
+        "https://cdn.example.com/images/image-e7ec2536.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-9c7fcd78.jpg",
+      "price": 69.4,
+      "compareAtPrice": 198.02,
+      "available": true,
+      "sku": "Cherry-comet-black",
+      "visualOptionId": "opt-858",
+      "options": {
+        "color": "Black",
+        "size": "6"
+      },
+      "id": "Cherry-Co.-91879267152-61503925113",
+      "publishedAt": "2025-04-14T11:36:50.045081",
+      "updatedAt": "2025-04-14T11:36:50.045081"
+    },
+    {
+      "shopifyProductId": 91046152128,
+      "shopifyVariantId": 43831706693,
+      "variantId": "deeaefb0-73e4-47e6-954d-39067bc8a272",
+      "productId": "2f536006-7f99-47c9-9376-d14b685aec37",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "White Pant",
+      "handle": "Yellow-Pant",
+      "productTitle": "Orange",
+      "description": "Yellow Pant description",
+      "productType": "Pant",
+      "vendor": "Comet",
+      "tags": [
+        "pant",
+        "blue",
+        "hot"
+      ],
+      "categoryId": "cat-001",
+      "categoryName": "Fashion",
+      "images": [
+        "https://cdn.example.com/images/image-d77efdc3.jpg",
+        "https://cdn.example.com/images/image-1726c01a.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-3a5d2fd5.jpg",
+      "price": 92.55,
+      "compareAtPrice": 157.51,
+      "available": true,
+      "sku": "Cherry-comet-black",
+      "visualOptionId": "opt-316",
+      "options": {
+        "color": "Purple",
+        "size": "5"
+      },
+      "id": "Cherry-Co.-95673977974-91140831893",
+      "publishedAt": "2025-04-20T11:36:50.045367",
+      "updatedAt": "2025-04-20T11:36:50.045367"
+    },
+    {
+      "shopifyProductId": 93155704822,
+      "shopifyVariantId": 72306845341,
+      "variantId": "35525766-9729-4209-b45a-8a8115761083",
+      "productId": "7853e074-cfb4-42a6-804c-ae3d12508a2a",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Red Activewear",
+      "handle": "Orange-Activewear",
+      "productTitle": "Blue",
+      "description": "Pink Activewear description",
+      "productType": "Activewear",
+      "vendor": "Comet",
+      "tags": [
+        "activewear",
+        "yellow",
+        "hot"
+      ],
+      "categoryId": "cat-001",
+      "categoryName": "Fashion",
+      "images": [
+        "https://cdn.example.com/images/image-ef3445bc.jpg",
+        "https://cdn.example.com/images/image-997ab9ed.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-c5e83830.jpg",
+      "price": 79.33,
+      "compareAtPrice": 143.43,
+      "available": true,
+      "sku": "Cherry-comet-white",
+      "visualOptionId": "opt-338",
+      "options": {
+        "color": "Yellow",
+        "size": "7"
+      },
+      "id": "Cherry-Co.-95802896272-42334616262",
+      "publishedAt": "2025-03-26T11:36:50.045502",
+      "updatedAt": "2025-03-26T11:36:50.045502"
+    },
+    {
+      "shopifyProductId": 99030953831,
+      "shopifyVariantId": 62018634989,
+      "variantId": "729429f2-f874-45b3-a6e2-64d5fc713027",
+      "productId": "df8fa71e-ee59-44bb-b168-6e7df29990c8",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Black T-Shirt",
+      "handle": "Blue-T-Shirt",
+      "productTitle": "Red",
+      "description": "Red T-Shirt description",
+      "productType": "T-Shirt",
+      "vendor": "Comet",
+      "tags": [
+        "t-shirt",
+        "orange",
+        "hot"
+      ],
+      "categoryId": "cat-001",
+      "categoryName": "Fashion",
+      "images": [
+        "https://cdn.example.com/images/image-492aebc2.jpg",
+        "https://cdn.example.com/images/image-2ccdad89.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-1c82bb75.jpg",
+      "price": 49.08,
+      "compareAtPrice": 142.88,
+      "available": true,
+      "sku": "Cherry-comet-red",
+      "visualOptionId": "opt-435",
+      "options": {
+        "color": "Red",
+        "size": "8"
+      },
+      "id": "Cherry-Co.-95522974017-51558347191",
+      "publishedAt": "2025-04-02T11:36:50.045619",
+      "updatedAt": "2025-04-02T11:36:50.045619"
+    },
+    {
+      "shopifyProductId": 98399886619,
+      "shopifyVariantId": 68395043949,
+      "variantId": "9ba3cd6b-3d26-4967-8310-aec40cb83454",
+      "productId": "a313991e-a507-47fa-a075-9bb27d857b99",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Blue Jeans",
+      "handle": "Purple-Jeans",
+      "productTitle": "Purple",
+      "description": "Orange Jeans description",
+      "productType": "Jeans",
+      "vendor": "Comet",
+      "tags": [
+        "jeans",
+        "blue",
+        "hot"
+      ],
+      "categoryId": "cat-001",
+      "categoryName": "Fashion",
+      "images": [
+        "https://cdn.example.com/images/image-a46798df.jpg",
+        "https://cdn.example.com/images/image-3a77b52a.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-e68efb79.jpg",
+      "price": 72.79,
+      "compareAtPrice": 109.08,
+      "available": true,
+      "sku": "Cherry-comet-green",
+      "visualOptionId": "opt-757",
+      "options": {
+        "color": "Green",
+        "size": "8"
+      },
+      "id": "Cherry-Co.-98983367527-94882805359",
+      "publishedAt": "2025-03-24T11:36:50.045748",
+      "updatedAt": "2025-03-24T11:36:50.045748"
+    },
+    {
+      "shopifyProductId": 97501333474,
+      "shopifyVariantId": 97786349886,
+      "variantId": "d1d17014-baa4-4c4d-922c-fd430f438830",
+      "productId": "38bdd072-24dd-4f1b-b00e-45081c34104a",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Pink Pant",
+      "handle": "White-Pant",
+      "productTitle": "Yellow",
+      "description": "Orange Pant description",
+      "productType": "Pant",
+      "vendor": "Comet",
+      "tags": [
+        "pant",
+        "blue",
+        "hot"
+      ],
+      "categoryId": "cat-001",
+      "categoryName": "Fashion",
+      "images": [
+        "https://cdn.example.com/images/image-396c38a7.jpg",
+        "https://cdn.example.com/images/image-577d82c8.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-a14c9a26.jpg",
+      "price": 53.94,
+      "compareAtPrice": 109.7,
+      "available": true,
+      "sku": "Cherry-comet-black",
+      "visualOptionId": "opt-238",
+      "options": {
+        "color": "Orange",
+        "size": "7"
+      },
+      "id": "Cherry-Co.-90744766289-68983321952",
+      "publishedAt": "2025-03-30T11:36:50.045981",
+      "updatedAt": "2025-03-30T11:36:50.045981"
+    },
+    {
+      "shopifyProductId": 98119205775,
+      "shopifyVariantId": 39907872553,
+      "variantId": "b35de28b-a433-4256-a42d-5db27b2d4499",
+      "productId": "951a1e37-53a7-4ba0-b9a9-d9583560c55e",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Black Nightwear",
+      "handle": "Green-Nightwear",
+      "productTitle": "Orange",
+      "description": "Black Nightwear description",
+      "productType": "Nightwear",
+      "vendor": "Comet",
+      "tags": [
+        "nightwear",
+        "blue",
+        "hot"
+      ],
+      "categoryId": "cat-001",
+      "categoryName": "Fashion",
+      "images": [
+        "https://cdn.example.com/images/image-21c77447.jpg",
+        "https://cdn.example.com/images/image-2bff70f0.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-ae6f69cb.jpg",
+      "price": 84.31,
+      "compareAtPrice": 126.45,
+      "available": true,
+      "sku": "Cherry-comet-green",
+      "visualOptionId": "opt-414",
+      "options": {
+        "color": "Red",
+        "size": "8"
+      },
+      "id": "Cherry-Co.-90755824373-40238887693",
+      "publishedAt": "2025-04-03T11:36:50.046118",
+      "updatedAt": "2025-04-03T11:36:50.046118"
+    },
+    {
+      "shopifyProductId": 90468902428,
+      "shopifyVariantId": 45176418032,
+      "variantId": "22163959-04c7-4db3-9661-71702a6ad881",
+      "productId": "052ba637-9b68-43b1-9b4e-83cce85c7a40",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Green Activewear",
+      "handle": "Green-Activewear",
+      "productTitle": "Yellow",
+      "description": "Red Activewear description",
+      "productType": "Activewear",
+      "vendor": "Comet",
+      "tags": [
+        "activewear",
+        "red",
+        "hot"
+      ],
+      "categoryId": "cat-001",
+      "categoryName": "Fashion",
+      "images": [
+        "https://cdn.example.com/images/image-330eabe8.jpg",
+        "https://cdn.example.com/images/image-7f771f5b.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-aa959968.jpg",
+      "price": 72.65,
+      "compareAtPrice": 158.52,
+      "available": true,
+      "sku": "Cherry-comet-purple",
+      "visualOptionId": "opt-749",
+      "options": {
+        "color": "Blue",
+        "size": "7"
+      },
+      "id": "Cherry-Co.-96290716366-29677767174",
+      "publishedAt": "2025-04-10T11:36:50.046233",
+      "updatedAt": "2025-04-10T11:36:50.046233"
+    },
+    {
+      "shopifyProductId": 98331825574,
+      "shopifyVariantId": 65371474474,
+      "variantId": "f966cc40-a4e6-4b20-827a-62f14c934839",
+      "productId": "5d99c6df-b84d-495b-802e-2982f8a2935b",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Purple Shorts",
+      "handle": "White-Shorts",
+      "productTitle": "Green",
+      "description": "Purple Shorts description",
+      "productType": "Shorts",
+      "vendor": "Comet",
+      "tags": [
+        "shorts",
+        "green",
+        "hot"
+      ],
+      "categoryId": "cat-001",
+      "categoryName": "Fashion",
+      "images": [
+        "https://cdn.example.com/images/image-abbe62eb.jpg",
+        "https://cdn.example.com/images/image-6732c779.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-41af1314.jpg",
+      "price": 64.69,
+      "compareAtPrice": 156.8,
+      "available": true,
+      "sku": "Cherry-comet-pink",
+      "visualOptionId": "opt-480",
+      "options": {
+        "color": "Orange",
+        "size": "7"
+      },
+      "id": "Cherry-Co.-95130908733-99856830333",
+      "publishedAt": "2025-04-15T11:36:50.046354",
+      "updatedAt": "2025-04-15T11:36:50.046354"
+    },
+    {
+      "shopifyProductId": 96546633717,
+      "shopifyVariantId": 75121756106,
+      "variantId": "13698900-2bdf-4e2a-b953-af8227711950",
+      "productId": "6e58e62f-96af-4a17-8ffd-ec4c81de4217",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Pink Top",
+      "handle": "White-Top",
+      "productTitle": "Black",
+      "description": "Pink Top description",
+      "productType": "Top",
+      "vendor": "Comet",
+      "tags": [
+        "top",
+        "black",
+        "hot"
+      ],
+      "categoryId": "cat-001",
+      "categoryName": "Fashion",
+      "images": [
+        "https://cdn.example.com/images/image-0d5c6891.jpg",
+        "https://cdn.example.com/images/image-2f64dbec.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-1af93c31.jpg",
+      "price": 68.49,
+      "compareAtPrice": 186.15,
+      "available": true,
+      "sku": "Cherry-comet-red",
+      "visualOptionId": "opt-146",
+      "options": {
+        "color": "Orange",
+        "size": "9"
+      },
+      "id": "Cherry-Co.-98686156800-14683283065",
+      "publishedAt": "2025-04-05T11:36:50.046469",
+      "updatedAt": "2025-04-05T11:36:50.046469"
+    },
+    {
+      "shopifyProductId": 99739699375,
+      "shopifyVariantId": 99706765462,
+      "variantId": "b7906927-1e27-417b-adfe-51cd1ad01275",
+      "productId": "2c715324-8d16-4d72-8238-b28285247804",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Blue Innerwear",
+      "handle": "Orange-Innerwear",
+      "productTitle": "Black",
+      "description": "Green Innerwear description",
+      "productType": "Innerwear",
+      "vendor": "Comet",
+      "tags": [
+        "innerwear",
+        "black",
+        "hot"
+      ],
+      "categoryId": "cat-001",
+      "categoryName": "Fashion",
+      "images": [
+        "https://cdn.example.com/images/image-132f1860.jpg",
+        "https://cdn.example.com/images/image-6d76c517.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-821a931d.jpg",
+      "price": 65.99,
+      "compareAtPrice": 128.12,
+      "available": true,
+      "sku": "Cherry-comet-purple",
+      "visualOptionId": "opt-459",
+      "options": {
+        "color": "Blue",
+        "size": "10"
+      },
+      "id": "Cherry-Co.-95771410441-31039728071",
+      "publishedAt": "2025-04-20T11:36:50.046611",
+      "updatedAt": "2025-04-20T11:36:50.046611"
+    },
+    {
+      "shopifyProductId": 90781292433,
+      "shopifyVariantId": 63649918652,
+      "variantId": "797207de-0a07-4fb1-b5bc-52ce1806d0b1",
+      "productId": "d170d315-ed3a-45b4-a79d-a86d644aaf96",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Purple Ethnic Wear",
+      "handle": "Pink-Ethnic-Wear",
+      "productTitle": "Orange",
+      "description": "Green Ethnic Wear description",
+      "productType": "Ethnic Wear",
+      "vendor": "Comet",
+      "tags": [
+        "ethnic wear",
+        "blue",
+        "hot"
+      ],
+      "categoryId": "cat-001",
+      "categoryName": "Fashion",
+      "images": [
+        "https://cdn.example.com/images/image-423b00c9.jpg",
+        "https://cdn.example.com/images/image-663597d3.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-b992bd2f.jpg",
+      "price": 38.11,
+      "compareAtPrice": 161.89,
+      "available": true,
+      "sku": "Cherry-comet-green",
+      "visualOptionId": "opt-265",
+      "options": {
+        "color": "White",
+        "size": "10"
+      },
+      "id": "Cherry-Co.-90600641083-17107104949",
+      "publishedAt": "2025-04-07T11:36:50.046750",
+      "updatedAt": "2025-04-07T11:36:50.046750"
+    },
+    {
+      "shopifyProductId": 91241126676,
+      "shopifyVariantId": 68298246513,
+      "variantId": "87a85eff-1cdd-496a-872a-dd3a75c9b5a5",
+      "productId": "a6ea1113-5f96-48bb-bd39-d72d28d562c3",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Pink Blush",
+      "handle": "Orange-Blush",
+      "productTitle": "Red",
+      "description": "Yellow Blush description",
+      "productType": "Blush",
+      "vendor": "Comet",
+      "tags": [
+        "blush",
+        "orange",
+        "hot"
+      ],
+      "categoryId": "cat-002",
+      "categoryName": "Beauty",
+      "images": [
+        "https://cdn.example.com/images/image-44a52cad.jpg",
+        "https://cdn.example.com/images/image-0c28b9c7.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-d0036e8a.jpg",
+      "price": 62.03,
+      "compareAtPrice": 163.05,
+      "available": true,
+      "sku": "Cherry-comet-green",
+      "visualOptionId": "opt-890",
+      "options": {
+        "color": "Green",
+        "size": "7"
+      },
+      "id": "Cherry-Co.-91855968502-89915490301",
+      "publishedAt": "2025-04-12T11:36:50.046865",
+      "updatedAt": "2025-04-12T11:36:50.046865"
+    },
+    {
+      "shopifyProductId": 90902776881,
+      "shopifyVariantId": 78894445209,
+      "variantId": "63442b19-2fe2-4372-9f1b-ccba5d6c0716",
+      "productId": "761782b4-1893-489c-9e21-592de271decc",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Green Blush",
+      "handle": "Purple-Blush",
+      "productTitle": "Orange",
+      "description": "White Blush description",
+      "productType": "Blush",
+      "vendor": "Comet",
+      "tags": [
+        "blush",
+        "pink",
+        "hot"
+      ],
+      "categoryId": "cat-002",
+      "categoryName": "Beauty",
+      "images": [
+        "https://cdn.example.com/images/image-427e5589.jpg",
+        "https://cdn.example.com/images/image-bf729f7c.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-f4689592.jpg",
+      "price": 76.59,
+      "compareAtPrice": 135.22,
+      "available": true,
+      "sku": "Cherry-comet-green",
+      "visualOptionId": "opt-814",
+      "options": {
+        "color": "Black",
+        "size": "9"
+      },
+      "id": "Cherry-Co.-90616000976-76631354379",
+      "publishedAt": "2025-04-10T11:36:50.046977",
+      "updatedAt": "2025-04-10T11:36:50.046977"
+    },
+    {
+      "shopifyProductId": 94943470578,
+      "shopifyVariantId": 98034964382,
+      "variantId": "da74bd5f-96f3-48c6-85b9-10ad54a5e8c3",
+      "productId": "212e0031-bf8e-46cd-b542-1ca4142286a6",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Green Hair Oil",
+      "handle": "Yellow-Hair-Oil",
+      "productTitle": "Green",
+      "description": "Yellow Hair Oil description",
+      "productType": "Hair Oil",
+      "vendor": "Comet",
+      "tags": [
+        "hair oil",
+        "yellow",
+        "hot"
+      ],
+      "categoryId": "cat-002",
+      "categoryName": "Beauty",
+      "images": [
+        "https://cdn.example.com/images/image-f735bdeb.jpg",
+        "https://cdn.example.com/images/image-3642785a.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-0c08bcf8.jpg",
+      "price": 28.36,
+      "compareAtPrice": 133.99,
+      "available": true,
+      "sku": "Cherry-comet-red",
+      "visualOptionId": "opt-693",
+      "options": {
+        "color": "Green",
+        "size": "7"
+      },
+      "id": "Cherry-Co.-93934029218-59741760075",
+      "publishedAt": "2025-04-20T11:36:50.047097",
+      "updatedAt": "2025-04-20T11:36:50.047097"
+    },
+    {
+      "shopifyProductId": 94391761416,
+      "shopifyVariantId": 97856906050,
+      "variantId": "0cfd913d-7159-4a51-be52-119232d7b23b",
+      "productId": "2b14b73e-144d-40a0-a874-61e3f7d9d2e6",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Yellow Face Mask",
+      "handle": "White-Face-Mask",
+      "productTitle": "Red",
+      "description": "White Face Mask description",
+      "productType": "Face Mask",
+      "vendor": "Comet",
+      "tags": [
+        "face mask",
+        "orange",
+        "hot"
+      ],
+      "categoryId": "cat-002",
+      "categoryName": "Beauty",
+      "images": [
+        "https://cdn.example.com/images/image-58c33844.jpg",
+        "https://cdn.example.com/images/image-1e081d6d.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-4f5da348.jpg",
+      "price": 85.57,
+      "compareAtPrice": 107.1,
+      "available": true,
+      "sku": "Cherry-comet-white",
+      "visualOptionId": "opt-105",
+      "options": {
+        "color": "White",
+        "size": "9"
+      },
+      "id": "Cherry-Co.-98680632986-15398219079",
+      "publishedAt": "2025-04-14T11:36:50.047208",
+      "updatedAt": "2025-04-14T11:36:50.047208"
+    },
+    {
+      "shopifyProductId": 97325618055,
+      "shopifyVariantId": 38721843345,
+      "variantId": "6d34a58d-f8ad-4e15-a181-0967771a0e4c",
+      "productId": "8f7f38a1-b807-418f-968c-f47e8470c018",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Purple Shampoo",
+      "handle": "Red-Shampoo",
+      "productTitle": "Black",
+      "description": "Blue Shampoo description",
+      "productType": "Shampoo",
+      "vendor": "Comet",
+      "tags": [
+        "shampoo",
+        "yellow",
+        "hot"
+      ],
+      "categoryId": "cat-002",
+      "categoryName": "Beauty",
+      "images": [
+        "https://cdn.example.com/images/image-d8ca3126.jpg",
+        "https://cdn.example.com/images/image-8d09729e.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-dae0d959.jpg",
+      "price": 33.36,
+      "compareAtPrice": 168.56,
+      "available": true,
+      "sku": "Cherry-comet-green",
+      "visualOptionId": "opt-883",
+      "options": {
+        "color": "Blue",
+        "size": "10"
+      },
+      "id": "Cherry-Co.-91400409025-72013041228",
+      "publishedAt": "2025-04-14T11:36:50.047317",
+      "updatedAt": "2025-04-14T11:36:50.047317"
+    },
+    {
+      "shopifyProductId": 91151925801,
+      "shopifyVariantId": 42265843873,
+      "variantId": "f15206e4-f73a-41d2-8bcf-10d00acc7561",
+      "productId": "2518edbc-f7aa-4f4b-b28c-a04c658ec043",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Pink Mascara",
+      "handle": "Orange-Mascara",
+      "productTitle": "Black",
+      "description": "Green Mascara description",
+      "productType": "Mascara",
+      "vendor": "Comet",
+      "tags": [
+        "mascara",
+        "black",
+        "hot"
+      ],
+      "categoryId": "cat-002",
+      "categoryName": "Beauty",
+      "images": [
+        "https://cdn.example.com/images/image-dca87512.jpg",
+        "https://cdn.example.com/images/image-89417213.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-7dc99aea.jpg",
+      "price": 21.37,
+      "compareAtPrice": 197.02,
+      "available": true,
+      "sku": "Cherry-comet-pink",
+      "visualOptionId": "opt-518",
+      "options": {
+        "color": "Pink",
+        "size": "6"
+      },
+      "id": "Cherry-Co.-90011793627-16753537428",
+      "publishedAt": "2025-04-16T11:36:50.047473",
+      "updatedAt": "2025-04-16T11:36:50.047473"
+    },
+    {
+      "shopifyProductId": 98602182873,
+      "shopifyVariantId": 22585677382,
+      "variantId": "88a1e3a6-a717-437b-8a15-77d63c3293fc",
+      "productId": "0e1ea386-175e-4986-a293-bf3a4f7dc048",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Red Nail Polish",
+      "handle": "Orange-Nail-Polish",
+      "productTitle": "Orange",
+      "description": "Red Nail Polish description",
+      "productType": "Nail Polish",
+      "vendor": "Comet",
+      "tags": [
+        "nail polish",
+        "red",
+        "hot"
+      ],
+      "categoryId": "cat-002",
+      "categoryName": "Beauty",
+      "images": [
+        "https://cdn.example.com/images/image-dc6b2e72.jpg",
+        "https://cdn.example.com/images/image-f5161590.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-99c6214f.jpg",
+      "price": 43.69,
+      "compareAtPrice": 107.08,
+      "available": true,
+      "sku": "Cherry-comet-white",
+      "visualOptionId": "opt-771",
+      "options": {
+        "color": "Pink",
+        "size": "9"
+      },
+      "id": "Cherry-Co.-92080767167-57625118448",
+      "publishedAt": "2025-03-31T11:36:50.047585",
+      "updatedAt": "2025-03-31T11:36:50.047585"
+    },
+    {
+      "shopifyProductId": 93761431296,
+      "shopifyVariantId": 50484228577,
+      "variantId": "36d2ac40-6096-47ea-a882-3770d2158a8e",
+      "productId": "fd09caa2-ce63-49da-8840-babab9713644",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Green Hair Oil",
+      "handle": "Blue-Hair-Oil",
+      "productTitle": "Pink",
+      "description": "Yellow Hair Oil description",
+      "productType": "Hair Oil",
+      "vendor": "Comet",
+      "tags": [
+        "hair oil",
+        "white",
+        "hot"
+      ],
+      "categoryId": "cat-002",
+      "categoryName": "Beauty",
+      "images": [
+        "https://cdn.example.com/images/image-1adfb3df.jpg",
+        "https://cdn.example.com/images/image-f46144b2.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-ec9fd2ae.jpg",
+      "price": 66.56,
+      "compareAtPrice": 188.3,
+      "available": true,
+      "sku": "Cherry-comet-blue",
+      "visualOptionId": "opt-585",
+      "options": {
+        "color": "Red",
+        "size": "8"
+      },
+      "id": "Cherry-Co.-97527629739-94413862719",
+      "publishedAt": "2025-04-11T11:36:50.047743",
+      "updatedAt": "2025-04-11T11:36:50.047743"
+    },
+    {
+      "shopifyProductId": 94870688835,
+      "shopifyVariantId": 31697601687,
+      "variantId": "5e51bc2d-9207-4f84-a238-64aa273fa53b",
+      "productId": "135ba11a-a93c-4062-9252-d1d4d697a9d8",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Black Skincare",
+      "handle": "White-Skincare",
+      "productTitle": "Blue",
+      "description": "Red Skincare description",
+      "productType": "Skincare",
+      "vendor": "Comet",
+      "tags": [
+        "skincare",
+        "black",
+        "hot"
+      ],
+      "categoryId": "cat-002",
+      "categoryName": "Beauty",
+      "images": [
+        "https://cdn.example.com/images/image-82c4a074.jpg",
+        "https://cdn.example.com/images/image-bb66a36a.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-65f2bf7c.jpg",
+      "price": 18.47,
+      "compareAtPrice": 194.96,
+      "available": true,
+      "sku": "Cherry-comet-pink",
+      "visualOptionId": "opt-320",
+      "options": {
+        "color": "Blue",
+        "size": "5"
+      },
+      "id": "Cherry-Co.-93106618788-14825173371",
+      "publishedAt": "2025-04-10T11:36:50.047875",
+      "updatedAt": "2025-04-10T11:36:50.047875"
+    },
+    {
+      "shopifyProductId": 94479317742,
+      "shopifyVariantId": 82129794777,
+      "variantId": "012db54c-cfff-4d7a-9b16-ee54ff594e08",
+      "productId": "eaa3e891-e738-42b6-b9d6-9cff4ecdd432",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Pink Compact Powder",
+      "handle": "Black-Compact-Powder",
+      "productTitle": "Yellow",
+      "description": "Blue Compact Powder description",
+      "productType": "Compact Powder",
+      "vendor": "Comet",
+      "tags": [
+        "compact powder",
+        "green",
+        "hot"
+      ],
+      "categoryId": "cat-002",
+      "categoryName": "Beauty",
+      "images": [
+        "https://cdn.example.com/images/image-2ecdcf05.jpg",
+        "https://cdn.example.com/images/image-972995ce.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-6d74703b.jpg",
+      "price": 44.22,
+      "compareAtPrice": 179.05,
+      "available": true,
+      "sku": "Cherry-comet-yellow",
+      "visualOptionId": "opt-421",
+      "options": {
+        "color": "Purple",
+        "size": "5"
+      },
+      "id": "Cherry-Co.-90467194347-54597403057",
+      "publishedAt": "2025-04-14T11:36:50.047992",
+      "updatedAt": "2025-04-14T11:36:50.047992"
+    },
+    {
+      "shopifyProductId": 98444538610,
+      "shopifyVariantId": 47922985007,
+      "variantId": "e15e68e1-2c34-4e8f-9664-7f0daea9cd1e",
+      "productId": "e580dd26-66dd-43ae-8cba-a17ba57ddbda",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Orange Mascara",
+      "handle": "Black-Mascara",
+      "productTitle": "Red",
+      "description": "Green Mascara description",
+      "productType": "Mascara",
+      "vendor": "Comet",
+      "tags": [
+        "mascara",
+        "blue",
+        "hot"
+      ],
+      "categoryId": "cat-002",
+      "categoryName": "Beauty",
+      "images": [
+        "https://cdn.example.com/images/image-b532ff12.jpg",
+        "https://cdn.example.com/images/image-7d7e20e0.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-42600812.jpg",
+      "price": 38.04,
+      "compareAtPrice": 181.05,
+      "available": true,
+      "sku": "Cherry-comet-pink",
+      "visualOptionId": "opt-268",
+      "options": {
+        "color": "Orange",
+        "size": "10"
+      },
+      "id": "Cherry-Co.-91193986147-37550778030",
+      "publishedAt": "2025-04-09T11:36:50.048110",
+      "updatedAt": "2025-04-09T11:36:50.048110"
+    },
+    {
+      "shopifyProductId": 95085115728,
+      "shopifyVariantId": 32944167425,
+      "variantId": "bef09550-6d52-44f5-86b2-b512a34f1b0f",
+      "productId": "0dba8917-bf14-4afd-ad9c-43f98561e22b",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Black Face Wash",
+      "handle": "White-Face-Wash",
+      "productTitle": "Red",
+      "description": "Red Face Wash description",
+      "productType": "Face Wash",
+      "vendor": "Comet",
+      "tags": [
+        "face wash",
+        "red",
+        "hot"
+      ],
+      "categoryId": "cat-002",
+      "categoryName": "Beauty",
+      "images": [
+        "https://cdn.example.com/images/image-552addba.jpg",
+        "https://cdn.example.com/images/image-c9c02bba.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-b7c014a4.jpg",
+      "price": 30.07,
+      "compareAtPrice": 168.36,
+      "available": true,
+      "sku": "Cherry-comet-yellow",
+      "visualOptionId": "opt-118",
+      "options": {
+        "color": "Red",
+        "size": "8"
+      },
+      "id": "Cherry-Co.-95236082146-18922890057",
+      "publishedAt": "2025-03-24T11:36:50.048221",
+      "updatedAt": "2025-03-24T11:36:50.048221"
+    },
+    {
+      "shopifyProductId": 96914792383,
+      "shopifyVariantId": 58172891695,
+      "variantId": "6f776614-279d-4ecb-8cf0-6da2884df034",
+      "productId": "47c1965a-13be-4a67-a9fe-3630323d0338",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Pink Makeup",
+      "handle": "White-Makeup",
+      "productTitle": "Yellow",
+      "description": "Green Makeup description",
+      "productType": "Makeup",
+      "vendor": "Comet",
+      "tags": [
+        "makeup",
+        "pink",
+        "hot"
+      ],
+      "categoryId": "cat-002",
+      "categoryName": "Beauty",
+      "images": [
+        "https://cdn.example.com/images/image-f741cbfc.jpg",
+        "https://cdn.example.com/images/image-93c91469.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-e716e9b4.jpg",
+      "price": 93.94,
+      "compareAtPrice": 100.66,
+      "available": true,
+      "sku": "Cherry-comet-blue",
+      "visualOptionId": "opt-503",
+      "options": {
+        "color": "White",
+        "size": "10"
+      },
+      "id": "Cherry-Co.-93005145260-74779305551",
+      "publishedAt": "2025-04-12T11:36:50.048346",
+      "updatedAt": "2025-04-12T11:36:50.048346"
+    },
+    {
+      "shopifyProductId": 90730100412,
+      "shopifyVariantId": 33328094293,
+      "variantId": "ac782093-00c9-4a11-b79e-957b6fd8b7da",
+      "productId": "f9642a1b-c5be-4aa9-aeeb-69a719a1223c",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Purple Perfume",
+      "handle": "Blue-Perfume",
+      "productTitle": "Red",
+      "description": "Orange Perfume description",
+      "productType": "Perfume",
+      "vendor": "Comet",
+      "tags": [
+        "perfume",
+        "yellow",
+        "hot"
+      ],
+      "categoryId": "cat-002",
+      "categoryName": "Beauty",
+      "images": [
+        "https://cdn.example.com/images/image-aa3c02db.jpg",
+        "https://cdn.example.com/images/image-3a933d8f.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-51f2611a.jpg",
+      "price": 60.75,
+      "compareAtPrice": 193.04,
+      "available": true,
+      "sku": "Cherry-comet-purple",
+      "visualOptionId": "opt-703",
+      "options": {
+        "color": "Pink",
+        "size": "5"
+      },
+      "id": "Cherry-Co.-95821151478-93167092292",
+      "publishedAt": "2025-04-14T11:36:50.048462",
+      "updatedAt": "2025-04-14T11:36:50.048462"
+    },
+    {
+      "shopifyProductId": 91427677683,
+      "shopifyVariantId": 61518702199,
+      "variantId": "1f014852-93f7-4fe5-a019-ee1dc6863ef1",
+      "productId": "3a6f03e5-7977-4e17-a0a8-5305faf33a8a",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Purple Body Lotion",
+      "handle": "Yellow-Body-Lotion",
+      "productTitle": "White",
+      "description": "Black Body Lotion description",
+      "productType": "Body Lotion",
+      "vendor": "Comet",
+      "tags": [
+        "body lotion",
+        "pink",
+        "hot"
+      ],
+      "categoryId": "cat-002",
+      "categoryName": "Beauty",
+      "images": [
+        "https://cdn.example.com/images/image-b38988f2.jpg",
+        "https://cdn.example.com/images/image-1f048df4.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-99f064bb.jpg",
+      "price": 62.8,
+      "compareAtPrice": 108.74,
+      "available": true,
+      "sku": "Cherry-comet-orange",
+      "visualOptionId": "opt-848",
+      "options": {
+        "color": "Purple",
+        "size": "8"
+      },
+      "id": "Cherry-Co.-91843694729-25460425632",
+      "publishedAt": "2025-03-27T11:36:50.048577",
+      "updatedAt": "2025-03-27T11:36:50.048577"
+    },
+    {
+      "shopifyProductId": 92482025170,
+      "shopifyVariantId": 69248306842,
+      "variantId": "f3ed4d85-44bd-4c9e-813b-33c23817502d",
+      "productId": "0c91999c-5019-473c-8828-97d84b5736db",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Yellow Foundation",
+      "handle": "Black-Foundation",
+      "productTitle": "White",
+      "description": "Purple Foundation description",
+      "productType": "Foundation",
+      "vendor": "Comet",
+      "tags": [
+        "foundation",
+        "yellow",
+        "hot"
+      ],
+      "categoryId": "cat-002",
+      "categoryName": "Beauty",
+      "images": [
+        "https://cdn.example.com/images/image-47353a08.jpg",
+        "https://cdn.example.com/images/image-4e7f8b51.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-4be3a8bd.jpg",
+      "price": 98.67,
+      "compareAtPrice": 186.62,
+      "available": true,
+      "sku": "Cherry-comet-purple",
+      "visualOptionId": "opt-643",
+      "options": {
+        "color": "Green",
+        "size": "5"
+      },
+      "id": "Cherry-Co.-91620435634-22381741061",
+      "publishedAt": "2025-04-01T11:36:50.048690",
+      "updatedAt": "2025-04-01T11:36:50.048690"
+    },
+    {
+      "shopifyProductId": 99234265509,
+      "shopifyVariantId": 95955196225,
+      "variantId": "fa79510a-28e8-4a7f-854f-a0e57cc3a838",
+      "productId": "4943299b-6867-4114-b257-5497d93b70e9",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Pink Face Wash",
+      "handle": "Black-Face-Wash",
+      "productTitle": "Purple",
+      "description": "White Face Wash description",
+      "productType": "Face Wash",
+      "vendor": "Comet",
+      "tags": [
+        "face wash",
+        "black",
+        "hot"
+      ],
+      "categoryId": "cat-002",
+      "categoryName": "Beauty",
+      "images": [
+        "https://cdn.example.com/images/image-699bb46a.jpg",
+        "https://cdn.example.com/images/image-27a2b6b8.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-6dae7082.jpg",
+      "price": 75.29,
+      "compareAtPrice": 106.66,
+      "available": true,
+      "sku": "Cherry-comet-green",
+      "visualOptionId": "opt-913",
+      "options": {
+        "color": "Yellow",
+        "size": "8"
+      },
+      "id": "Cherry-Co.-98776274270-38813112431",
+      "publishedAt": "2025-04-20T11:36:50.048802",
+      "updatedAt": "2025-04-20T11:36:50.048802"
+    },
+    {
+      "shopifyProductId": 99983253400,
+      "shopifyVariantId": 20270465271,
+      "variantId": "e5aacbfe-ba7c-4f58-a5ec-8ba3878f8f0f",
+      "productId": "a8b3a86a-edf8-459c-9740-adef7073d295",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Yellow Body Lotion",
+      "handle": "White-Body-Lotion",
+      "productTitle": "Yellow",
+      "description": "Yellow Body Lotion description",
+      "productType": "Body Lotion",
+      "vendor": "Comet",
+      "tags": [
+        "body lotion",
+        "black",
+        "hot"
+      ],
+      "categoryId": "cat-002",
+      "categoryName": "Beauty",
+      "images": [
+        "https://cdn.example.com/images/image-7a91429b.jpg",
+        "https://cdn.example.com/images/image-08b5111c.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-c31fc73f.jpg",
+      "price": 55.8,
+      "compareAtPrice": 174.37,
+      "available": true,
+      "sku": "Cherry-comet-blue",
+      "visualOptionId": "opt-995",
+      "options": {
+        "color": "Purple",
+        "size": "5"
+      },
+      "id": "Cherry-Co.-90882875006-51045118428",
+      "publishedAt": "2025-03-30T11:36:50.048915",
+      "updatedAt": "2025-03-30T11:36:50.048915"
+    },
+    {
+      "shopifyProductId": 97453733406,
+      "shopifyVariantId": 14620659235,
+      "variantId": "7311f968-22d9-427c-b925-39cebfdb6308",
+      "productId": "4b2c2a9f-24e4-4ef7-a91c-af5583bdbfb3",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Green Face Wash",
+      "handle": "Orange-Face-Wash",
+      "productTitle": "Green",
+      "description": "Green Face Wash description",
+      "productType": "Face Wash",
+      "vendor": "Comet",
+      "tags": [
+        "face wash",
+        "black",
+        "hot"
+      ],
+      "categoryId": "cat-002",
+      "categoryName": "Beauty",
+      "images": [
+        "https://cdn.example.com/images/image-9034b6a0.jpg",
+        "https://cdn.example.com/images/image-08059994.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-0b10cc24.jpg",
+      "price": 81.76,
+      "compareAtPrice": 105.36,
+      "available": true,
+      "sku": "Cherry-comet-blue",
+      "visualOptionId": "opt-947",
+      "options": {
+        "color": "Blue",
+        "size": "7"
+      },
+      "id": "Cherry-Co.-94816156353-98066970348",
+      "publishedAt": "2025-04-03T11:36:50.049033",
+      "updatedAt": "2025-04-03T11:36:50.049033"
+    },
+    {
+      "shopifyProductId": 98340602269,
+      "shopifyVariantId": 66740972691,
+      "variantId": "3253ebe6-dad1-4859-b134-703355d03347",
+      "productId": "5e036522-f16e-4891-80c5-ac177769d110",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Orange Face Mask",
+      "handle": "Red-Face-Mask",
+      "productTitle": "Purple",
+      "description": "Pink Face Mask description",
+      "productType": "Face Mask",
+      "vendor": "Comet",
+      "tags": [
+        "face mask",
+        "orange",
+        "hot"
+      ],
+      "categoryId": "cat-002",
+      "categoryName": "Beauty",
+      "images": [
+        "https://cdn.example.com/images/image-e9f3ea37.jpg",
+        "https://cdn.example.com/images/image-88ca92af.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-7b1d0c6a.jpg",
+      "price": 38.95,
+      "compareAtPrice": 129.0,
+      "available": true,
+      "sku": "Cherry-comet-pink",
+      "visualOptionId": "opt-491",
+      "options": {
+        "color": "Pink",
+        "size": "10"
+      },
+      "id": "Cherry-Co.-99240174187-68029265102",
+      "publishedAt": "2025-04-18T11:36:50.049418",
+      "updatedAt": "2025-04-18T11:36:50.049418"
+    },
+    {
+      "shopifyProductId": 98417165502,
+      "shopifyVariantId": 32818898159,
+      "variantId": "b23da503-a8ed-416e-860c-175f87fa748b",
+      "productId": "99b38d63-8dac-4d80-89ce-6c4db00b686b",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Black Wallets",
+      "handle": "Pink-Wallets",
+      "productTitle": "Yellow",
+      "description": "Green Wallets description",
+      "productType": "Wallets",
+      "vendor": "Comet",
+      "tags": [
+        "wallets",
+        "black",
+        "hot"
+      ],
+      "categoryId": "cat-003",
+      "categoryName": "Accessories",
+      "images": [
+        "https://cdn.example.com/images/image-768598b6.jpg",
+        "https://cdn.example.com/images/image-e2a74943.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-c2a8b932.jpg",
+      "price": 89.94,
+      "compareAtPrice": 138.62,
+      "available": true,
+      "sku": "Cherry-comet-red",
+      "visualOptionId": "opt-514",
+      "options": {
+        "color": "White",
+        "size": "6"
+      },
+      "id": "Cherry-Co.-97751183921-93547704988",
+      "publishedAt": "2025-04-17T11:36:50.049526",
+      "updatedAt": "2025-04-17T11:36:50.049526"
+    },
+    {
+      "shopifyProductId": 99097734885,
+      "shopifyVariantId": 61515379927,
+      "variantId": "67d82c89-1da6-47dc-9b89-714ebe62aeda",
+      "productId": "ae0b05eb-7f78-47c2-a089-a684e2020504",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Red Hair Accessories",
+      "handle": "Red-Hair-Accessories",
+      "productTitle": "Black",
+      "description": "Green Hair Accessories description",
+      "productType": "Hair Accessories",
+      "vendor": "Comet",
+      "tags": [
+        "hair accessories",
+        "pink",
+        "hot"
+      ],
+      "categoryId": "cat-003",
+      "categoryName": "Accessories",
+      "images": [
+        "https://cdn.example.com/images/image-32603562.jpg",
+        "https://cdn.example.com/images/image-248435c1.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-d7aeb3b4.jpg",
+      "price": 19.96,
+      "compareAtPrice": 190.81,
+      "available": true,
+      "sku": "Cherry-comet-yellow",
+      "visualOptionId": "opt-205",
+      "options": {
+        "color": "Blue",
+        "size": "8"
+      },
+      "id": "Cherry-Co.-94222162382-28919639631",
+      "publishedAt": "2025-04-07T11:36:50.050237",
+      "updatedAt": "2025-04-07T11:36:50.050237"
+    },
+    {
+      "shopifyProductId": 96931892686,
+      "shopifyVariantId": 99962579357,
+      "variantId": "22cca9ab-534a-40e7-94d7-57387c97aa79",
+      "productId": "03751c9d-5432-4c88-866e-e52d450a8525",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Green Watches",
+      "handle": "Black-Watches",
+      "productTitle": "Pink",
+      "description": "Black Watches description",
+      "productType": "Watches",
+      "vendor": "Comet",
+      "tags": [
+        "watches",
+        "green",
+        "hot"
+      ],
+      "categoryId": "cat-003",
+      "categoryName": "Accessories",
+      "images": [
+        "https://cdn.example.com/images/image-d1ad51ab.jpg",
+        "https://cdn.example.com/images/image-6fd561d2.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-f6357bf5.jpg",
+      "price": 39.67,
+      "compareAtPrice": 132.55,
+      "available": true,
+      "sku": "Cherry-comet-pink",
+      "visualOptionId": "opt-641",
+      "options": {
+        "color": "Red",
+        "size": "6"
+      },
+      "id": "Cherry-Co.-90852794401-94143497818",
+      "publishedAt": "2025-03-28T11:36:50.050368",
+      "updatedAt": "2025-03-28T11:36:50.050368"
+    },
+    {
+      "shopifyProductId": 96852306723,
+      "shopifyVariantId": 85605751761,
+      "variantId": "81572b75-c6c0-441d-b9fb-4c4f82be0465",
+      "productId": "32f9b467-e5b2-498a-ab43-16cbdcb26764",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Yellow Jewelry",
+      "handle": "Pink-Jewelry",
+      "productTitle": "Black",
+      "description": "Black Jewelry description",
+      "productType": "Jewelry",
+      "vendor": "Comet",
+      "tags": [
+        "jewelry",
+        "purple",
+        "hot"
+      ],
+      "categoryId": "cat-003",
+      "categoryName": "Accessories",
+      "images": [
+        "https://cdn.example.com/images/image-249ed5a4.jpg",
+        "https://cdn.example.com/images/image-0882a11c.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-71485371.jpg",
+      "price": 31.28,
+      "compareAtPrice": 108.62,
+      "available": true,
+      "sku": "Cherry-comet-black",
+      "visualOptionId": "opt-944",
+      "options": {
+        "color": "Black",
+        "size": "5"
+      },
+      "id": "Cherry-Co.-95049094123-15858157443",
+      "publishedAt": "2025-04-01T11:36:50.050628",
+      "updatedAt": "2025-04-01T11:36:50.050628"
+    },
+    {
+      "shopifyProductId": 99900981586,
+      "shopifyVariantId": 86586076322,
+      "variantId": "66fc874e-d964-4681-a474-0f28c7fdeee4",
+      "productId": "6d9764ba-5bae-4c77-9847-fe4aa2d2aee9",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Blue Watches",
+      "handle": "Red-Watches",
+      "productTitle": "Orange",
+      "description": "Green Watches description",
+      "productType": "Watches",
+      "vendor": "Comet",
+      "tags": [
+        "watches",
+        "black",
+        "hot"
+      ],
+      "categoryId": "cat-003",
+      "categoryName": "Accessories",
+      "images": [
+        "https://cdn.example.com/images/image-892bcefb.jpg",
+        "https://cdn.example.com/images/image-cc0abd6f.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-211416e9.jpg",
+      "price": 16.33,
+      "compareAtPrice": 175.99,
+      "available": true,
+      "sku": "Cherry-comet-white",
+      "visualOptionId": "opt-899",
+      "options": {
+        "color": "White",
+        "size": "5"
+      },
+      "id": "Cherry-Co.-99087695173-99973732558",
+      "publishedAt": "2025-04-18T11:36:50.050762",
+      "updatedAt": "2025-04-18T11:36:50.050762"
+    },
+    {
+      "shopifyProductId": 96912275903,
+      "shopifyVariantId": 23764557926,
+      "variantId": "126a5256-fbed-4523-b610-5b067c416f62",
+      "productId": "7ca35c60-d87e-4bc3-8eee-f5ef3de2d9e8",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Red Earrings",
+      "handle": "Blue-Earrings",
+      "productTitle": "Red",
+      "description": "White Earrings description",
+      "productType": "Earrings",
+      "vendor": "Comet",
+      "tags": [
+        "earrings",
+        "orange",
+        "hot"
+      ],
+      "categoryId": "cat-003",
+      "categoryName": "Accessories",
+      "images": [
+        "https://cdn.example.com/images/image-25395110.jpg",
+        "https://cdn.example.com/images/image-3dbbb0ae.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-a0c1607a.jpg",
+      "price": 67.25,
+      "compareAtPrice": 111.88,
+      "available": true,
+      "sku": "Cherry-comet-pink",
+      "visualOptionId": "opt-276",
+      "options": {
+        "color": "White",
+        "size": "8"
+      },
+      "id": "Cherry-Co.-98704763304-86851389480",
+      "publishedAt": "2025-04-21T11:36:50.050882",
+      "updatedAt": "2025-04-21T11:36:50.050882"
+    },
+    {
+      "shopifyProductId": 96917100247,
+      "shopifyVariantId": 65599072700,
+      "variantId": "6eb5ea3e-a53f-48f5-9888-1990e3c1e51d",
+      "productId": "6c22bcfe-6148-42dc-a620-365674e595d4",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Pink Caps & Hats",
+      "handle": "Purple-Caps-&-Hats",
+      "productTitle": "White",
+      "description": "Black Caps & Hats description",
+      "productType": "Caps & Hats",
+      "vendor": "Comet",
+      "tags": [
+        "caps & hats",
+        "red",
+        "hot"
+      ],
+      "categoryId": "cat-003",
+      "categoryName": "Accessories",
+      "images": [
+        "https://cdn.example.com/images/image-6972c4c8.jpg",
+        "https://cdn.example.com/images/image-5d95bf7c.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-cd9c7803.jpg",
+      "price": 32.16,
+      "compareAtPrice": 193.05,
+      "available": true,
+      "sku": "Cherry-comet-blue",
+      "visualOptionId": "opt-489",
+      "options": {
+        "color": "Black",
+        "size": "5"
+      },
+      "id": "Cherry-Co.-90310478602-31746765154",
+      "publishedAt": "2025-04-06T11:36:50.051041",
+      "updatedAt": "2025-04-06T11:36:50.051041"
+    },
+    {
+      "shopifyProductId": 93158390019,
+      "shopifyVariantId": 70848454456,
+      "variantId": "5f4e666a-23c8-41f3-9407-a8f859e3e04b",
+      "productId": "6d285ab2-ba69-4811-b59d-8740514865e3",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Green Belts",
+      "handle": "Green-Belts",
+      "productTitle": "Red",
+      "description": "Black Belts description",
+      "productType": "Belts",
+      "vendor": "Comet",
+      "tags": [
+        "belts",
+        "green",
+        "hot"
+      ],
+      "categoryId": "cat-003",
+      "categoryName": "Accessories",
+      "images": [
+        "https://cdn.example.com/images/image-bf0c723d.jpg",
+        "https://cdn.example.com/images/image-26feb7f8.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-a1084b65.jpg",
+      "price": 22.44,
+      "compareAtPrice": 142.02,
+      "available": true,
+      "sku": "Cherry-comet-green",
+      "visualOptionId": "opt-424",
+      "options": {
+        "color": "White",
+        "size": "5"
+      },
+      "id": "Cherry-Co.-98161637973-32362421094",
+      "publishedAt": "2025-04-05T11:36:50.051154",
+      "updatedAt": "2025-04-05T11:36:50.051154"
+    },
+    {
+      "shopifyProductId": 92838386041,
+      "shopifyVariantId": 81985334575,
+      "variantId": "455dc5a2-6af8-47eb-b4ab-a83f10f41c5a",
+      "productId": "27bfa621-b500-452e-bc3a-15e3bf9c4e84",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Pink Hair Accessories",
+      "handle": "Orange-Hair-Accessories",
+      "productTitle": "Purple",
+      "description": "Black Hair Accessories description",
+      "productType": "Hair Accessories",
+      "vendor": "Comet",
+      "tags": [
+        "hair accessories",
+        "purple",
+        "hot"
+      ],
+      "categoryId": "cat-003",
+      "categoryName": "Accessories",
+      "images": [
+        "https://cdn.example.com/images/image-fe575524.jpg",
+        "https://cdn.example.com/images/image-187cfff4.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-db1f96c7.jpg",
+      "price": 67.58,
+      "compareAtPrice": 188.59,
+      "available": true,
+      "sku": "Cherry-comet-orange",
+      "visualOptionId": "opt-376",
+      "options": {
+        "color": "Blue",
+        "size": "7"
+      },
+      "id": "Cherry-Co.-93371392585-74761538232",
+      "publishedAt": "2025-04-21T11:36:50.051272",
+      "updatedAt": "2025-04-21T11:36:50.051272"
+    },
+    {
+      "shopifyProductId": 98792425848,
+      "shopifyVariantId": 12746648774,
+      "variantId": "2827a180-7d88-45f5-ac62-c5b4d1206ca8",
+      "productId": "7513a498-eed4-495b-b5b3-709c6571d33c",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Black Socks",
+      "handle": "Green-Socks",
+      "productTitle": "Orange",
+      "description": "Yellow Socks description",
+      "productType": "Socks",
+      "vendor": "Comet",
+      "tags": [
+        "socks",
+        "red",
+        "hot"
+      ],
+      "categoryId": "cat-003",
+      "categoryName": "Accessories",
+      "images": [
+        "https://cdn.example.com/images/image-289dd1ea.jpg",
+        "https://cdn.example.com/images/image-f6ae91db.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-4b5d05fe.jpg",
+      "price": 17.48,
+      "compareAtPrice": 147.1,
+      "available": true,
+      "sku": "Cherry-comet-black",
+      "visualOptionId": "opt-348",
+      "options": {
+        "color": "White",
+        "size": "10"
+      },
+      "id": "Cherry-Co.-99519148818-63946903247",
+      "publishedAt": "2025-03-28T11:36:50.051391",
+      "updatedAt": "2025-03-28T11:36:50.051391"
+    },
+    {
+      "shopifyProductId": 96549204826,
+      "shopifyVariantId": 16170401190,
+      "variantId": "c6d84e9f-f4e4-4eb1-bed8-665bfac5c94e",
+      "productId": "5dca7d91-b07b-44d4-b2a5-8883def366f4",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Purple Sunglasses",
+      "handle": "Orange-Sunglasses",
+      "productTitle": "Black",
+      "description": "Purple Sunglasses description",
+      "productType": "Sunglasses",
+      "vendor": "Comet",
+      "tags": [
+        "sunglasses",
+        "blue",
+        "hot"
+      ],
+      "categoryId": "cat-003",
+      "categoryName": "Accessories",
+      "images": [
+        "https://cdn.example.com/images/image-51ea6417.jpg",
+        "https://cdn.example.com/images/image-17b9b72c.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-60671391.jpg",
+      "price": 73.44,
+      "compareAtPrice": 192.5,
+      "available": true,
+      "sku": "Cherry-comet-black",
+      "visualOptionId": "opt-689",
+      "options": {
+        "color": "Black",
+        "size": "10"
+      },
+      "id": "Cherry-Co.-92065017467-51643460572",
+      "publishedAt": "2025-04-19T11:36:50.051506",
+      "updatedAt": "2025-04-19T11:36:50.051506"
+    },
+    {
+      "shopifyProductId": 97700840500,
+      "shopifyVariantId": 41503512226,
+      "variantId": "88d1eb74-e3f4-4a40-8c6c-9795579ac178",
+      "productId": "1b01b426-b769-46d7-a9c9-b719b1de421c",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Red Sunglasses",
+      "handle": "Orange-Sunglasses",
+      "productTitle": "Blue",
+      "description": "Purple Sunglasses description",
+      "productType": "Sunglasses",
+      "vendor": "Comet",
+      "tags": [
+        "sunglasses",
+        "yellow",
+        "hot"
+      ],
+      "categoryId": "cat-003",
+      "categoryName": "Accessories",
+      "images": [
+        "https://cdn.example.com/images/image-ff67268b.jpg",
+        "https://cdn.example.com/images/image-97e56e23.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-266ca344.jpg",
+      "price": 56.82,
+      "compareAtPrice": 113.0,
+      "available": true,
+      "sku": "Cherry-comet-purple",
+      "visualOptionId": "opt-715",
+      "options": {
+        "color": "Blue",
+        "size": "5"
+      },
+      "id": "Cherry-Co.-93035440604-64522023487",
+      "publishedAt": "2025-04-12T11:36:50.051615",
+      "updatedAt": "2025-04-12T11:36:50.051615"
+    },
+    {
+      "shopifyProductId": 95813089905,
+      "shopifyVariantId": 10326573545,
+      "variantId": "bd9a56b9-fb8f-4327-bb2e-47ab0ccd6bf1",
+      "productId": "76dbd311-d94d-4916-9f96-42bf20999848",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Purple Sunglasses",
+      "handle": "Orange-Sunglasses",
+      "productTitle": "White",
+      "description": "Yellow Sunglasses description",
+      "productType": "Sunglasses",
+      "vendor": "Comet",
+      "tags": [
+        "sunglasses",
+        "red",
+        "hot"
+      ],
+      "categoryId": "cat-003",
+      "categoryName": "Accessories",
+      "images": [
+        "https://cdn.example.com/images/image-be7e5151.jpg",
+        "https://cdn.example.com/images/image-983ab67c.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-f84d76da.jpg",
+      "price": 62.58,
+      "compareAtPrice": 133.11,
+      "available": true,
+      "sku": "Cherry-comet-green",
+      "visualOptionId": "opt-437",
+      "options": {
+        "color": "Orange",
+        "size": "7"
+      },
+      "id": "Cherry-Co.-99204426501-12735624727",
+      "publishedAt": "2025-04-06T11:36:50.051744",
+      "updatedAt": "2025-04-06T11:36:50.051744"
+    },
+    {
+      "shopifyProductId": 92837183615,
+      "shopifyVariantId": 71938299958,
+      "variantId": "b259f25a-0dc5-49bd-9bf4-31a93291ba63",
+      "productId": "faf89ec7-2305-4efd-8c7a-9ddc438a4dd3",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Red Jewelry",
+      "handle": "Red-Jewelry",
+      "productTitle": "Pink",
+      "description": "Pink Jewelry description",
+      "productType": "Jewelry",
+      "vendor": "Comet",
+      "tags": [
+        "jewelry",
+        "yellow",
+        "hot"
+      ],
+      "categoryId": "cat-003",
+      "categoryName": "Accessories",
+      "images": [
+        "https://cdn.example.com/images/image-42cbc4af.jpg",
+        "https://cdn.example.com/images/image-1ca35819.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-c6249786.jpg",
+      "price": 34.07,
+      "compareAtPrice": 116.71,
+      "available": true,
+      "sku": "Cherry-comet-blue",
+      "visualOptionId": "opt-341",
+      "options": {
+        "color": "Blue",
+        "size": "6"
+      },
+      "id": "Cherry-Co.-90687824211-41353641653",
+      "publishedAt": "2025-04-06T11:36:50.051833",
+      "updatedAt": "2025-04-06T11:36:50.051833"
+    },
+    {
+      "shopifyProductId": 97670144465,
+      "shopifyVariantId": 80057598293,
+      "variantId": "429b811c-72a7-454d-92cc-61377e1b188d",
+      "productId": "e0ed5623-9f2d-4acb-8913-5de73f0835e9",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Red Bags",
+      "handle": "Yellow-Bags",
+      "productTitle": "Green",
+      "description": "Pink Bags description",
+      "productType": "Bags",
+      "vendor": "Comet",
+      "tags": [
+        "bags",
+        "white",
+        "hot"
+      ],
+      "categoryId": "cat-003",
+      "categoryName": "Accessories",
+      "images": [
+        "https://cdn.example.com/images/image-e267c709.jpg",
+        "https://cdn.example.com/images/image-b662b8d1.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-22d5a240.jpg",
+      "price": 36.28,
+      "compareAtPrice": 121.62,
+      "available": true,
+      "sku": "Cherry-comet-orange",
+      "visualOptionId": "opt-758",
+      "options": {
+        "color": "Black",
+        "size": "7"
+      },
+      "id": "Cherry-Co.-91321242948-66197299485",
+      "publishedAt": "2025-04-11T11:36:50.051902",
+      "updatedAt": "2025-04-11T11:36:50.051902"
+    },
+    {
+      "shopifyProductId": 95497872554,
+      "shopifyVariantId": 49848708451,
+      "variantId": "352a35cb-ec07-4260-9c46-59a1f716c67d",
+      "productId": "9e648ea0-e5e1-4802-8299-28ac1c7a68ca",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Green Rings",
+      "handle": "Yellow-Rings",
+      "productTitle": "Orange",
+      "description": "Blue Rings description",
+      "productType": "Rings",
+      "vendor": "Comet",
+      "tags": [
+        "rings",
+        "purple",
+        "hot"
+      ],
+      "categoryId": "cat-003",
+      "categoryName": "Accessories",
+      "images": [
+        "https://cdn.example.com/images/image-e3ac5137.jpg",
+        "https://cdn.example.com/images/image-83dba9fb.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-34973771.jpg",
+      "price": 32.3,
+      "compareAtPrice": 161.23,
+      "available": true,
+      "sku": "Cherry-comet-white",
+      "visualOptionId": "opt-997",
+      "options": {
+        "color": "Purple",
+        "size": "9"
+      },
+      "id": "Cherry-Co.-98507316389-23088071898",
+      "publishedAt": "2025-04-07T11:36:50.051959",
+      "updatedAt": "2025-04-07T11:36:50.051959"
+    },
+    {
+      "shopifyProductId": 94504647911,
+      "shopifyVariantId": 19593984276,
+      "variantId": "05775565-ba9b-4b4c-868e-8581e6457889",
+      "productId": "ab4fb488-be97-4166-bb80-3ff3100b565f",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Blue Belts",
+      "handle": "Red-Belts",
+      "productTitle": "Black",
+      "description": "Purple Belts description",
+      "productType": "Belts",
+      "vendor": "Comet",
+      "tags": [
+        "belts",
+        "black",
+        "hot"
+      ],
+      "categoryId": "cat-003",
+      "categoryName": "Accessories",
+      "images": [
+        "https://cdn.example.com/images/image-6ad174cf.jpg",
+        "https://cdn.example.com/images/image-459be531.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-0b98b4d8.jpg",
+      "price": 46.38,
+      "compareAtPrice": 140.18,
+      "available": true,
+      "sku": "Cherry-comet-pink",
+      "visualOptionId": "opt-633",
+      "options": {
+        "color": "Orange",
+        "size": "5"
+      },
+      "id": "Cherry-Co.-91241145282-75998102900",
+      "publishedAt": "2025-03-25T11:36:50.052016",
+      "updatedAt": "2025-03-25T11:36:50.052016"
+    },
+    {
+      "shopifyProductId": 96046698658,
+      "shopifyVariantId": 55145807083,
+      "variantId": "c133adb5-225f-4c6b-9ba6-dc381b985cb4",
+      "productId": "e8769b34-58cb-42d5-93b2-99061b8ef80e",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Yellow Caps & Hats",
+      "handle": "White-Caps-&-Hats",
+      "productTitle": "Pink",
+      "description": "Pink Caps & Hats description",
+      "productType": "Caps & Hats",
+      "vendor": "Comet",
+      "tags": [
+        "caps & hats",
+        "purple",
+        "hot"
+      ],
+      "categoryId": "cat-003",
+      "categoryName": "Accessories",
+      "images": [
+        "https://cdn.example.com/images/image-52867929.jpg",
+        "https://cdn.example.com/images/image-02b0cdd0.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-1cd8a8c4.jpg",
+      "price": 80.36,
+      "compareAtPrice": 150.63,
+      "available": true,
+      "sku": "Cherry-comet-orange",
+      "visualOptionId": "opt-510",
+      "options": {
+        "color": "Green",
+        "size": "8"
+      },
+      "id": "Cherry-Co.-92601416139-76391279289",
+      "publishedAt": "2025-04-03T11:36:50.052083",
+      "updatedAt": "2025-04-03T11:36:50.052083"
+    },
+    {
+      "shopifyProductId": 92768084718,
+      "shopifyVariantId": 48887512349,
+      "variantId": "7a7ef5f6-868e-4d63-a572-2ab5369e2bdb",
+      "productId": "e0b80901-1181-4d12-b29e-7d9e8918919a",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Red Earrings",
+      "handle": "White-Earrings",
+      "productTitle": "Yellow",
+      "description": "Green Earrings description",
+      "productType": "Earrings",
+      "vendor": "Comet",
+      "tags": [
+        "earrings",
+        "black",
+        "hot"
+      ],
+      "categoryId": "cat-003",
+      "categoryName": "Accessories",
+      "images": [
+        "https://cdn.example.com/images/image-bf979395.jpg",
+        "https://cdn.example.com/images/image-5b963303.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-6269f558.jpg",
+      "price": 46.76,
+      "compareAtPrice": 107.55,
+      "available": true,
+      "sku": "Cherry-comet-green",
+      "visualOptionId": "opt-689",
+      "options": {
+        "color": "Green",
+        "size": "8"
+      },
+      "id": "Cherry-Co.-95877865390-97451669753",
+      "publishedAt": "2025-04-15T11:36:50.052155",
+      "updatedAt": "2025-04-15T11:36:50.052155"
+    },
+    {
+      "shopifyProductId": 92096499419,
+      "shopifyVariantId": 88015696551,
+      "variantId": "b9190bc5-db0d-454d-bf6b-131bdfa69e93",
+      "productId": "6ca31e63-049a-4477-aa99-2987da5524db",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Red Handbags",
+      "handle": "Blue-Handbags",
+      "productTitle": "White",
+      "description": "Purple Handbags description",
+      "productType": "Handbags",
+      "vendor": "Comet",
+      "tags": [
+        "handbags",
+        "orange",
+        "hot"
+      ],
+      "categoryId": "cat-003",
+      "categoryName": "Accessories",
+      "images": [
+        "https://cdn.example.com/images/image-c5224d18.jpg",
+        "https://cdn.example.com/images/image-f7dc4a7e.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-3dc27e23.jpg",
+      "price": 41.04,
+      "compareAtPrice": 104.0,
+      "available": true,
+      "sku": "Cherry-comet-blue",
+      "visualOptionId": "opt-207",
+      "options": {
+        "color": "Orange",
+        "size": "8"
+      },
+      "id": "Cherry-Co.-94372189206-15922912330",
+      "publishedAt": "2025-04-05T11:36:50.052210",
+      "updatedAt": "2025-04-05T11:36:50.052210"
+    },
+    {
+      "shopifyProductId": 95343355883,
+      "shopifyVariantId": 72639112406,
+      "variantId": "3e80a47e-7482-4507-847b-090696220c95",
+      "productId": "cc47f5f2-c842-41f8-9c4d-e5e063807415",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Orange Events",
+      "handle": "Black-Events",
+      "productTitle": "Green",
+      "description": "Pink Events description",
+      "productType": "Events",
+      "vendor": "Comet",
+      "tags": [
+        "events",
+        "pink",
+        "hot"
+      ],
+      "categoryId": "cat-004",
+      "categoryName": "Entertainment",
+      "images": [
+        "https://cdn.example.com/images/image-ba8ae988.jpg",
+        "https://cdn.example.com/images/image-e324d592.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-805dc05b.jpg",
+      "price": 25.5,
+      "compareAtPrice": 196.02,
+      "available": true,
+      "sku": "Cherry-comet-orange",
+      "visualOptionId": "opt-329",
+      "options": {
+        "color": "Black",
+        "size": "10"
+      },
+      "id": "Cherry-Co.-90541333608-86790528393",
+      "publishedAt": "2025-04-20T11:36:50.052281",
+      "updatedAt": "2025-04-20T11:36:50.052281"
+    },
+    {
+      "shopifyProductId": 95304025389,
+      "shopifyVariantId": 32574643398,
+      "variantId": "d48fe9ca-9aaa-4a80-8141-9222ea07d989",
+      "productId": "ba2df77a-4c93-46f4-a3e2-028c337fad05",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Black Virtual Events",
+      "handle": "Red-Virtual-Events",
+      "productTitle": "Black",
+      "description": "Black Virtual Events description",
+      "productType": "Virtual Events",
+      "vendor": "Comet",
+      "tags": [
+        "virtual events",
+        "blue",
+        "hot"
+      ],
+      "categoryId": "cat-004",
+      "categoryName": "Entertainment",
+      "images": [
+        "https://cdn.example.com/images/image-0a499ba9.jpg",
+        "https://cdn.example.com/images/image-33819773.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-84c076dd.jpg",
+      "price": 89.0,
+      "compareAtPrice": 172.92,
+      "available": true,
+      "sku": "Cherry-comet-red",
+      "visualOptionId": "opt-254",
+      "options": {
+        "color": "Blue",
+        "size": "6"
+      },
+      "id": "Cherry-Co.-90459238750-49729338785",
+      "publishedAt": "2025-04-06T11:36:50.052550",
+      "updatedAt": "2025-04-06T11:36:50.052550"
+    },
+    {
+      "shopifyProductId": 92987171794,
+      "shopifyVariantId": 51994786611,
+      "variantId": "9bee04a8-f62c-4a2f-9df7-7039fe40e321",
+      "productId": "1f0a7b2f-cf39-40f2-9a18-1b81a2f57fc0",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Green Theatre",
+      "handle": "Green-Theatre",
+      "productTitle": "Red",
+      "description": "Yellow Theatre description",
+      "productType": "Theatre",
+      "vendor": "Comet",
+      "tags": [
+        "theatre",
+        "red",
+        "hot"
+      ],
+      "categoryId": "cat-004",
+      "categoryName": "Entertainment",
+      "images": [
+        "https://cdn.example.com/images/image-67347bdf.jpg",
+        "https://cdn.example.com/images/image-5f68c952.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-320f726a.jpg",
+      "price": 78.74,
+      "compareAtPrice": 134.49,
+      "available": true,
+      "sku": "Cherry-comet-blue",
+      "visualOptionId": "opt-253",
+      "options": {
+        "color": "Purple",
+        "size": "9"
+      },
+      "id": "Cherry-Co.-97839504739-83429408426",
+      "publishedAt": "2025-03-25T11:36:50.052656",
+      "updatedAt": "2025-03-25T11:36:50.052656"
+    },
+    {
+      "shopifyProductId": 98233299335,
+      "shopifyVariantId": 78746797686,
+      "variantId": "84bc772f-1b63-4420-8a5d-b55cf9295ac6",
+      "productId": "ddcc8783-65a5-4106-9798-e11eed79d130",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Blue Books",
+      "handle": "Red-Books",
+      "productTitle": "Blue",
+      "description": "Orange Books description",
+      "productType": "Books",
+      "vendor": "Comet",
+      "tags": [
+        "books",
+        "blue",
+        "hot"
+      ],
+      "categoryId": "cat-004",
+      "categoryName": "Entertainment",
+      "images": [
+        "https://cdn.example.com/images/image-311a3da0.jpg",
+        "https://cdn.example.com/images/image-df53c450.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-d248f446.jpg",
+      "price": 73.07,
+      "compareAtPrice": 102.78,
+      "available": true,
+      "sku": "Cherry-comet-green",
+      "visualOptionId": "opt-200",
+      "options": {
+        "color": "Red",
+        "size": "9"
+      },
+      "id": "Cherry-Co.-93914548687-80583198908",
+      "publishedAt": "2025-04-18T11:36:50.052829",
+      "updatedAt": "2025-04-18T11:36:50.052829"
+    },
+    {
+      "shopifyProductId": 96699888882,
+      "shopifyVariantId": 85005339850,
+      "variantId": "904cecda-fce2-401a-abb7-5eca86b291c1",
+      "productId": "b2ab3a4f-4b54-4fb8-bc20-6a8927698587",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Red Board Games",
+      "handle": "Green-Board-Games",
+      "productTitle": "Orange",
+      "description": "Pink Board Games description",
+      "productType": "Board Games",
+      "vendor": "Comet",
+      "tags": [
+        "board games",
+        "black",
+        "hot"
+      ],
+      "categoryId": "cat-004",
+      "categoryName": "Entertainment",
+      "images": [
+        "https://cdn.example.com/images/image-d8534996.jpg",
+        "https://cdn.example.com/images/image-ba5b088c.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-52d7f522.jpg",
+      "price": 32.21,
+      "compareAtPrice": 171.04,
+      "available": true,
+      "sku": "Cherry-comet-orange",
+      "visualOptionId": "opt-186",
+      "options": {
+        "color": "Yellow",
+        "size": "8"
+      },
+      "id": "Cherry-Co.-94293684699-97083906221",
+      "publishedAt": "2025-04-21T11:36:50.052915",
+      "updatedAt": "2025-04-21T11:36:50.052915"
+    },
+    {
+      "shopifyProductId": 95333715991,
+      "shopifyVariantId": 49003009850,
+      "variantId": "325e8c09-f581-4a07-a14f-e78c7beb67c6",
+      "productId": "0526c8f0-e36e-4b64-8505-dc6486de773a",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Orange Events",
+      "handle": "Blue-Events",
+      "productTitle": "Purple",
+      "description": "Blue Events description",
+      "productType": "Events",
+      "vendor": "Comet",
+      "tags": [
+        "events",
+        "blue",
+        "hot"
+      ],
+      "categoryId": "cat-004",
+      "categoryName": "Entertainment",
+      "images": [
+        "https://cdn.example.com/images/image-3c248eb8.jpg",
+        "https://cdn.example.com/images/image-18f251e1.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-e7419aae.jpg",
+      "price": 32.93,
+      "compareAtPrice": 170.72,
+      "available": true,
+      "sku": "Cherry-comet-yellow",
+      "visualOptionId": "opt-824",
+      "options": {
+        "color": "Red",
+        "size": "9"
+      },
+      "id": "Cherry-Co.-92927354585-86754649494",
+      "publishedAt": "2025-04-07T11:36:50.052998",
+      "updatedAt": "2025-04-07T11:36:50.052998"
+    },
+    {
+      "shopifyProductId": 90475754318,
+      "shopifyVariantId": 40411208898,
+      "variantId": "090fec20-e8d0-4886-bb44-5d05c58ab981",
+      "productId": "74598802-8783-496b-80fa-d6860c3df07f",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Black Events",
+      "handle": "Red-Events",
+      "productTitle": "Yellow",
+      "description": "Pink Events description",
+      "productType": "Events",
+      "vendor": "Comet",
+      "tags": [
+        "events",
+        "white",
+        "hot"
+      ],
+      "categoryId": "cat-004",
+      "categoryName": "Entertainment",
+      "images": [
+        "https://cdn.example.com/images/image-190f3ce1.jpg",
+        "https://cdn.example.com/images/image-2154f31d.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-5aa86735.jpg",
+      "price": 45.69,
+      "compareAtPrice": 163.59,
+      "available": true,
+      "sku": "Cherry-comet-orange",
+      "visualOptionId": "opt-753",
+      "options": {
+        "color": "Green",
+        "size": "10"
+      },
+      "id": "Cherry-Co.-91213626485-81529498692",
+      "publishedAt": "2025-04-11T11:36:50.053202",
+      "updatedAt": "2025-04-11T11:36:50.053202"
+    },
+    {
+      "shopifyProductId": 95214593184,
+      "shopifyVariantId": 84550872958,
+      "variantId": "18bab27a-e5d1-4a11-a533-d33e35ae7af0",
+      "productId": "a7f45d69-4e31-45ca-9e78-0057f001a7aa",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Orange Games",
+      "handle": "Blue-Games",
+      "productTitle": "Red",
+      "description": "White Games description",
+      "productType": "Games",
+      "vendor": "Comet",
+      "tags": [
+        "games",
+        "orange",
+        "hot"
+      ],
+      "categoryId": "cat-004",
+      "categoryName": "Entertainment",
+      "images": [
+        "https://cdn.example.com/images/image-d380ab9d.jpg",
+        "https://cdn.example.com/images/image-23e128f3.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-6818d4ee.jpg",
+      "price": 84.47,
+      "compareAtPrice": 197.5,
+      "available": true,
+      "sku": "Cherry-comet-blue",
+      "visualOptionId": "opt-850",
+      "options": {
+        "color": "Purple",
+        "size": "8"
+      },
+      "id": "Cherry-Co.-96741627150-90677841708",
+      "publishedAt": "2025-04-07T11:36:50.053401",
+      "updatedAt": "2025-04-07T11:36:50.053401"
+    },
+    {
+      "shopifyProductId": 95075933646,
+      "shopifyVariantId": 71048049866,
+      "variantId": "08995600-36f8-41e0-9d83-5767ed55424f",
+      "productId": "ed91efeb-e036-46dd-a760-0cafa30e9407",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Pink Movies",
+      "handle": "Black-Movies",
+      "productTitle": "Pink",
+      "description": "Blue Movies description",
+      "productType": "Movies",
+      "vendor": "Comet",
+      "tags": [
+        "movies",
+        "yellow",
+        "hot"
+      ],
+      "categoryId": "cat-004",
+      "categoryName": "Entertainment",
+      "images": [
+        "https://cdn.example.com/images/image-60600fa7.jpg",
+        "https://cdn.example.com/images/image-293f053c.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-d8fbd85e.jpg",
+      "price": 86.52,
+      "compareAtPrice": 197.35,
+      "available": true,
+      "sku": "Cherry-comet-red",
+      "visualOptionId": "opt-560",
+      "options": {
+        "color": "White",
+        "size": "6"
+      },
+      "id": "Cherry-Co.-96521605282-15518821689",
+      "publishedAt": "2025-04-11T11:36:50.053499",
+      "updatedAt": "2025-04-11T11:36:50.053499"
+    },
+    {
+      "shopifyProductId": 95049899417,
+      "shopifyVariantId": 98938052259,
+      "variantId": "2c18883d-98f5-4cec-acf5-4fa3d9700e99",
+      "productId": "81f2badd-6d86-499d-b09b-cbfb3a0fb7b0",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Pink E-Sports",
+      "handle": "Blue-E-Sports",
+      "productTitle": "Yellow",
+      "description": "Purple E-Sports description",
+      "productType": "E-Sports",
+      "vendor": "Comet",
+      "tags": [
+        "e-sports",
+        "yellow",
+        "hot"
+      ],
+      "categoryId": "cat-004",
+      "categoryName": "Entertainment",
+      "images": [
+        "https://cdn.example.com/images/image-fe75b6b8.jpg",
+        "https://cdn.example.com/images/image-d06c8b2f.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-aaa4f854.jpg",
+      "price": 58.67,
+      "compareAtPrice": 190.84,
+      "available": true,
+      "sku": "Cherry-comet-orange",
+      "visualOptionId": "opt-718",
+      "options": {
+        "color": "Blue",
+        "size": "10"
+      },
+      "id": "Cherry-Co.-94574060132-98156400740",
+      "publishedAt": "2025-04-15T11:36:50.053576",
+      "updatedAt": "2025-04-15T11:36:50.053576"
+    },
+    {
+      "shopifyProductId": 90855369180,
+      "shopifyVariantId": 58673014337,
+      "variantId": "3c51914d-1ce8-446b-9653-3a9fd5a9fc2b",
+      "productId": "84e42859-75df-407d-acc0-d33f7e23f94a",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Pink Books",
+      "handle": "White-Books",
+      "productTitle": "Pink",
+      "description": "Orange Books description",
+      "productType": "Books",
+      "vendor": "Comet",
+      "tags": [
+        "books",
+        "black",
+        "hot"
+      ],
+      "categoryId": "cat-004",
+      "categoryName": "Entertainment",
+      "images": [
+        "https://cdn.example.com/images/image-1622fbe8.jpg",
+        "https://cdn.example.com/images/image-bfa556d5.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-1d80015b.jpg",
+      "price": 81.73,
+      "compareAtPrice": 175.78,
+      "available": true,
+      "sku": "Cherry-comet-black",
+      "visualOptionId": "opt-681",
+      "options": {
+        "color": "Pink",
+        "size": "5"
+      },
+      "id": "Cherry-Co.-94180222231-22619257933",
+      "publishedAt": "2025-04-18T11:36:50.053648",
+      "updatedAt": "2025-04-18T11:36:50.053648"
+    },
+    {
+      "shopifyProductId": 98934855664,
+      "shopifyVariantId": 37006890426,
+      "variantId": "9008dc33-05c4-487c-af16-596db3a714da",
+      "productId": "0c83addb-fce8-4dcd-9ce2-87143131890f",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Red Music",
+      "handle": "Green-Music",
+      "productTitle": "Red",
+      "description": "Green Music description",
+      "productType": "Music",
+      "vendor": "Comet",
+      "tags": [
+        "music",
+        "purple",
+        "hot"
+      ],
+      "categoryId": "cat-004",
+      "categoryName": "Entertainment",
+      "images": [
+        "https://cdn.example.com/images/image-2f118580.jpg",
+        "https://cdn.example.com/images/image-02a962e6.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-f4f69037.jpg",
+      "price": 72.32,
+      "compareAtPrice": 188.05,
+      "available": true,
+      "sku": "Cherry-comet-purple",
+      "visualOptionId": "opt-862",
+      "options": {
+        "color": "Pink",
+        "size": "9"
+      },
+      "id": "Cherry-Co.-95302149168-42963684866",
+      "publishedAt": "2025-04-05T11:36:50.053729",
+      "updatedAt": "2025-04-05T11:36:50.053729"
+    },
+    {
+      "shopifyProductId": 97928024870,
+      "shopifyVariantId": 58253583783,
+      "variantId": "7ba8d5c9-01f9-432e-9e5a-1c67684d5545",
+      "productId": "5c433b98-501a-445a-ae1d-0e2a4b93470b",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Red Podcasts",
+      "handle": "White-Podcasts",
+      "productTitle": "Orange",
+      "description": "Blue Podcasts description",
+      "productType": "Podcasts",
+      "vendor": "Comet",
+      "tags": [
+        "podcasts",
+        "blue",
+        "hot"
+      ],
+      "categoryId": "cat-004",
+      "categoryName": "Entertainment",
+      "images": [
+        "https://cdn.example.com/images/image-3c13efc6.jpg",
+        "https://cdn.example.com/images/image-1d683593.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-e9ccc04c.jpg",
+      "price": 36.03,
+      "compareAtPrice": 175.73,
+      "available": true,
+      "sku": "Cherry-comet-purple",
+      "visualOptionId": "opt-872",
+      "options": {
+        "color": "Red",
+        "size": "9"
+      },
+      "id": "Cherry-Co.-90883584337-77227318415",
+      "publishedAt": "2025-04-18T11:36:50.053975",
+      "updatedAt": "2025-04-18T11:36:50.053975"
+    },
+    {
+      "shopifyProductId": 98918575021,
+      "shopifyVariantId": 67467469065,
+      "variantId": "e30bd740-c947-4cd7-8f8a-6ca35906ab69",
+      "productId": "a0888319-0040-4105-a62f-53a8a1621a28",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Black Board Games",
+      "handle": "Yellow-Board-Games",
+      "productTitle": "Red",
+      "description": "Black Board Games description",
+      "productType": "Board Games",
+      "vendor": "Comet",
+      "tags": [
+        "board games",
+        "pink",
+        "hot"
+      ],
+      "categoryId": "cat-004",
+      "categoryName": "Entertainment",
+      "images": [
+        "https://cdn.example.com/images/image-32f5caac.jpg",
+        "https://cdn.example.com/images/image-71fdf698.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-89e6d67c.jpg",
+      "price": 79.88,
+      "compareAtPrice": 117.75,
+      "available": true,
+      "sku": "Cherry-comet-white",
+      "visualOptionId": "opt-863",
+      "options": {
+        "color": "Purple",
+        "size": "8"
+      },
+      "id": "Cherry-Co.-96988688121-70595443853",
+      "publishedAt": "2025-04-04T11:36:50.054108",
+      "updatedAt": "2025-04-04T11:36:50.054108"
+    },
+    {
+      "shopifyProductId": 95628486695,
+      "shopifyVariantId": 54575516159,
+      "variantId": "a44e1948-2a00-4382-a57f-3c5686fc3bd8",
+      "productId": "08743bde-7cfa-44fd-a8a6-2cb2d252a914",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Red Virtual Events",
+      "handle": "Orange-Virtual-Events",
+      "productTitle": "Red",
+      "description": "Green Virtual Events description",
+      "productType": "Virtual Events",
+      "vendor": "Comet",
+      "tags": [
+        "virtual events",
+        "green",
+        "hot"
+      ],
+      "categoryId": "cat-004",
+      "categoryName": "Entertainment",
+      "images": [
+        "https://cdn.example.com/images/image-ec93652f.jpg",
+        "https://cdn.example.com/images/image-0b19196d.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-4b47ea29.jpg",
+      "price": 10.25,
+      "compareAtPrice": 177.08,
+      "available": true,
+      "sku": "Cherry-comet-white",
+      "visualOptionId": "opt-697",
+      "options": {
+        "color": "Blue",
+        "size": "9"
+      },
+      "id": "Cherry-Co.-95565944354-74188543704",
+      "publishedAt": "2025-04-03T11:36:50.054295",
+      "updatedAt": "2025-04-03T11:36:50.054295"
+    },
+    {
+      "shopifyProductId": 94816128327,
+      "shopifyVariantId": 64491012883,
+      "variantId": "e8a3a1c8-a055-4fce-a1bb-9128b97a6184",
+      "productId": "77d07856-4510-45c9-8de5-eb57e3bdaf60",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Blue Mobile Games",
+      "handle": "Purple-Mobile-Games",
+      "productTitle": "Purple",
+      "description": "Orange Mobile Games description",
+      "productType": "Mobile Games",
+      "vendor": "Comet",
+      "tags": [
+        "mobile games",
+        "yellow",
+        "hot"
+      ],
+      "categoryId": "cat-004",
+      "categoryName": "Entertainment",
+      "images": [
+        "https://cdn.example.com/images/image-2966950a.jpg",
+        "https://cdn.example.com/images/image-ed22ec4e.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-40c23d9d.jpg",
+      "price": 65.15,
+      "compareAtPrice": 126.2,
+      "available": true,
+      "sku": "Cherry-comet-yellow",
+      "visualOptionId": "opt-460",
+      "options": {
+        "color": "Blue",
+        "size": "7"
+      },
+      "id": "Cherry-Co.-92579969253-50874317395",
+      "publishedAt": "2025-04-04T11:36:50.054378",
+      "updatedAt": "2025-04-04T11:36:50.054378"
+    },
+    {
+      "shopifyProductId": 91310587031,
+      "shopifyVariantId": 58337196063,
+      "variantId": "f576b26e-936f-4077-8d3b-4e83b3d44ea7",
+      "productId": "0484a7b5-b104-4a9b-af0b-97ef6ae2d61d",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Orange Books",
+      "handle": "Red-Books",
+      "productTitle": "White",
+      "description": "Black Books description",
+      "productType": "Books",
+      "vendor": "Comet",
+      "tags": [
+        "books",
+        "purple",
+        "hot"
+      ],
+      "categoryId": "cat-004",
+      "categoryName": "Entertainment",
+      "images": [
+        "https://cdn.example.com/images/image-0c16bc0c.jpg",
+        "https://cdn.example.com/images/image-ac29bb04.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-482ff84b.jpg",
+      "price": 29.57,
+      "compareAtPrice": 172.55,
+      "available": true,
+      "sku": "Cherry-comet-orange",
+      "visualOptionId": "opt-547",
+      "options": {
+        "color": "Red",
+        "size": "5"
+      },
+      "id": "Cherry-Co.-97661101502-67435839354",
+      "publishedAt": "2025-03-29T11:36:50.054503",
+      "updatedAt": "2025-03-29T11:36:50.054503"
+    },
+    {
+      "shopifyProductId": 94940917054,
+      "shopifyVariantId": 45417925286,
+      "variantId": "c2675e25-a391-461e-908d-21b12773591f",
+      "productId": "433a8a19-f859-4762-b483-d410d987db1d",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "White Theatre",
+      "handle": "Blue-Theatre",
+      "productTitle": "White",
+      "description": "Yellow Theatre description",
+      "productType": "Theatre",
+      "vendor": "Comet",
+      "tags": [
+        "theatre",
+        "yellow",
+        "hot"
+      ],
+      "categoryId": "cat-004",
+      "categoryName": "Entertainment",
+      "images": [
+        "https://cdn.example.com/images/image-d0dccb6b.jpg",
+        "https://cdn.example.com/images/image-703c2f91.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-fd058b87.jpg",
+      "price": 93.07,
+      "compareAtPrice": 181.52,
+      "available": true,
+      "sku": "Cherry-comet-orange",
+      "visualOptionId": "opt-264",
+      "options": {
+        "color": "Purple",
+        "size": "10"
+      },
+      "id": "Cherry-Co.-99803999994-45634690998",
+      "publishedAt": "2025-04-18T11:36:50.054604",
+      "updatedAt": "2025-04-18T11:36:50.054604"
+    },
+    {
+      "shopifyProductId": 92520795827,
+      "shopifyVariantId": 60972195102,
+      "variantId": "93bad581-5d89-44d9-bd7a-67df47e31dc7",
+      "productId": "2ce9e544-0075-497c-a2ee-0c51ba401a5d",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Green Streaming Services",
+      "handle": "Pink-Streaming-Services",
+      "productTitle": "Pink",
+      "description": "Purple Streaming Services description",
+      "productType": "Streaming Services",
+      "vendor": "Comet",
+      "tags": [
+        "streaming services",
+        "green",
+        "hot"
+      ],
+      "categoryId": "cat-004",
+      "categoryName": "Entertainment",
+      "images": [
+        "https://cdn.example.com/images/image-6701df3c.jpg",
+        "https://cdn.example.com/images/image-d2c0cd35.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-2911ce7b.jpg",
+      "price": 61.52,
+      "compareAtPrice": 178.29,
+      "available": true,
+      "sku": "Cherry-comet-blue",
+      "visualOptionId": "opt-779",
+      "options": {
+        "color": "Orange",
+        "size": "6"
+      },
+      "id": "Cherry-Co.-96994859647-28913344137",
+      "publishedAt": "2025-03-31T11:36:50.054689",
+      "updatedAt": "2025-03-31T11:36:50.054689"
+    },
+    {
+      "shopifyProductId": 98704502523,
+      "shopifyVariantId": 50648389932,
+      "variantId": "f6450a6b-8808-4aa2-8d41-63ff0c918d93",
+      "productId": "dd8a8404-59b8-42a7-85e5-60edca64ae07",
+      "brandId": "brand-004",
+      "brandName": "Cherry Co.",
+      "title": "Green Live Concerts",
+      "handle": "Red-Live-Concerts",
+      "productTitle": "Yellow",
+      "description": "Red Live Concerts description",
+      "productType": "Live Concerts",
+      "vendor": "Comet",
+      "tags": [
+        "live concerts",
+        "purple",
+        "hot"
+      ],
+      "categoryId": "cat-004",
+      "categoryName": "Entertainment",
+      "images": [
+        "https://cdn.example.com/images/image-176269d0.jpg",
+        "https://cdn.example.com/images/image-1e25002e.jpg"
+      ],
+      "featuredImage": "https://cdn.example.com/images/image-ec6c243a.jpg",
+      "price": 13.84,
+      "compareAtPrice": 180.9,
+      "available": true,
+      "sku": "Cherry-comet-white",
+      "visualOptionId": "opt-856",
+      "options": {
+        "color": "Red",
+        "size": "10"
+      },
+      "id": "Cherry-Co.-92541030362-36844951860",
+      "publishedAt": "2025-04-17T11:36:50.054769",
+      "updatedAt": "2025-04-17T11:36:50.054769"
+    }
+  ]
+}

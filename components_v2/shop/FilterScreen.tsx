@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { View, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
 import {
   SafeAreaView,
@@ -16,11 +16,14 @@ import {
   getOptionsOfFilterSelector,
   getSelectedCategorySelector,
   getSelectedFilterTypeSelector,
+  searchAndFilterProducts,
   setAppliedOptionsOfFilter,
 } from "@/store/slices/ShoppingSlice";
 import FilterBody from "@/components_v2/shop/FilterBody";
 import { getBrandsGroupedByCategoryDict } from "@/store/slices/BrandsSlice";
-import { Category } from "@/store/initialState/ShoppingInitialState";
+import SearchInputBar from "../common/SearchInputBar";
+import { Searchbar } from "react-native-paper";
+import { SortOption } from "@/store/initialState/ShoppingInitialState";
 interface FilterScreenProps {
   onClose: () => void;
 }
@@ -36,17 +39,15 @@ const FilterScreen: React.FC<FilterScreenProps> = ({ onClose }) => {
   const brandsList = useAppSelector((state) =>
     getBrandsGroupedByCategoryDict(state, { payload: selectedCategory })
   );
-  console.log(
-    brandsList,
-    "brandsList",
-    selectedCategory,
-    selectedCategory as keyof Category
-  );
 
   const [selectedOptions, setSelectedOptions] = useState<string[]>(
     appliedOptionsInitialState as string[]
   );
   const insets = useSafeAreaInsets();
+
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isSearchActive, setIsSearchActive] = useState(false);
+  const searchbarRef = useRef<typeof Searchbar>(null);
 
   const toggleSelection = (option: string) => {
     setSelectedOptions((prev) =>
@@ -54,6 +55,12 @@ const FilterScreen: React.FC<FilterScreenProps> = ({ onClose }) => {
         ? prev.filter((item) => item !== option)
         : [...prev, option]
     );
+  };
+
+  const handleSortOption = (option: string) => {
+    dispatch(setAppliedOptionsOfFilter(option as SortOption));
+    dispatch(searchAndFilterProducts(1));
+    onClose();
   };
 
   console.log(selectedFilterType, "selectedFilterType");
@@ -67,11 +74,13 @@ const FilterScreen: React.FC<FilterScreenProps> = ({ onClose }) => {
   const resetFilters = () => {
     setSelectedOptions([]);
     dispatch(setAppliedOptionsOfFilter([]));
+    dispatch(searchAndFilterProducts(1));
     onClose();
   };
 
   const applyFilters = () => {
     dispatch(setAppliedOptionsOfFilter(selectedOptions));
+    dispatch(searchAndFilterProducts(1));
     onClose();
   };
 
@@ -96,25 +105,47 @@ const FilterScreen: React.FC<FilterScreenProps> = ({ onClose }) => {
           {headerTitle}
         </StyledText>
       </View>
+      {FilterOptions[selectedFilterType as keyof typeof FilterOptions]
+        .searchPresent && (
+        <View style={styles.searchContainer}>
+          <SearchInputBar
+            isSearchActive={isSearchActive}
+            searchbarRef={searchbarRef}
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+            onSearchFocus={() => setIsSearchActive(true)}
+            onSearchBlur={() => setIsSearchActive(false)}
+            containerStyle={styles.searchInput}
+            placeholderText={
+              FilterOptions[selectedFilterType as keyof typeof FilterOptions]
+                .searchPlaceholder
+            }
+          />
+        </View>
+      )}
       <FilterBody
         filterType={selectedFilterType}
         options={options}
         selectedOptions={selectedOptions}
         toggleSelection={toggleSelection}
+        handleSingleSelect={handleSortOption}
       />
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity onPress={resetFilters}>
-          <StyledText preset="headingMedium" style={styles.resetText}>
-            Reset
-          </StyledText>
-        </TouchableOpacity>
-        <TextButton
-          text="Apply"
-          onPress={applyFilters}
-          color="black"
-          variant="small"
-        />
-      </View>
+      {FilterOptions[selectedFilterType as keyof typeof FilterOptions]?.type ===
+        "multiSelect" && (
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity onPress={resetFilters}>
+            <StyledText preset="headingMedium" style={styles.resetText}>
+              Reset
+            </StyledText>
+          </TouchableOpacity>
+          <TextButton
+            text="Apply"
+            onPress={applyFilters}
+            color="black"
+            variant="small"
+          />
+        </View>
+      )}
     </SafeAreaView>
   );
 };
@@ -125,6 +156,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+  },
+  searchContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 20,
+    paddingHorizontal: 24,
+  },
+  searchInput: {
+    flex: 1,
   },
   header: {
     flexDirection: "row",

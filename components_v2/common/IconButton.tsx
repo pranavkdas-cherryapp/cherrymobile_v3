@@ -1,4 +1,9 @@
-import { TouchableOpacity, StyleSheet, StyleProp } from "react-native";
+import {
+  TouchableOpacity,
+  StyleSheet,
+  StyleProp,
+  ViewStyle,
+} from "react-native";
 import WishlistIcon from "@/assets/icons/wishlist-icon.svg";
 import HelpIcon from "@/assets/icons/help-icon.svg";
 import PlatinumIcon from "@/assets/icons/cherry-platinum-icon.svg";
@@ -9,6 +14,7 @@ import DiamondIcon from "@/assets/icons/cherry-diamond-icon.svg";
 import AddedToWishlistIcon from "@/assets/icons/added-to-wishlist-icon.svg";
 import NotAddedToWishlistIcon from "@/assets/icons/not-added-to-wishlist-icon.svg";
 import GoToNextPageIcon from "@/assets/icons/go-to-next-page-icon.svg";
+import GoToPreviousPageIcon from "@/assets/icons/go-to-previous-page-icon.svg";
 
 const iconsList = {
   wishlist: WishlistIcon,
@@ -21,6 +27,7 @@ const iconsList = {
   addedToWishlist: AddedToWishlistIcon,
   notAddedToWishlist: NotAddedToWishlistIcon,
   goToNextPage: GoToNextPageIcon,
+  goToPreviousPage: GoToPreviousPageIcon,
 };
 
 type IconKey = keyof typeof iconsList;
@@ -30,16 +37,18 @@ const IconButton = ({
   width,
   height,
   style,
+  onPress,
 }: {
   iconKey: IconKey;
   width: number;
   height: number;
   style?: StyleProp<ViewStyle>;
+  onPress?: () => void;
 }) => {
   const IconComponent = iconsList[iconKey];
 
   return (
-    <TouchableOpacity style={[styles.iconButton, style]}>
+    <TouchableOpacity style={[styles.iconButton, style]} onPress={onPress}>
       <IconComponent width={width} height={height} />
     </TouchableOpacity>
   );
@@ -47,7 +56,7 @@ const IconButton = ({
 
 const styles = StyleSheet.create({
   iconButton: {
-    marginLeft: 10,
+    marginLeft: 8,
     justifyContent: "center",
     alignItems: "center",
   },

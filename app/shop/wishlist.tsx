@@ -1,69 +1,48 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import {
   SafeAreaView,
   View,
-  Text,
-  TouchableOpacity,
   StyleSheet,
   Platform,
-  ScrollView,
   Dimensions,
   Modal,
 } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import IconButton from "@/components_v2/common/IconButton";
-import { Chip, Searchbar } from "react-native-paper";
-import { useLocalSearchParams, router } from "expo-router";
-import SearchInputBar from "@/components_v2/common/SearchInputBar";
+import { router } from "expo-router";
 import { TabView, SceneMap, TabBar } from "react-native-tab-view";
 import ProductsGrid from "@/components_v2/shop/ProductGrid";
-import SearchActiveShopScreen from "@/components_v2/shop/SearchActive";
 import FilterScreen from "@/components_v2/shop/FilterScreen";
 import {
   getIsFilterVisibleSelector,
-  searchAndFilterProducts,
   setIsFilterVisible,
   setSelectedCategory,
 } from "@/store/slices/ShoppingSlice";
 import { useAppSelector, useAppDispatch } from "@/store/hooks";
-import { Category } from "@/store/initialState/ShoppingInitialState";
+import StyledText from "@/components_v2/common/StyledText";
 
 export default function ShopScreen() {
-  const { queryParams } = useLocalSearchParams();
-
-  const [searchQuery, setSearchQuery] = useState("");
-  const [isSearchActive, setIsSearchActive] = useState(false);
-  const searchbarRef = useRef<typeof Searchbar>(null);
+  const insets = useSafeAreaInsets();
 
   const isFilterVisible = useAppSelector(getIsFilterVisibleSelector);
   const dispatch = useAppDispatch();
 
+  const [index, setIndex] = useState(0);
   const [routes] = useState([
+    { key: "all", title: "All" },
     { key: "fashion", title: "Fashion" },
     { key: "beauty", title: "Beauty" },
     { key: "accessories", title: "Accessories" },
     { key: "entertainment", title: "Entertainment" },
   ]);
-  const [index, setIndex] = useState(0);
-  const [currentTabKey, setCurrentTabKey] = useState(routes[0].key);
 
-  const renderScene = ({ route }: { route: { key: string } }) => {
-    if (route.key !== currentTabKey) return null; // shows empty during transition
-    return <ProductsGrid />;
-  };
-
-  useEffect(() => {
-    if (queryParams && typeof queryParams === "string")
-      setSearchQuery(queryParams);
-  }, [queryParams]);
-
-  const handleSearchSubmit = (newQuery: string) => {
-    setIsSearchActive(false);
-    if (newQuery) {
-      router.push(`/shop?queryParams=${encodeURIComponent(newQuery)}`);
-    } else {
-      router.push("/shop");
-    }
-  };
+  const renderScene = SceneMap({
+    all: ProductsGrid,
+    fashion: ProductsGrid,
+    beauty: ProductsGrid,
+    accessories: ProductsGrid,
+    entertainment: ProductsGrid,
+  });
 
   const renderTabBar = (props: any) => (
     <View>
@@ -86,50 +65,43 @@ export default function ShopScreen() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <View style={styles.container}>
+      <View style={[styles.container, { paddingTop: insets.top }]}>
         <View style={styles.searchContainer}>
-          <SearchInputBar
-            isSearchActive={isSearchActive}
-            searchbarRef={searchbarRef}
-            searchQuery={searchQuery}
-            setSearchQuery={setSearchQuery}
-            onSearchFocus={() => setIsSearchActive(true)}
-            onSearchBlur={() => handleSearchSubmit(searchQuery)}
-            containerStyle={styles.searchInput}
-            onClearIconPress={() => handleSearchSubmit("")}
-          />
-          {!isSearchActive && (
-            <View style={styles.searchIcons}>
-              <IconButton
-                iconKey="wishlist"
-                width={36}
-                height={36}
-                onPress={() => router.push("/shop/wishlist")}
-              />
-              <IconButton iconKey="help" width={36} height={36} />
-            </View>
-          )}
-        </View>
-        {isSearchActive ? (
-          <SearchActiveShopScreen />
-        ) : (
-          <TabView
-            navigationState={{ index, routes }}
-            renderScene={renderScene}
-            initialLayout={{ width: Dimensions.get("window").width }}
-            renderTabBar={renderTabBar}
-            onIndexChange={(index: number) => {
-              setIndex(index);
-              setTimeout(() => {
-                setCurrentTabKey(routes[index].key); // delay to let transition complete
-              }, 100); // You can tweak this duration
-              dispatch(
-                setSelectedCategory(routes[index].key as keyof typeof Category)
-              );
-              dispatch(searchAndFilterProducts(1));
+          <View
+            style={{
+              width: 36,
+              height: 36,
+              borderRadius: 80,
+              borderWidth: 1,
+              borderColor: "#f3f3f3",
+              padding: 4,
             }}
-          />
-        )}
+          >
+            <IconButton
+              iconKey="goToPreviousPage"
+              width={12}
+              height={24}
+              style={{ position: "relative", right: 6 }}
+              onPress={() => router.back()}
+            />
+          </View>
+          <StyledText preset={"headingMedium"} style={styles.headerTitle}>
+            My favourites
+          </StyledText>
+          <View style={{ width: 24 }} />
+        </View>
+        <TabView
+          navigationState={{ index, routes }}
+          renderScene={renderScene}
+          initialLayout={{ width: Dimensions.get("window").width }}
+          renderTabBar={renderTabBar}
+          onIndexChange={(index: number) => {
+            setIndex(index);
+            dispatch(
+              setSelectedCategory(routes[index].key as keyof typeof Category)
+            );
+          }}
+        />
       </View>
       <Modal
         animationType="slide"
@@ -151,20 +123,32 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: Platform.OS === "ios" ? 20 : 30,
-    // paddingHorizontal: 20,
-    // backgroundColor: "#fff",
+  },
+  header: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 16,
+    paddingBottom: 8,
+    justifyContent: "space-between",
+  },
+  headerTitle: {
+    flex: 1,
+    textAlign: "center",
+    marginRight: 40,
+    color: "#313339",
   },
   searchContainer: {
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 20,
+    paddingVertical: 16,
   },
   searchInput: {
     flex: 1,
   },
   searchIcons: {
     flexDirection: "row",
-    marginLeft: 8,
+    marginLeft: 10,
   },
   tabBar: {
     backgroundColor: "white",

@@ -17,11 +17,13 @@ export default function FilterBody({
   options,
   selectedOptions,
   toggleSelection,
+  handleSingleSelect,
 }: {
   filterType: string;
   options: string[];
   selectedOptions: string[];
   toggleSelection: (option: string) => void;
+  handleSingleSelect: (option: string) => void;
 }) {
   const filterOption = FilterOptions[filterType as keyof typeof FilterOptions];
   const filterOptionsType = filterOption?.type;
@@ -32,7 +34,10 @@ export default function FilterBody({
         data={options}
         keyExtractor={(item) => item}
         renderItem={({ item }) => (
-          <TouchableOpacity style={styles.optionContainer}>
+          <TouchableOpacity
+            style={styles.optionContainer}
+            onPress={() => handleSingleSelect(item)}
+          >
             <Text style={styles.optionText}>{item}</Text>
             <ChevronRight size={20} color="#000" />
           </TouchableOpacity>
@@ -76,7 +81,7 @@ export default function FilterBody({
 const styles = StyleSheet.create({
   container: {
     paddingVertical: 12,
-    paddingHorizontal: 16,
+    paddingHorizontal: 20,
     backgroundColor: "#fff",
   },
   optionContainer: {
@@ -93,7 +98,7 @@ const styles = StyleSheet.create({
   },
   scrollContainer: {
     flex: 1,
-    paddingHorizontal: 16,
+    paddingHorizontal: 20,
   },
   scrollContainerContent: {
     paddingBottom: 80,

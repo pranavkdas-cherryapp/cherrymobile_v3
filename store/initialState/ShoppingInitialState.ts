@@ -19,7 +19,7 @@ export enum SortOption {
   PriceLowToHigh = "Price low to high",
   PriceHighToLow = "Price high to low",
   NewReleases = "New releases",
-  Recommended = "Recommended",
+  // Recommended = "Recommended",
 }
 
 // Types
@@ -46,6 +46,7 @@ export interface AppliedFiltersList {
 }
 
 export interface ShoppingPageState {
+  searchQuery: string;
   productsToDisplay: any[]; // Replace with proper Product type when available
   filtersList: FiltersList;
   appliedFilters: AppliedFiltersList;
@@ -54,10 +55,14 @@ export interface ShoppingPageState {
   isFilterVisible: boolean;
   selectedFilterType: keyof typeof FilterOptions | null;
   selectedCategory: Category | null;
+  numResultsPerQuery: number;
+  pageNumber: number;
+  isLastPage: boolean;
 }
 
 // Initial State
 export const initialState: ShoppingPageState = {
+  searchQuery: "",
   productsToDisplay: [],
   filtersList: {
     productFilterList: {
@@ -75,7 +80,7 @@ export const initialState: ShoppingPageState = {
       SortOption.PriceLowToHigh,
       SortOption.PriceHighToLow,
       SortOption.NewReleases,
-      SortOption.Recommended,
+      // SortOption.Recommended,
     ],
   },
   appliedFilters: {
@@ -84,7 +89,7 @@ export const initialState: ShoppingPageState = {
     // colorFilterList: [],
     // priceRangeFilterLimits: {
     //   lowerLimit: "0",
-    //   upperLimit: "0",
+    //   upperLimit: "999999",
     // },
     sortOptions: null,
   },
@@ -93,4 +98,7 @@ export const initialState: ShoppingPageState = {
   isFilterVisible: false,
   selectedFilterType: null,
   selectedCategory: Category.Fashion,
+  numResultsPerQuery: 50,
+  pageNumber: 1,
+  isLastPage: false,
 };

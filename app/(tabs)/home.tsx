@@ -19,6 +19,7 @@ import Collections from "@/components_v2/home/Collections";
 import LottieView from "lottie-react-native";
 import { useAppDispatch } from "@/store/hooks";
 import { getBrandsList } from "@/store/slices/BrandsSlice";
+import { searchAndFilterProducts } from "@/store/slices/ShoppingSlice";
 
 export default function HomeScreen() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -34,10 +35,6 @@ export default function HomeScreen() {
     }
   }, [playCount]);
 
-  useEffect(() => {
-    dispatch(getBrandsList());
-  }, []);
-
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
@@ -52,8 +49,13 @@ export default function HomeScreen() {
             containerStyle={styles.searchInput}
           />
           <View style={styles.searchIcons}>
-            <IconButton iconKey="wishlist" width={28} height={28} />
-            <IconButton iconKey="help" width={28} height={28} />
+            <IconButton
+              iconKey="wishlist"
+              width={36}
+              height={36}
+              onPress={() => router.push("/shop/wishlist")}
+            />
+            <IconButton iconKey="help" width={36} height={36} />
           </View>
         </View>
 
@@ -152,7 +154,7 @@ const styles = StyleSheet.create({
   },
   searchIcons: {
     flexDirection: "row",
-    marginLeft: 10,
+    marginLeft: 8,
   },
   iconButton: {
     width: 20,
